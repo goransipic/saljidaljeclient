@@ -1,0 +1,14 @@
+site:
+  title: "SaljiDaljeClient"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/saljidaljeclient.js"
+      api: "build/libs/saljidaljeclient.jar"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/saljidaljeclient.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
