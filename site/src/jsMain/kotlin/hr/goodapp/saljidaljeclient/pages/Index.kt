@@ -3,6 +3,7 @@ package hr.goodapp.saljidaljeclient.pages
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.layout.Layout
+import hr.goodapp.saljidaljeclient.components.sections.main.BackToTop
 import hr.goodapp.saljidaljeclient.components.sections.main.BodyTypeSelectionSection
 import hr.goodapp.saljidaljeclient.components.sections.main.BrandsSection
 import hr.goodapp.saljidaljeclient.components.sections.main.CtaCarousel
@@ -29,4 +30,5 @@ fun HomePage() {
     CtaCarousel()
     MobileAppCta()
     LatestNewsSection()
+    BackToTop()
 }

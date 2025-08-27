@@ -21,6 +21,7 @@ kobweb {
                 link(rel = "stylesheet", href = "vendor/simplebar/dist/simplebar.min.css")
                 link(rel = "stylesheet", href = "vendor/tiny-slider/dist/tiny-slider.css")
                 link(rel = "stylesheet", href = "/css/theme.css")
+
                 script(src = "vendor/bootstrap/dist/js/bootstrap.bundle.min.js") {
                     type = "text/javascript"
                     defer = true
