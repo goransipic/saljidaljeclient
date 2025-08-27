@@ -1,9 +1,5 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
-import com.varabyte.kobweb.gradle.core.util.importCss
-import kotlinx.html.style
-import kotlinx.html.script
 import kotlinx.html.link
-import kotlinx.html.styleLink
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -19,7 +15,7 @@ kobweb {
     app {
         index {
             description.set("Powered by Kobweb")
-
+            faviconPath.set("/favicon.ico")
             head.add {
                 link(rel = "stylesheet", href = "vendor/simplebar/dist/simplebar.min.css")
                 link(rel = "stylesheet", href = "vendor/tiny-slider/dist/tiny-slider.css")
@@ -52,7 +48,7 @@ kotlin {
             implementation(libs.compose.runtime)
             implementation(libs.compose.html.core)
             implementation(libs.kobweb.core)
-            //implementation(libs.kobweb.silk)
+            implementation(libs.kobweb.silk)
             // This default template uses built-in SVG icons, but what's available is limited.
             // Uncomment the following if you want access to a large set of font-awesome icons:
             // implementation(libs.silk.icons.fa)
