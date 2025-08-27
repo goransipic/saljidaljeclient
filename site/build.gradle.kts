@@ -1,4 +1,9 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+import com.varabyte.kobweb.gradle.core.util.importCss
+import kotlinx.html.style
+import kotlinx.html.script
+import kotlinx.html.link
+import kotlinx.html.styleLink
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -14,6 +19,21 @@ kobweb {
     app {
         index {
             description.set("Powered by Kobweb")
+
+            head.add {
+                link(rel = "stylesheet", href = "vendor/simplebar/dist/simplebar.min.css")
+                link(rel = "stylesheet", href = "vendor/tiny-slider/dist/tiny-slider.css")
+                link(rel = "stylesheet", href = "/css/theme.css")
+//                script(src = "vendor/bootstrap/dist/js/bootstrap.bundle.min.js") { type = "text/javascript" }
+//                script(src = "vendor/simplebar/dist/simplebar.min.js") { type = "text/javascript" }
+//                script(src = "vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js") { type = "text/javascript" }
+//                script(src = "vendor/tiny-slider/dist/min/tiny-slider.js") { type = "text/javascript" }
+//                script(src = "vendor/jarallax/dist/jarallax.min.js") { type = "text/javascript" }
+//                script(src = "vendor/rellax/rellax.min.js") { type = "text/javascript" }
+//
+//                // Main theme script
+//                script(src = "js/theme.min.js") { type = "text/javascript" }
+            }
         }
     }
 }
@@ -32,7 +52,7 @@ kotlin {
             implementation(libs.compose.runtime)
             implementation(libs.compose.html.core)
             implementation(libs.kobweb.core)
-            implementation(libs.kobweb.silk)
+            //implementation(libs.kobweb.silk)
             // This default template uses built-in SVG icons, but what's available is limited.
             // Uncomment the following if you want access to a large set of font-awesome icons:
             // implementation(libs.silk.icons.fa)
