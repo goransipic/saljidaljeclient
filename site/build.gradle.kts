@@ -1,5 +1,6 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
+import kotlinx.html.script
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -20,15 +21,36 @@ kobweb {
                 link(rel = "stylesheet", href = "vendor/simplebar/dist/simplebar.min.css")
                 link(rel = "stylesheet", href = "vendor/tiny-slider/dist/tiny-slider.css")
                 link(rel = "stylesheet", href = "/css/theme.css")
-//                script(src = "vendor/bootstrap/dist/js/bootstrap.bundle.min.js") { type = "text/javascript" }
-//                script(src = "vendor/simplebar/dist/simplebar.min.js") { type = "text/javascript" }
-//                script(src = "vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js") { type = "text/javascript" }
-//                script(src = "vendor/tiny-slider/dist/min/tiny-slider.js") { type = "text/javascript" }
-//                script(src = "vendor/jarallax/dist/jarallax.min.js") { type = "text/javascript" }
-//                script(src = "vendor/rellax/rellax.min.js") { type = "text/javascript" }
-//
-//                // Main theme script
-//                script(src = "js/theme.min.js") { type = "text/javascript" }
+                script(src = "vendor/bootstrap/dist/js/bootstrap.bundle.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "vendor/simplebar/dist/simplebar.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "vendor/tiny-slider/dist/min/tiny-slider.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "vendor/jarallax/dist/jarallax.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "vendor/rellax/rellax.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+
+                // Main theme script
+                script(src = "js/theme.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
             }
         }
     }

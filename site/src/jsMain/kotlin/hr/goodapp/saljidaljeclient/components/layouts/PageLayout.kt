@@ -32,26 +32,8 @@ fun PageLayout(ctx: PageContext, content: @Composable () -> Unit) {
         content()
     }
     CustomFooter()
-    // Add JS at the end of body
-    // Add JS at the bottom of the body
 
-    // Add JS at the bottom of the body
-    LaunchedEffect(Unit) {
-        val scripts = listOf(
-            "vendor/bootstrap/dist/js/bootstrap.bundle.min.js",
-            "vendor/simplebar/dist/simplebar.min.js",
-            "vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
-            "vendor/tiny-slider/dist/min/tiny-slider.js",
-            "vendor/jarallax/dist/jarallax.min.js",
-            "vendor/rellax/rellax.min.js",
-            "js/theme.min.js"
-        )
 
-        scripts.forEach { src ->
-            val script = document.createElement("script") as HTMLScriptElement
-            script.src = src
-            //script.defer = true
-            document.body?.appendChild(script)
-        }
-    }
+
+
 }
