@@ -7,6 +7,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxHeight
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.core.AppGlobals
 import com.varabyte.kobweb.core.isExporting
+import com.varabyte.kobweb.silk.SilkApp
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
@@ -45,6 +46,9 @@ fun AppEntry(content: @Composable () -> Unit) {
         body?.classList?.add("bg-dark")
     }
     //KobwebApp {
-    content()
+    SilkApp {
+        content()
+    }
+
     //}
 }
