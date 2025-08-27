@@ -2,11 +2,14 @@ package hr.goodapp.saljidaljeclient
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxHeight
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.core.AppGlobals
 import com.varabyte.kobweb.core.isExporting
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
+import com.varabyte.kobweb.silk.init.registerStyleBase
 import hr.goodapp.saljidaljeclient.styles.registerCustomStyles
 import kotlinx.browser.document
 import org.w3c.dom.HTMLBodyElement
@@ -31,6 +34,7 @@ fun initStyles(ctx: InitSilkContext) {
             element?.insertAdjacentHTML("afterbegin", htmlString)
         }
     }
+    ctx.stylesheet.registerStyleBase("html, body") { Modifier.fillMaxHeight() }
 }
 
 @App
