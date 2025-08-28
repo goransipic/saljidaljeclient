@@ -1,19 +1,13 @@
 package hr.goodapp.saljidaljeclient.components.layouts
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.SideEffect
-import com.varabyte.kobweb.compose.dom.RawHtml
 import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.core.layout.Layout
-import hr.goodapp.saljidaljeclient.components.sections.CustomFooter
-import hr.goodapp.saljidaljeclient.components.sections.main.NavbarBar
-import hr.goodapp.saljidaljeclient.components.sections.main.SignInModal
-import hr.goodapp.saljidaljeclient.components.sections.main.SignupModal
-import kotlinx.browser.document
-import org.jetbrains.compose.web.dom.Div
+import hr.goodapp.saljidaljeclient.components.sections.common.CustomFooter
+import hr.goodapp.saljidaljeclient.components.sections.common.NavbarBar
+import hr.goodapp.saljidaljeclient.components.sections.common.SignInModal
+import hr.goodapp.saljidaljeclient.components.sections.common.SignupModal
 import org.jetbrains.compose.web.dom.Main
-import org.w3c.dom.HTMLScriptElement
 
 
 class PageLayoutData(val title: String)

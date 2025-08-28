@@ -1,4 +1,4 @@
-package hr.goodapp.saljidaljeclient.components.sections.main
+package hr.goodapp.saljidaljeclient.components.sections.common
 
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.dom.*

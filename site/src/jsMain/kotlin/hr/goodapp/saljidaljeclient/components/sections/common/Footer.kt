@@ -1,4 +1,4 @@
-package hr.goodapp.saljidaljeclient.components.sections
+package hr.goodapp.saljidaljeclient.components.sections.common
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.DefaultStyleSheet.attr

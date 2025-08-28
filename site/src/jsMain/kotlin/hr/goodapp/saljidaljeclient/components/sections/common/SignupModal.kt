@@ -1,8 +1,6 @@
-package hr.goodapp.saljidaljeclient.components.sections.main
+package hr.goodapp.saljidaljeclient.components.sections.common
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.dom.ElementRefScope
-import com.varabyte.kobweb.compose.dom.ref
 import org.jetbrains.compose.web.attributes.*
 import org.jetbrains.compose.web.dom.*
 
