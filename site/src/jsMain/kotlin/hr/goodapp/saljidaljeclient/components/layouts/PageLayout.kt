@@ -1,6 +1,7 @@
 package hr.goodapp.saljidaljeclient.components.layouts
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.core.layout.Layout
 import hr.goodapp.saljidaljeclient.components.sections.common.CustomFooter
@@ -26,8 +27,4 @@ fun PageLayout(ctx: PageContext, content: @Composable () -> Unit) {
         content()
     }
     CustomFooter()
-
-
-
-
 }

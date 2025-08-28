@@ -1,30 +1,14 @@
-package hr.goodapp.saljidaljeclient.pages.profile
+package hr.goodapp.saljidaljeclient.components.sections.profile
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.core.Page
-import com.varabyte.kobweb.core.layout.Layout
-import hr.goodapp.saljidaljeclient.components.sections.common.Breadcrumb
-import hr.goodapp.saljidaljeclient.components.sections.profile.Sidebar
+import hr.goodapp.saljidaljeclient.components.sections.profile.common.fieldBlock
 import org.jetbrains.compose.web.attributes.ButtonType
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.attributes.type
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-@Page("index")
-@Layout(".components.layouts.PageLayout")
-fun AccountInfo() {
-    Div(attrs = { classes("container", "pt-5", "pb-lg-4", "mt-5", "mb-sm-2") }) {
-        Breadcrumb()
-        Div (attrs = {classes("row")}) {
-            Sidebar()
-            Content()
-        }
-    }
-}
-
-@Composable
-fun Content() {
+fun PersonalInfoContent() {
     Div(attrs = { classes("col-lg-8", "col-md-7", "mb-5") }) {
         H1(attrs = { classes("h2", "text-light") }) { Text("Personal Info") }
         Div(attrs = { classes("text-light", "mb-2", "pt-1") }) {
@@ -58,7 +42,7 @@ fun Content() {
                     )
                     fieldBlock("Email", "robert_fox@email.com", "email", InputType.Email)
                     fieldBlock("Phone number", "(302) 555-0107", "phone")
-                    fieldBlock("Address", "Not specified", "address", withBorder = false ,placeholder = "Enter address")
+                    fieldBlock("Address", "Not specified", "address", withBorder = false, placeholder = "Enter address")
                 }
             }
 
@@ -104,69 +88,6 @@ fun Content() {
                         Text("Delete account")
                     }
                 }
-            }
-        }
-    }
-}
-
-// Helper function for a field
-@Composable
-fun fieldBlock(
-    label: String,
-    value: String,
-    collapseId: String,
-    inputType: InputType<String> = InputType.Text,
-    placeholder: String? = null,
-    isSelect: Boolean = false,
-    withBorder: Boolean = true,
-    selectOptions: List<String> = emptyList()
-) {
-    Div(attrs = {
-        if (withBorder){
-            classes("border-bottom", "border-light", "pb-3", "mb-3")
-        }
-    }) {
-        Div(attrs = { classes("d-flex", "align-items-center", "justify-content-between") }) {
-            Div(attrs = { classes("pe-2", "opacity-70") }) {
-                Label(attrs = { classes("form-label", "fw-bold", "text-light") }) { Text(label) }
-                Div(attrs = { classes("text-light"); id("$collapseId-value") }) { Text(value) }
-            }
-            Div(attrs = { attr("data-bs-toggle", "tooltip"); attr("title", "Edit") }) {
-                A(href = "#$collapseId-collapse", attrs = {
-                    classes("nav-link", "nav-link-light", "py-0")
-                    attr("data-bs-toggle", "collapse")
-                }) {
-                    I(attrs = { classes("fi-edit") })
-                }
-            }
-        }
-        Div(attrs = {
-            classes("collapse")
-            id("$collapseId-collapse")
-            attr("data-bs-parent", "#personal-info")
-        }) {
-            if (isSelect) {
-                Select(attrs = {
-                    classes("form-select", "form-select-light", "mt-3")
-                    attr("data-bs-binded-element", "#$collapseId-value")
-                }) {
-                    Option(
-                        value = "",
-                        attrs = { attr("value", ""); attr("disabled", "true"); attr("selected", "true") }) {
-                        Text("Select your $label")
-                    }
-                    selectOptions.forEach { opt ->
-                        Option(value = "Demo") { Text(opt) }
-                    }
-                }
-            } else {
-                Input(type = inputType, attrs = {
-                    classes("form-control", "form-control-light", "mt-3")
-                    attr("data-bs-binded-element", "#$collapseId-value")
-                    attr("data-bs-unset-value", "Not specified")
-                    placeholder?.let { attr("placeholder", it) }
-                    value(value)
-                })
             }
         }
     }

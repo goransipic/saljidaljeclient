@@ -1,21 +1,23 @@
 package hr.goodapp.saljidaljeclient.components.sections.profile
 
 import androidx.compose.runtime.Composable
-import org.jetbrains.compose.web.attributes.ButtonType
-import org.jetbrains.compose.web.attributes.InputType
-import org.jetbrains.compose.web.attributes.type
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import hr.goodapp.saljidaljeclient.components.layouts.SidebarItems
 import org.jetbrains.compose.web.dom.Aside
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun Sidebar() {
+fun Sidebar(sidebarItems: SidebarItems, onClicked: (SidebarItems) -> Unit) {
     Aside(attrs = { classes("col-lg-4", "col-md-5", "pe-xl-4", "mb-5") }) {
-        AccountNav()
+        AccountNav(sidebarItems,onClicked)
     }
 }
 
 @Composable
-private fun AccountNav() {
+private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems) -> Unit) {
     Div(attrs = { classes("card", "card-body", "card-light", "border-0", "shadow-sm", "pb-1", "me-lg-1") }) {
         // Top profile row
         Div(attrs = { classes("d-flex", "d-md-block", "d-lg-flex", "align-items-start", "pt-lg-2", "mb-4") }) {
@@ -74,23 +76,27 @@ private fun AccountNav() {
             I(attrs = { classes("fi-align-justify", "me-2") })
             Text("Menu")
         }
-
         // Collapsible navigation
         Div(attrs = { classes("collapse", "d-md-block", "mt-3"); id("account-nav") }) {
             Div(attrs = { classes("card-nav") }) {
-                A(href = "car-finder-account-info.html", attrs = { classes("card-nav-link", "active") }) {
-                    I(attrs = { classes("fi-user", "me-2") })
+                var isActive by remember(sidebarItems) { mutableStateOf(sidebarItems) }
+                A(href = "#", attrs = { onClick { onClicked(SidebarItems.PERSONAL_INFO) }; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.PERSONAL_INFO) "active" else null).toTypedArray()) }) {
+                    I(attrs = {
+                        classes("fi-user", "me-2")
+                    })
                     Text("Personal Info")
                 }
-                A(href = "car-finder-account-security.html", attrs = { classes("card-nav-link") }) {
-                    I(attrs = { classes("fi-lock", "me-2") })
+                A(href = "#", attrs = { onClick { onClicked(SidebarItems.PASSWORD_SECURITY) };  classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.PASSWORD_SECURITY) "active" else null).toTypedArray()) }) {
+                    I(attrs = {
+                        classes("fi-lock", "me-2")
+                    })
                     Text("Password & Security")
                 }
-                A(href = "car-finder-account-cars.html", attrs = { classes("card-nav-link") }) {
+                A(href = "#", attrs = { onClick { onClicked(SidebarItems.CARS)}; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.CARS) "active" else null).toTypedArray()) }) {
                     I(attrs = { classes("fi-car", "me-2") })
                     Text("My Cars")
                 }
-                A(href = "car-finder-account-wishlist.html", attrs = { classes("card-nav-link") }) {
+                A(href = "#", attrs = { onClick { onClicked(SidebarItems.WHISH_LIST)}; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.WHISH_LIST) "active" else null).toTypedArray()) }) {
                     I(attrs = { classes("fi-heart", "me-2") })
                     Text("Wishlist")
                     Span(attrs = { classes("badge", "bg-faded-light", "ms-2") }) {
