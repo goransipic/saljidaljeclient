@@ -25,7 +25,7 @@ fun initStyles(ctx: InitSilkContext) {
         if (AppGlobals.isExporting) { // this works with inserting page loading but i dont know how????
             val htmlString = """
                 <!-- Page loading spinner-->
-                <div class="page-loading active">
+                <div class="page-loading active bg-dark">
                     <div class="page-loading-inner">
                         <div class="page-spinner"></div><span>Loading...</span>
                     </div>
@@ -46,6 +46,10 @@ fun initStyles(ctx: InitSilkContext) {
 @Composable
 fun AppEntry(content: @Composable () -> Unit) {
     //KobwebApp {
+    LaunchedEffect(Unit) {
+        val body = document.body as? HTMLBodyElement
+        body?.classList?.add("bg-dark")
+    }
     SilkApp {
         content()
     }

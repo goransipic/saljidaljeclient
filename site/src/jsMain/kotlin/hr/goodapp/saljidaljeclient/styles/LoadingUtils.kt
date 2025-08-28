@@ -8,7 +8,7 @@ import com.varabyte.kobweb.compose.css.TransitionTimingFunction
 import com.varabyte.kobweb.compose.css.VerticalAlign
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Color
+
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.styleModifier
@@ -23,6 +23,7 @@ import com.varabyte.kobweb.silk.style.vars.color.BackgroundColorVar
 import com.varabyte.kobweb.silk.style.vars.color.ColorVar
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.AnimationTimingFunction
+import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.Position
@@ -33,6 +34,7 @@ import org.jetbrains.compose.web.css.deg
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.rgb
 import org.jetbrains.compose.web.css.s
 
 
@@ -56,7 +58,7 @@ fun SilkStylesheet.registerCustomStyles() {
                 property("-webkit-transition", "all .4s .2s ease-in-out")
             }
             .transition(Transition.of("all", 0.4.s, TransitionTimingFunction.EaseInOut, 0.2.s))
-            .backgroundColor(BackgroundColorVar.value())
+            .backgroundColor(rgb(31, 27, 45))
             .opacity(0)
             .visibility(Visibility.Hidden)
             .zIndex(9999)
@@ -101,7 +103,7 @@ fun SilkStylesheet.registerCustomStyles() {
         Modifier
             .display(DisplayStyle.InlineBlock)
             .verticalAlign(VerticalAlign.TextBottom)
-            .border(0.15.em, LineStyle.Solid, Color.rgb(0x9691a4))
+            .border(0.15.em, LineStyle.Solid,  rgb(150, 145, 164))
             .borderRight { color(Colors.Transparent) }
             .borderRadius(50.percent)
             .styleModifier {
