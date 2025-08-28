@@ -34,6 +34,10 @@ fun initStyles(ctx: InitSilkContext) {
             val element = document.getElementById("_kobweb-root") as? HTMLElement
             element?.insertAdjacentHTML("afterbegin", htmlString)
         }
+        if (AppGlobals.isExporting) {
+            val body = document.body as? HTMLBodyElement
+            body?.classList?.add("bg-dark")
+        }
     }
     ctx.stylesheet.registerStyleBase("html, body") { Modifier.fillMaxHeight() }
 }
@@ -41,10 +45,6 @@ fun initStyles(ctx: InitSilkContext) {
 @App
 @Composable
 fun AppEntry(content: @Composable () -> Unit) {
-    LaunchedEffect(Unit) {
-        val body = document.body as? HTMLBodyElement
-        body?.classList?.add("bg-dark")
-    }
     //KobwebApp {
     SilkApp {
         content()
