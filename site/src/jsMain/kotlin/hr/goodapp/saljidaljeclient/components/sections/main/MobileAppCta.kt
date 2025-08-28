@@ -107,7 +107,6 @@ fun MobileAppCta() {
                         </defs>
                     </svg>""".trimIndent();
                         }
-
                     }
                 }
             }
