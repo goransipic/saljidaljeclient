@@ -3,7 +3,7 @@ package hr.goodapp.saljidaljeclient.pages.profile
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.layout.Layout
-import hr.goodapp.saljidaljeclient.components.sections.profile.Breadcrumb
+import hr.goodapp.saljidaljeclient.components.sections.common.Breadcrumb
 import hr.goodapp.saljidaljeclient.components.sections.profile.Sidebar
 import org.jetbrains.compose.web.attributes.ButtonType
 import org.jetbrains.compose.web.attributes.InputType
