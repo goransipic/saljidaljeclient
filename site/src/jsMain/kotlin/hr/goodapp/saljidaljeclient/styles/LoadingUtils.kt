@@ -96,7 +96,7 @@ fun SilkStylesheet.registerCustomStyles() {
                 .display(DisplayStyle.Block)
                 .fontSize(1.cssRem)
                 .fontWeight(FontWeight.Normal)
-                .color(ColorVar.value())
+                .color(rgb(31, 27, 45))
         }
     }
     registerStyleBase(".page-spinner") {
