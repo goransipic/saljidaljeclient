@@ -18,37 +18,70 @@ kobweb {
             description.set("Powered by Kobweb")
             faviconPath.set("/favicon.ico")
             head.add {
-                link(rel = "stylesheet", href = "vendor/simplebar/dist/simplebar.min.css")
-                link(rel = "stylesheet", href = "vendor/tiny-slider/dist/tiny-slider.css")
+                link(rel = "stylesheet", href = "/vendor/simplebar/dist/simplebar.min.css")
+                link(rel = "stylesheet", href = "/vendor/tiny-slider/dist/tiny-slider.css")
+
+                // FilePond CSS (optional, but usually needed)
+                link(rel = "stylesheet", href = "/vendor/filepond/dist/filepond.min.css")
+                link(rel = "stylesheet", href = "/vendor/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css")
+
                 link(rel = "stylesheet", href = "/css/theme.css")
 
-                script(src = "vendor/bootstrap/dist/js/bootstrap.bundle.min.js") {
+
+
+                script(src = "/vendor/bootstrap/dist/js/bootstrap.bundle.min.js") {
                     type = "text/javascript"
                     defer = true
                 }
-                script(src = "vendor/simplebar/dist/simplebar.min.js") {
+                script(src = "/vendor/simplebar/dist/simplebar.min.js") {
                     type = "text/javascript"
                     defer = true
                 }
-                script(src = "vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js") {
+                script(src = "/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js") {
                     type = "text/javascript"
                     defer = true
                 }
-                script(src = "vendor/tiny-slider/dist/min/tiny-slider.js") {
+                script(src = "/vendor/tiny-slider/dist/min/tiny-slider.js") {
                     type = "text/javascript"
                     defer = true
                 }
-                script(src = "vendor/jarallax/dist/jarallax.min.js") {
+                script(src = "/vendor/jarallax/dist/jarallax.min.js") {
                     type = "text/javascript"
                     defer = true
                 }
-                script(src = "vendor/rellax/rellax.min.js") {
+                script(src = "/vendor/rellax/rellax.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+
+                // FilePond plugins + core JS
+                script(src = "/vendor/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "/vendor/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "/vendor/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "/vendor/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "/vendor/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+                script(src = "/vendor/filepond/dist/filepond.min.js") {
                     type = "text/javascript"
                     defer = true
                 }
 
                 // Main theme script
-                script(src = "js/theme.min.js") {
+                script(src = "/js/theme.min.js") {
                     type = "text/javascript"
                     defer = true
                 }

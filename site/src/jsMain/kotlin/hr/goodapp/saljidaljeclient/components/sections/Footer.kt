@@ -16,7 +16,7 @@ fun CustomFooter() {
         Div({ classes("border-bottom", "border-light", "py-4") }) {
             Div({ classes("container", "d-sm-flex", "align-items-center", "justify-content-between") }) {
                 A(href = "real-estate-home-v1.html", attrs = { classes("d-inline-block") }) {
-                    Img(src = "img/logo/logo-light.svg", alt = "logo") {
+                    Img(src = "/img/logo/logo-light.svg", alt = "logo") {
                         attr("width", "116")
                     }
                 }

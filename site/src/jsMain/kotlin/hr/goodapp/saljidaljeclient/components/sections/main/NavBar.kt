@@ -12,11 +12,11 @@ fun NavbarBar() {
         Div(attrs = { classes("container") }) {
             // Brand
             A(
-                href = "car-finder-home.html",
+                href = "/",
                 attrs = { classes("navbar-brand", "me-3", "me-xl-4") }
             ) {
                 Img(
-                    src = "img/logo/logo-light.svg",
+                    src = "/img/logo/logo-light.svg",
                     alt = "Finder",
                     attrs = { attr("width", "116"); classes("d-block") }
                 )

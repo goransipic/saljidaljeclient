@@ -24,7 +24,7 @@ fun SignInModal() {
                                 Br()
                                 Text("Welcome back.")
                             }
-                            Img(src = "img/signin-modal/signin-dark.svg", alt = "Illustration") {
+                            Img(src = "/img/signin-modal/signin-dark.svg", alt = "Illustration") {
                                 classes("d-block", "mx-auto")
                                 attr("width", "344")
                             }

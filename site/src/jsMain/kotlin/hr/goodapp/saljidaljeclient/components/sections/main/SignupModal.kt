@@ -52,7 +52,7 @@ fun SignupModal() {
                                 }
                             }
 
-                            Img(src = "img/signin-modal/signup-dark.svg", alt = "Illustration") {
+                            Img(src = "/img/signin-modal/signup-dark.svg", alt = "Illustration") {
                                 classes("d-block", "mx-auto")
                                 attr("width", "344")
                             }
