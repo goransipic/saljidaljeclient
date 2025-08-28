@@ -47,6 +47,7 @@ val Spinner = Keyframes {
 }
 
 fun SilkStylesheet.registerCustomStyles() {
+    val color = rgb(150, 145, 164)
     registerStyleBase(".page-loading") {
         Modifier
             .position(Position.Absolute)
@@ -96,14 +97,14 @@ fun SilkStylesheet.registerCustomStyles() {
                 .display(DisplayStyle.Block)
                 .fontSize(1.cssRem)
                 .fontWeight(FontWeight.Normal)
-                .color(rgb(31, 27, 45))
+                .color(color)
         }
     }
     registerStyleBase(".page-spinner") {
         Modifier
             .display(DisplayStyle.InlineBlock)
             .verticalAlign(VerticalAlign.TextBottom)
-            .border(0.15.em, LineStyle.Solid,  rgb(150, 145, 164))
+            .border(0.15.em, LineStyle.Solid,  color)
             .borderRight { color(Colors.Transparent) }
             .borderRadius(50.percent)
             .styleModifier {
