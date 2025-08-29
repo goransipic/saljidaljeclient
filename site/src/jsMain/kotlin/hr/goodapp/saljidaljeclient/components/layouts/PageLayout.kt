@@ -8,10 +8,9 @@ import hr.goodapp.saljidaljeclient.components.sections.common.CustomFooter
 import hr.goodapp.saljidaljeclient.components.sections.common.NavbarBar
 import hr.goodapp.saljidaljeclient.components.sections.common.SignInModal
 import hr.goodapp.saljidaljeclient.components.sections.common.SignupModal
+import hr.goodapp.saljidaljeclient.components.sections.profile.common.SidebarItems
 import org.jetbrains.compose.web.dom.Main
 
-
-class PageLayoutData(val title: String)
 
 @Composable
 @Layout

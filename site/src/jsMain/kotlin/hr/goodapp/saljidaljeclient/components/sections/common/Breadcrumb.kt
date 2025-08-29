@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun Breadcrumb() {
+fun Breadcrumb(title: String) {
     Nav(
         attrs = {
             classes("mb-4", "pt-md-3")
@@ -28,7 +28,7 @@ fun Breadcrumb() {
                     attr("aria-current", "page")
                 }
             ) {
-                Text("Personal Info")
+                Text(title)
             }
         }
     }
