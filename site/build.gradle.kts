@@ -25,6 +25,8 @@ kobweb {
                 link(rel = "stylesheet", href = "/vendor/filepond/dist/filepond.min.css")
                 link(rel = "stylesheet", href = "/vendor/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css")
 
+                link(rel = "stylesheet", href = "/vendor/leaflet/dist/leaflet.css")
+
                 link(rel = "stylesheet", href = "/css/theme.css")
 
 
@@ -38,6 +40,11 @@ kobweb {
                     defer = true
                 }
                 script(src = "/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+
+                script(src = "/vendor/leaflet/dist/leaflet.js") {
                     type = "text/javascript"
                     defer = true
                 }

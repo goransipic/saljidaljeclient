@@ -1,6 +1,7 @@
 package hr.goodapp.saljidaljeclient.components.sections.common
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.core.rememberPageContext
 import org.jetbrains.compose.web.dom.*
 
 @Composable
@@ -43,7 +44,11 @@ fun NavbarBar() {
                 I(attrs = { classes("fi-user", "me-2") })
                 Text("Sign in")
             }
-            A("car-finder-sell-car.html", attrs = {
+            val ctx = rememberPageContext()
+            A("/sell-car", attrs = { onClick {
+                it.preventDefault()
+                ctx.router.navigateTo("/sell-car")
+            }
                 classes("btn", "btn-primary", "btn-sm", "ms-2", "order-lg-3")
             }) {
                 I(attrs = { classes("fi-plus", "me-2") })
