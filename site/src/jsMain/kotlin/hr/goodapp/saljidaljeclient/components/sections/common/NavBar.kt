@@ -12,9 +12,10 @@ fun NavbarBar() {
     }) {
         Div(attrs = { classes("container") }) {
             // Brand
+            val ctx = rememberPageContext()
             A(
                 href = "/",
-                attrs = { classes("navbar-brand", "me-3", "me-xl-4") }
+                attrs = { onClick { it.preventDefault(); ctx.router.navigateTo("/") }; classes("navbar-brand", "me-3", "me-xl-4") }
             ) {
                 Img(
                     src = "/img/logo/logo-light.svg",
@@ -44,7 +45,7 @@ fun NavbarBar() {
                 I(attrs = { classes("fi-user", "me-2") })
                 Text("Sign in")
             }
-            val ctx = rememberPageContext()
+
             A("/sell-car", attrs = { onClick {
                 it.preventDefault()
                 ctx.router.navigateTo("/sell-car")
