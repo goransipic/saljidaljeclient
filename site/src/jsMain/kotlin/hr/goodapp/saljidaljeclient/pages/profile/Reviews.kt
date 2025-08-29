@@ -3,12 +3,13 @@ package hr.goodapp.saljidaljeclient.pages.profile
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.layout.Layout
-import hr.goodapp.saljidaljeclient.components.sections.profile.common.SidebarItems
 import hr.goodapp.saljidaljeclient.components.sections.profile.common.Content
+import hr.goodapp.saljidaljeclient.components.sections.profile.common.SidebarItems
 
-@Composable
-@Page("index")
+
+@Page("reviews")
 @Layout(".components.layouts.AccountLayout")
-fun AccountInfo() {
-    Content(SidebarItems.PERSONAL_INFO)
+@Composable
+fun Reviews() {
+    Content(SidebarItems.REVIEWS)
 }

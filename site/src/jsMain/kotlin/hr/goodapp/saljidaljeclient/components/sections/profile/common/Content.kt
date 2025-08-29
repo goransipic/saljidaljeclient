@@ -1,39 +1,26 @@
 package hr.goodapp.saljidaljeclient.components.sections.profile.common
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import hr.goodapp.saljidaljeclient.components.layouts.SidebarItems
-import hr.goodapp.saljidaljeclient.components.sections.profile.CarsContent
-import hr.goodapp.saljidaljeclient.components.sections.profile.PasswordSecurityContent
-import hr.goodapp.saljidaljeclient.components.sections.profile.PersonalInfoContent
-import hr.goodapp.saljidaljeclient.components.sections.profile.Sidebar
-import hr.goodapp.saljidaljeclient.components.sections.profile.WishlistContent
+import androidx.compose.runtime.*
+import hr.goodapp.saljidaljeclient.components.sections.profile.*
 import org.jetbrains.compose.web.attributes.InputType
-import org.jetbrains.compose.web.dom.A
-import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.I
-import org.jetbrains.compose.web.dom.Input
-import org.jetbrains.compose.web.dom.Label
-import org.jetbrains.compose.web.dom.Option
-import org.jetbrains.compose.web.dom.Select
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.*
 
 @Composable
 fun Content(sidebarItems: SidebarItems) {
     var item by remember { mutableStateOf(sidebarItems) }
-    Sidebar(item) {
-        item = it
+    Sidebar(item) { p1,p2 ->
+        p2.preventDefault()
+        item = p1
+        updateUrlWithoutNavigation(p1.url)
     }
     when(item) {
         SidebarItems.PERSONAL_INFO -> PersonalInfoContent()
         SidebarItems.PASSWORD_SECURITY -> PasswordSecurityContent()
         SidebarItems.CARS -> CarsContent()
         SidebarItems.WHISH_LIST -> WishlistContent()
+        SidebarItems.REVIEWS -> ReviewsContent()
+        SidebarItems.NOTIFICATION -> NotificationContent()
     }
-
 }
 
 // Helper function for a field

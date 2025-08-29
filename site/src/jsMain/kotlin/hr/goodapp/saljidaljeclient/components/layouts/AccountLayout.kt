@@ -7,13 +7,6 @@ import hr.goodapp.saljidaljeclient.components.sections.common.Breadcrumb
 import org.jetbrains.compose.web.dom.Div
 
 
-enum class SidebarItems {
-    PERSONAL_INFO,
-    PASSWORD_SECURITY,
-    CARS,
-    WHISH_LIST
-}
-
 @Composable
 @Layout(".components.layouts.PageLayout")
 fun AccountLayout(ctx: PageContext, content: @Composable () -> Unit) {
