@@ -27,6 +27,8 @@ kobweb {
 
                 link(rel = "stylesheet", href = "/vendor/leaflet/dist/leaflet.css")
 
+                link(rel = "stylesheet", href = "/vendor/nouislider/dist/nouislider.min.css")
+
                 link(rel = "stylesheet", href = "/css/theme.css")
 
 
@@ -52,6 +54,12 @@ kobweb {
                     type = "text/javascript"
                     defer = true
                 }
+
+                script(src = "/vendor/nouislider/dist/nouislider.min.js") {
+                    type = "text/javascript"
+                    defer = true
+                }
+
                 script(src = "/vendor/jarallax/dist/jarallax.min.js") {
                     type = "text/javascript"
                     defer = true
