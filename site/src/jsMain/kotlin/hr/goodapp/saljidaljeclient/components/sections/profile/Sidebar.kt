@@ -6,6 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.web.events.SyntheticMouseEvent
+import com.varabyte.kobweb.core.rememberPageContext
 import hr.goodapp.saljidaljeclient.components.sections.profile.common.SidebarItems
 import kotlinx.browser.window
 import org.jetbrains.compose.web.dom.Aside
@@ -14,7 +15,7 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun Sidebar(sidebarItems: SidebarItems, onClicked: (SidebarItems, SyntheticMouseEvent) -> Unit) {
     Aside(attrs = { classes("col-lg-4", "col-md-5", "pe-xl-4", "mb-5") }) {
-        AccountNav(sidebarItems,onClicked)
+        AccountNav(sidebarItems, onClicked)
     }
 }
 
@@ -81,59 +82,130 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
         // Collapsible navigation
         Div(attrs = { classes("collapse", "d-md-block", "mt-3"); id("account-nav") }) {
             Div(attrs = { classes("card-nav") }) {
-                var isActive by remember(sidebarItems) { mutableStateOf(sidebarItems) }
-                A(href = "#", attrs = { onClick { onClicked(SidebarItems.PERSONAL_INFO,it) }; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.PERSONAL_INFO) "active" else null).toTypedArray()) }) {
+                var itemClicked by remember(sidebarItems) { mutableStateOf(sidebarItems) }
+                A(
+                    href = SidebarItems.PERSONAL_INFO.url,
+                    attrs = {
+                        onClick {
+                            onClicked(
+                                SidebarItems.PERSONAL_INFO,
+                                it
+                            )
+                        }; classes(
+                        *listOfNotNull(
+                            "card-nav-link",
+                            if (itemClicked == SidebarItems.PERSONAL_INFO) "active" else null
+                        ).toTypedArray()
+                    )
+                    }) {
                     I(attrs = {
                         classes("fi-user", "me-2")
                     })
                     Text("Personal Info")
                 }
-                A(href = "#", attrs = { onClick { it ->
-                    it.preventDefault()
-                    onClicked(SidebarItems.PASSWORD_SECURITY,it)
-                };  classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.PASSWORD_SECURITY) "active" else null).toTypedArray()) }) {
+                A(href = SidebarItems.PASSWORD_SECURITY.url, attrs = {
+                    onClick { it ->
+                        onClicked(SidebarItems.PASSWORD_SECURITY, it)
+                    }; classes(
+                    *listOfNotNull(
+                        "card-nav-link",
+                        if (itemClicked == SidebarItems.PASSWORD_SECURITY) "active" else null
+                    ).toTypedArray()
+                )
+                }) {
                     I(attrs = {
                         classes("fi-lock", "me-2")
                     })
                     Text("Password & Security")
                 }
-                A(href = "#", attrs = { onClick {
-                    it.preventDefault()
-                    onClicked(SidebarItems.CARS,it)}; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.CARS) "active" else null).toTypedArray()) }) {
+                A(href = SidebarItems.CARS.url, attrs = {
+                    onClick {
+                        onClicked(SidebarItems.CARS, it)
+                    }; classes(
+                    *listOfNotNull(
+                        "card-nav-link",
+                        if (itemClicked == SidebarItems.CARS) "active" else null
+                    ).toTypedArray()
+                )
+                }) {
                     I(attrs = { classes("fi-car", "me-2") })
                     Text("My Cars")
                 }
-                A(href = "#", attrs = { onClick { onClicked(SidebarItems.WHISH_LIST,it)}; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.WHISH_LIST) "active" else null).toTypedArray()) }) {
+                A(
+                    href = SidebarItems.WHISH_LIST.url,
+                    attrs = {
+                        onClick {
+                            onClicked(
+                                SidebarItems.WHISH_LIST,
+                                it
+                            )
+                        }; classes(
+                        *listOfNotNull(
+                            "card-nav-link",
+                            if (itemClicked == SidebarItems.WHISH_LIST) "active" else null
+                        ).toTypedArray()
+                    )
+                    }) {
                     I(attrs = { classes("fi-heart", "me-2") })
                     Text("Wishlist")
                     Span(attrs = { classes("badge", "bg-faded-light", "ms-2") }) {
                         Text("4")
                     }
                 }
-                A(href = "#", attrs = { onClick { onClicked(SidebarItems.REVIEWS,it)}; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.REVIEWS) "active" else null).toTypedArray()) }) {
+                A(
+                    href = SidebarItems.REVIEWS.url,
+                    attrs = {
+                        onClick { onClicked(SidebarItems.REVIEWS, it) }; classes(
+                        *listOfNotNull(
+                            "card-nav-link",
+                            if (itemClicked == SidebarItems.REVIEWS) "active" else null
+                        ).toTypedArray()
+                    )
+                    }) {
                     I(attrs = { classes("fi-star", "me-2") })
                     Text("Reviews")
                 }
-                A(href = "#", attrs = { onClick { onClicked(SidebarItems.NOTIFICATION,it)}; classes(*listOfNotNull("card-nav-link", if (isActive == SidebarItems.NOTIFICATION) "active" else null).toTypedArray()) }) {
+                A(
+                    href = SidebarItems.NOTIFICATION.url,
+                    attrs = {
+                        onClick {
+                            onClicked(
+                                SidebarItems.NOTIFICATION,
+                                it
+                            )
+                        }; classes(
+                        *listOfNotNull(
+                            "card-nav-link",
+                            if (itemClicked == SidebarItems.NOTIFICATION) "active" else null
+                        ).toTypedArray()
+                    )
+                    }) {
                     I(attrs = { classes("fi-bell", "me-2") })
                     Text("Notifications")
                 }
-                A(href = "help-center", attrs = { classes("card-nav-link") }) {
+                val ctx = rememberPageContext()
+                A(href = "/profile/help-center", attrs = { onClick {
+                    it.preventDefault()
+                    ctx.router.navigateTo("/profile/help-center")
+                };classes("card-nav-link") }) {
                     I(attrs = { classes("fi-help", "me-2") })
                     Text("Help")
                 }
-                A(href = "signin-dark.html", attrs = { classes("card-nav-link") }) {
+
+                A(
+                    href = "/",
+                    attrs = {
+                        onClick {
+                            it.preventDefault();
+                            ctx.router.navigateTo("/")
+                        }; classes("card-nav-link")
+                    }) {
                     I(attrs = { classes("fi-logout", "me-2") })
                     Text("Sign Out")
                 }
             }
         }
     }
-}
-
-fun updateUrlWithoutNavigation(newUrl: String) {
-    // Push new state without navigation
-    window.history.pushState(null, "", newUrl)
 }
 
 

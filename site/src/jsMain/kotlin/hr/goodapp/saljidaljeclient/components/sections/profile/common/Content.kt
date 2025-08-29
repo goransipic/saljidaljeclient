@@ -1,17 +1,20 @@
 package hr.goodapp.saljidaljeclient.components.sections.profile.common
 
 import androidx.compose.runtime.*
+import com.varabyte.kobweb.core.rememberPageContext
 import hr.goodapp.saljidaljeclient.components.sections.profile.*
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.dom.*
 
 @Composable
 fun Content(sidebarItems: SidebarItems) {
-    var item by remember { mutableStateOf(sidebarItems) }
-    Sidebar(item) { p1,p2 ->
-        p2.preventDefault()
-        item = p1
-        updateUrlWithoutNavigation(p1.url)
+    val ctx = rememberPageContext() // Get the router
+    var item by remember(sidebarItems) { mutableStateOf(sidebarItems) }
+
+    Sidebar(item) { menuItem,event ->
+        event.preventDefault()
+        item = menuItem
+        ctx.router.navigateTo(menuItem.url)
     }
     when(item) {
         SidebarItems.PERSONAL_INFO -> PersonalInfoContent()
