@@ -27,5 +27,5 @@ fun HomePage() {
     CtaCarousel()
     MobileAppCta()
     LatestNewsSection()
-    BackToTop()
+    //BackToTop()
 }
