@@ -2,6 +2,7 @@ package hr.goodapp.saljidaljeclient.components.sections.common
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.rememberPageContext
+import hr.goodapp.saljidaljeclient.components.widgets.CostumeLink
 import org.jetbrains.compose.web.dom.*
 
 @Composable
@@ -101,7 +102,7 @@ fun NavbarBar() {
 
                     // Home link
                     Li(attrs = { classes("nav-item", "active") }) {
-                        A("car-finder-home.html", attrs = { classes("nav-link") }) { Text("Home") }
+                        CostumeLink(href = "/", attrs = { classes("nav-link") }){ Text("Home") }
                     }
 
                     // Catalog dropdown
