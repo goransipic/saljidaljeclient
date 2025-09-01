@@ -11,6 +11,7 @@ import com.varabyte.kobweb.silk.SilkApp
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import hr.goodapp.saljidaljeclient.styles.registerCustomStyles
 import kotlinx.browser.document
 import org.w3c.dom.HTMLBodyElement
@@ -22,6 +23,7 @@ private const val COLOR_MODE_KEY = "saljidaljeclient:colorMode"
 fun initStyles(ctx: InitSilkContext) {
     ctx.stylesheet.registerCustomStyles()
     ctx.config.apply {
+        initialColorMode = ColorMode.DARK
         if (AppGlobals.isExporting) { // this works with inserting page loading but i dont know how????
             val htmlString = """
                 <!-- Page loading spinner-->
