@@ -10,6 +10,7 @@ import hr.goodapp.saljidaljeclient.components.layouts.PageLayoutData
 import hr.goodapp.saljidaljeclient.components.sections.category.CatalogList
 import hr.goodapp.saljidaljeclient.components.sections.category.FilterButton
 import hr.goodapp.saljidaljeclient.components.sections.category.FiltersSidebar
+import hr.goodapp.saljidaljeclient.components.sections.common.MarginButton
 import org.jetbrains.compose.web.dom.Div
 
 
@@ -17,7 +18,7 @@ import org.jetbrains.compose.web.dom.Div
 fun initCategoryPage(ctx: InitRouteContext) {
     ctx.data.add(PageLayoutData(content = {
         FilterButton()
-    }))
+    }, marginButton = MarginButton.MB_5))
 }
 
 @Composable

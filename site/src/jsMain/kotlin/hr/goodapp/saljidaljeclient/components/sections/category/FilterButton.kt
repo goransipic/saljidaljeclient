@@ -10,6 +10,7 @@ fun FilterButton() {
     Button(
         attrs = {
             classes("btn", "btn-primary", "btn-sm", "w-100", "rounded-0", "fixed-bottom", "d-lg-none")
+            style { property("height", "48px") }
             attr("type", "button")
             attr("data-bs-toggle", "offcanvas")
             attr("data-bs-target", "#filters-sidebar")

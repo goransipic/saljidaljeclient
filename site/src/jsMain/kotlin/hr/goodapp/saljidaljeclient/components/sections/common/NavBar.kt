@@ -114,9 +114,9 @@ fun NavbarBar() {
                             attr("aria-expanded", "false")
                         }) { Text("Catalog") }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                            Li { A("car-finder-catalog-list.html", attrs = { classes("dropdown-item") }) { Text("List View") } }
-                            Li { A("car-finder-catalog-grid.html", attrs = { classes("dropdown-item") }) { Text("Grid View") } }
-                            Li { A("car-finder-single.html", attrs = { classes("dropdown-item") }) { Text("Car Single Page") } }
+                            Li { CostumeLink("/category", attrs = { classes("dropdown-item") }) { Text("List View") } }
+//                            Li { A("car-finder-catalog-grid.html", attrs = { classes("dropdown-item") }) { Text("Grid View") } }
+                            Li { CostumeLink("/single", attrs = { classes("dropdown-item") }) { Text("Car Single Page") } }
                         }
                     }
 
@@ -125,16 +125,16 @@ fun NavbarBar() {
                         A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle", "dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Account") }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
                             listOf(
-                                "Personal Info" to "car-finder-account-info.html",
-                                "Password & Security" to "car-finder-account-security.html",
-                                "My Cars" to "car-finder-account-cars.html",
-                                "Wishlist" to "car-finder-account-wishlist.html",
-                                "Reviews" to "car-finder-account-reviews.html",
-                                "Notifications" to "car-finder-account-notifications.html",
+                                "Personal Info" to "/profile",
+                                "Password & Security" to "/profile/password-security",
+                                "My Cars" to "/profile/cars",
+                                "Wishlist" to "/profile/wish-list",
+                                "Reviews" to "/profile/reviews",
+                                "Notifications" to "/profile/notifications",
                                 "Sign In" to "signin-dark.html",
                                 "Sign Up" to "signup-dark.html"
                             ).forEach { (label, href) ->
-                                Li { A(href, attrs = { classes("dropdown-item") }) { Text(label) } }
+                                CostumeLink(href, attrs = { classes("dropdown-item") }) { Text(label) }
                             }
                         }
                     }

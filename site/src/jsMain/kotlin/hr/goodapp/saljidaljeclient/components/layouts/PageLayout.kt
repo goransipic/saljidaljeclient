@@ -10,7 +10,7 @@ import hr.goodapp.saljidaljeclient.components.widgets.*
 import org.jetbrains.compose.web.dom.Main
 
 
-data class PageLayoutData(val content: @Composable () -> Unit)
+data class PageLayoutData(val content: @Composable () -> Unit, val marginButton: MarginButton? = null)
 
 @Composable
 @Layout
@@ -51,5 +51,6 @@ fun PageLayout(ctx: PageContext, content: @Composable () -> Unit) {
     CustomFooter()
     if (data != null)
         data.content()
-    BackToTop()
+
+    BackToTop(data?.marginButton)
 }
