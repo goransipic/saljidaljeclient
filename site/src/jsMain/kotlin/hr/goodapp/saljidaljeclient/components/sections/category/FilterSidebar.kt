@@ -99,17 +99,22 @@ fun FiltersSidebar() {
                 }
 
                 // --- Make & Model ---
-                SectionDropdown("Make & Model", "Any make",
-                    listOf("Audi", "Infiniti", "Honda", "Hyundai", "Lexus", "Mazda", "Mitsubishi",
-                        "Mercedes-Benz", "Nissan", "Opel", "Renault", "Toyota")
-                )
-                Select(attrs = { classes("form-select", "form-select-light", "mb-1") }) {
-                    Option("", attrs = { attr("disabled", "true"); attr("selected", "true") }) { Text("Any model") }
-                    listOf("Altima", "Juke", "Leaf", "Maxima", "Micra", "Murano", "Note", "Pathfinder", "Patrol").forEach {
-                        Option(it) { Text(it) }
+                Div(attrs = { classes("pb-4", "mb-2") }) {
+                    H3(attrs = { classes("h6", "text-light") }) { Text("Make & Model") }
+                    Select(attrs = { classes("form-select", "form-select-light", "mb-2") }) {
+                        Option("", attrs = { attr("disabled", "true"); attr("selected", "true") }) { Text("Any make") }
+                        listOf("Audi", "Infiniti", "Honda", "Hyundai", "Lexus", "Mazda", "Mitsubishi",
+                            "Mercedes-Benz", "Nissan", "Opel", "Renault", "Toyota").forEach {
+                            Option(it) { Text(it) }
+                        }
+                    }
+                    Select(attrs = { classes("form-select", "form-select-light", "mb-1") }) {
+                        Option("", attrs = { attr("disabled", "true"); attr("selected", "true") }) { Text("Any model") }
+                        listOf("Altima", "Juke", "Leaf", "Maxima", "Micra", "Murano", "Note", "Pathfinder", "Patrol").forEach {
+                            Option(it) { Text(it) }
+                        }
                     }
                 }
-
                 // --- Price ---
                 Div(attrs = { classes("pb-4", "mb-2") }) {
                     H3(attrs = { classes("h6", "text-light") }) { Text("Price") }
