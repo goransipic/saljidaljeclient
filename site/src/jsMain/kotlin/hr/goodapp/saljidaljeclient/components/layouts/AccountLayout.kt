@@ -8,12 +8,12 @@ import hr.goodapp.saljidaljeclient.components.sections.common.Breadcrumb
 import hr.goodapp.saljidaljeclient.components.sections.profile.common.SidebarItems
 import org.jetbrains.compose.web.dom.Div
 
-class PageLayoutData(val title: SidebarItems)
+class AccountLayoutData(val title: SidebarItems)
 
 @Composable
 @Layout(".components.layouts.PageLayout")
 fun AccountLayout(ctx: PageContext, content: @Composable () -> Unit) {
-    val title = ctx.data.getValue<PageLayoutData>().title.title
+    val title = ctx.data.getValue<AccountLayoutData>().title.title
 
     Div(attrs = { classes("container", "pt-5", "pb-lg-4", "mt-5", "mb-sm-2") }) {
         Breadcrumb(title)

@@ -6,14 +6,14 @@ import com.varabyte.kobweb.core.data.add
 import com.varabyte.kobweb.core.init.InitRoute
 import com.varabyte.kobweb.core.init.InitRouteContext
 import com.varabyte.kobweb.core.layout.Layout
-import hr.goodapp.saljidaljeclient.components.layouts.PageLayoutData
+import hr.goodapp.saljidaljeclient.components.layouts.AccountLayoutData
 import hr.goodapp.saljidaljeclient.components.sections.profile.common.Content
 import hr.goodapp.saljidaljeclient.components.sections.profile.common.SidebarItems
 
 
 @InitRoute
 fun initNotificationsPage(ctx: InitRouteContext) {
-    ctx.data.add(PageLayoutData(SidebarItems.NOTIFICATION))
+    ctx.data.add(AccountLayoutData(SidebarItems.NOTIFICATION))
 }
 
 @Composable
