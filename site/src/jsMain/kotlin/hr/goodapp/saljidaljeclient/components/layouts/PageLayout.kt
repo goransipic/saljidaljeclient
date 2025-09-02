@@ -5,6 +5,8 @@ import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.core.data.get
 import com.varabyte.kobweb.core.layout.Layout
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import hr.goodapp.saljidaljeclient.components.sections.common.*
 import hr.goodapp.saljidaljeclient.components.widgets.*
 import org.jetbrains.compose.web.dom.Main
@@ -52,5 +54,6 @@ fun PageLayout(ctx: PageContext, content: @Composable () -> Unit) {
     if (data != null)
         data.content()
 
-    BackToTop(data?.marginButton)
+    val bp = rememberBreakpoint()
+    BackToTop(if (bp > Breakpoint.MD) null else data?.marginButton)
 }
