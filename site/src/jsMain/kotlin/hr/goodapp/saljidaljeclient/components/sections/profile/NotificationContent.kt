@@ -97,7 +97,7 @@ fun NotificationContent() {
                     id("all-notifications");
                     defaultChecked()
                     // you can add data attribute like:
-                    // attr("data-master-checkbox-for", "#notification-settings")
+                    attr("data-master-checkbox-for", "#notification-settings")
                 })
                 Label(attrs = { classes("form-check-label");}, forId = "all-notifications") {
                     Text("Enable / disable all notifications")
