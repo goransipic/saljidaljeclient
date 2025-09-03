@@ -140,7 +140,7 @@ fun smoothScroll() {
         "speed" to 800,
         "speedAsDuration" to true,
         "offset" to { _: dynamic, toggle: dynamic ->
-            toggle.dataset.scrollOffset?.toIntOrNull() ?: 40
+            (toggle.dataset.scrollOffset?.unsafeCast<String?>())?.toIntOrNull() ?: 40
         },
         "header" to fixedHeader,
         "updateURL" to false

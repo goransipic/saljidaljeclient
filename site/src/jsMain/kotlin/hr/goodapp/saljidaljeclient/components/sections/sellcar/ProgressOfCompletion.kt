@@ -33,7 +33,7 @@ fun ProgressOfCompletion() {
                 SidebarItem("#basic-info", "Osnovne informacije", completed = true)
                 SidebarItem("#price", "Cijena", completed = true)
                 SidebarItem("#vehicle-info", "Podaci o vozilu", completed = true)
-                SidebarItem("#features", "Karakteristike", completed = false)
+                SidebarItem("#features", "Značajke", completed = false)
                 SidebarItem("#photos", "Fotografije / video", completed = false)
                 SidebarItem("#location", "Lokacija", completed = true)
                 SidebarItem("#contacts", "Kontakt", completed = true)

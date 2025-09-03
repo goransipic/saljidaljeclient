@@ -28,10 +28,10 @@ fun FiltersSidebar() {
             Div(attrs = { classes("offcanvas-header", "bg-transparent", "d-block", "border-bottom", "border-light", "pt-0", "pt-lg-4", "px-lg-0") }) {
                 Ul(attrs = { classes("nav", "nav-tabs", "nav-tabs-light", "mb-0") }) {
                     Li(attrs = { classes("nav-item") }) {
-                        A("#", attrs = { classes("nav-link") }) { Text("Pretraži nove") }
+                        A("#", attrs = { classes("nav-link") }) { Text("Novi") }
                     }
                     Li(attrs = { classes("nav-item") }) {
-                        A("#", attrs = { classes("nav-link", "active") }) { Text("Pretraži rabljene") }
+                        A("#", attrs = { classes("nav-link", "active") }) { Text("Rabljeni") }
                     }
                 }
             }
