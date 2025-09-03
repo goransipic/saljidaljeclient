@@ -39,10 +39,10 @@ fun CtaCarousel() {
                             }) {
                                 H2(attrs = { classes("text-light") }) { Text("Auto Market") }
                                 P(attrs = { classes("fs-lg", "text-light", "opacity-70", "pb-md-4") }) {
-                                    Text("Choose the best for your car!")
+                                    Text("Odaberi najbolje za svoj automobil!")
                                 }
                                 A(href = "car-finder-catalog-grid.html", attrs = { classes("btn", "btn-primary") }) {
-                                    Text("Go to shop")
+                                    Text("Idi u trgovinu")
                                     I(attrs = { classes("fi-chevron-right", "fs-sm", "ms-2") }) {}
                                 }
                             }
@@ -58,10 +58,10 @@ fun CtaCarousel() {
                                     )
                                 }) {
                                     listOf(
-                                        "Seat Covers" to "01.png",
-                                        "Tires" to "02.png",
-                                        "Disks" to "03.png",
-                                        "Child Seats" to "04.png"
+                                        "Navlake za sjedala" to "01.png",
+                                        "Gume" to "02.png",
+                                        "Felge" to "03.png",
+                                        "Dječja sjedala" to "04.png"
                                     ).forEach { (label, img) ->
                                         A(
                                             href = "#",
@@ -69,7 +69,6 @@ fun CtaCarousel() {
                                             Img(src = "img/car-finder/categories/$img", attrs = {
                                                 classes("d-block", "mb-2", "mx-auto")
                                                 width(168)
-
                                             }, alt = label)
                                             Div(attrs = { classes("fw-bold", "text-center", "pt-1") }) { Text(label) }
                                         }
@@ -95,12 +94,12 @@ fun CtaCarousel() {
                                     "text-md-start"
                                 )
                             }) {
-                                H2(attrs = { classes("text-light") }) { Text("Car sale in 24 hours") }
+                                H2(attrs = { classes("text-light") }) { Text("Prodaja auta u 24h") }
                                 P(attrs = { classes("fs-lg", "text-light", "opacity-70", "pb-md-4") }) {
-                                    Text("Calculate your car's value, then choose how you want to sell.")
+                                    Text("Izračunaj vrijednost svog auta i odaberi kako želiš prodati.")
                                 }
                                 A(href = "car-finder-sell-car.html", attrs = { classes("btn", "btn-primary") }) {
-                                    Text("Sell my car")
+                                    Text("Prodaj moj auto")
                                     I(attrs = { classes("fi-chevron-right", "fs-sm", "ms-2") }) {}
                                 }
                             }
@@ -117,9 +116,9 @@ fun CtaCarousel() {
                                     )
                                 }) {
                                     listOf(
-                                        "Vetted buyers" to "buyers.svg",
-                                        "Smart tools" to "tools.svg",
-                                        "The offer you deserve" to "handshake.svg"
+                                        "Provjereni kupci" to "buyers.svg",
+                                        "Pametni alati" to "tools.svg",
+                                        "Ponuda koju zaslužuješ" to "handshake.svg"
                                     ).forEach { (label, img) ->
                                         Div(attrs = { classes("col") }) {
                                             Div(attrs = {

@@ -30,38 +30,38 @@ fun SignupModal() {
                         // Left side
                         Div({ classes("col-md-6", "border-end-md", "border-light", "p-4", "p-sm-5") }) {
                             H2({ classes("h3", "text-light", "mb-4", "mb-sm-5") }) {
-                                Text("Join Finder.")
+                                Text("Pridružite se Finderu.")
                                 Br()
-                                Text("Get premium benefits:")
+                                Text("Iskoristite premium pogodnosti:")
                             }
 
                             Ul({ classes("list-unstyled", "mb-4", "mb-sm-5") }) {
                                 Li({ classes("d-flex", "mb-2") }) {
                                     I({ classes("fi-check-circle", "text-primary", "mt-1", "me-2") })
-                                    Span({ classes("text-light") }) { Text("Add and promote your listings") }
+                                    Span({ classes("text-light") }) { Text("Dodajte i promovirajte svoje oglase") }
                                 }
                                 Li({ classes("d-flex", "mb-2") }) {
                                     I({ classes("fi-check-circle", "text-primary", "mt-1", "me-2") })
-                                    Span({ classes("text-light") }) { Text("Easily manage your wishlist") }
+                                    Span({ classes("text-light") }) { Text("Jednostavno upravljajte listom želja") }
                                 }
                                 Li({ classes("d-flex", "mb-0") }) {
                                     I({ classes("fi-check-circle", "text-primary", "mt-1", "me-2") })
-                                    Span({ classes("text-light") }) { Text("Leave reviews") }
+                                    Span({ classes("text-light") }) { Text("Ostavite recenzije") }
                                 }
                             }
 
-                            Img(src = "/img/signin-modal/signup-dark.svg", alt = "Illustration") {
+                            Img(src = "/img/signin-modal/signup-dark.svg", alt = "Ilustracija") {
                                 classes("d-block", "mx-auto")
                                 attr("width", "344")
                             }
 
                             Div({ classes("text-light", "mt-sm-4", "pt-md-3") }) {
-                                Span({ classes("opacity-60") }) { Text("Already have an account? ") }
+                                Span({ classes("opacity-60") }) { Text("Već imate račun? ") }
                                 A(href = "#signin-modal", attrs = {
                                     classes("text-light")
                                     attr("data-bs-toggle", "modal")
                                     attr("data-bs-dismiss", "modal")
-                                }) { Text("Sign in") }
+                                }) { Text("Prijavite se") }
                             }
                         }
 
@@ -69,16 +69,16 @@ fun SignupModal() {
                         Div({ classes("col-md-6", "px-4", "pt-2", "pb-4", "px-sm-5", "pb-sm-5", "pt-md-5") }) {
                             A("#", attrs = { classes("btn", "btn-outline-info", "w-100", "mb-3") }) {
                                 I({ classes("fi-google", "fs-lg", "me-1") })
-                                Text("Sign in with Google")
+                                Text("Prijava putem Google-a")
                             }
                             A("#", attrs = { classes("btn", "btn-outline-info", "w-100", "mb-3") }) {
                                 I({ classes("fi-facebook", "fs-lg", "me-1") })
-                                Text("Sign in with Facebook")
+                                Text("Prijava putem Facebook-a")
                             }
 
                             Div({ classes("d-flex", "align-items-center", "py-3", "mb-3") }) {
                                 Hr({ classes("hr-light", "w-100") })
-                                Div({ classes("text-light", "opacity-70", "px-3") }) { Text("Or") }
+                                Div({ classes("text-light", "opacity-70", "px-3") }) { Text("Ili") }
                                 Hr({ classes("hr-light", "w-100") })
                             }
 
@@ -88,22 +88,22 @@ fun SignupModal() {
                             }) {
                                 // Name
                                 Div({ classes("mb-4") }) {
-                                    Label(forId = "signup-name", attrs = { classes("form-label", "text-light") }) { Text("Full name") }
+                                    Label(forId = "signup-name", attrs = { classes("form-label", "text-light") }) { Text("Puno ime") }
                                     Input(InputType.Text) {
                                         classes("form-control", "form-control-light")
                                         id("signup-name")
-                                        placeholder("Enter your full name")
+                                        placeholder("Unesite svoje puno ime")
                                         required()
                                     }
                                 }
 
                                 // Email
                                 Div({ classes("mb-4") }) {
-                                    Label(forId = "signup-email", attrs = { classes("form-label", "text-light") }) { Text("Email address") }
+                                    Label(forId = "signup-email", attrs = { classes("form-label", "text-light") }) { Text("Email adresa") }
                                     Input(InputType.Email) {
                                         classes("form-control", "form-control-light")
                                         id("signup-email")
-                                        placeholder("Enter your email")
+                                        placeholder("Unesite svoj email")
                                         required()
                                     }
                                 }
@@ -111,8 +111,8 @@ fun SignupModal() {
                                 // Password
                                 Div({ classes("mb-4") }) {
                                     Label(forId = "signup-password", attrs = { classes("form-label", "text-light") }) {
-                                        Text("Password ")
-                                        Span({ classes("fs-sm", "opacity-50") }) { Text("min. 8 char") }
+                                        Text("Lozinka ")
+                                        Span({ classes("fs-sm", "opacity-50") }) { Text("min. 8 znakova") }
                                     }
                                     Div({ classes("password-toggle") }) {
                                         Input(InputType.Password) {
@@ -123,7 +123,7 @@ fun SignupModal() {
                                         }
                                         Label(attrs = {
                                             classes("password-toggle-btn")
-                                            attr("aria-label", "Show/hide password")
+                                            attr("aria-label", "Prikaži/sakrij lozinku")
                                         }) {
                                             Input(InputType.Checkbox) { classes("password-toggle-check") }
                                             Span({ classes("password-toggle-indicator") })
@@ -133,7 +133,7 @@ fun SignupModal() {
 
                                 // Confirm Password
                                 Div({ classes("mb-4") }) {
-                                    Label(forId = "signup-password-confirm", attrs = { classes("form-label", "text-light") }) { Text("Confirm password") }
+                                    Label(forId = "signup-password-confirm", attrs = { classes("form-label", "text-light") }) { Text("Potvrdite lozinku") }
                                     Div({ classes("password-toggle") }) {
                                         Input(InputType.Password) {
                                             classes("form-control", "form-control-light")
@@ -143,7 +143,7 @@ fun SignupModal() {
                                         }
                                         Label(attrs = {
                                             classes("password-toggle-btn")
-                                            attr("aria-label", "Show/hide password")
+                                            attr("aria-label", "Prikaži/sakrij lozinku")
                                         }) {
                                             Input(InputType.Checkbox) { classes("password-toggle-check") }
                                             Span({ classes("password-toggle-indicator") })
@@ -159,20 +159,20 @@ fun SignupModal() {
                                         required()
                                     }
                                     Label(forId = "agree-to-terms", attrs = { classes("form-check-label") }) {
-                                        Span({ classes("opacity-70") }) { Text("By joining, I agree to the") }
+                                        Span({ classes("opacity-70") }) { Text("Pridruživanjem prihvaćam") }
                                         Text(" ")
-                                        A("#", attrs = { classes("text-light") }) { Text("Terms of use") }
+                                        A("#", attrs = { classes("text-light") }) { Text("Uvjete korištenja") }
                                         Text(" ")
-                                        Span({ classes("opacity-70") }) { Text("and") }
+                                        Span({ classes("opacity-70") }) { Text("i") }
                                         Text(" ")
-                                        A("#", attrs = { classes("text-light") }) { Text("Privacy policy") }
+                                        A("#", attrs = { classes("text-light") }) { Text("Pravila privatnosti") }
                                     }
                                 }
 
                                 Button(attrs = {
                                     classes("btn", "btn-primary", "btn-lg", "w-100")
                                     type(ButtonType.Submit)
-                                }) { Text("Sign up") }
+                                }) { Text("Registracija") }
                             }
                         }
                     }

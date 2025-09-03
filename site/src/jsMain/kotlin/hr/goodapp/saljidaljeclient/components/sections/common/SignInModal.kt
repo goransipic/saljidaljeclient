@@ -20,21 +20,21 @@ fun SignInModal() {
                         // LEFT SIDE
                         Div({ classes("col-md-6", "border-end-md", "border-light", "p-4", "p-sm-5") }) {
                             H2({ classes("h3", "text-light", "mb-4", "mb-sm-5") }) {
-                                Text("Hey there! ")
+                                Text("Pozdrav! ")
                                 Br()
-                                Text("Welcome back.")
+                                Text("Dobrodošli natrag.")
                             }
-                            Img(src = "/img/signin-modal/signin-dark.svg", alt = "Illustration") {
+                            Img(src = "/img/signin-modal/signin-dark.svg", alt = "Ilustracija") {
                                 classes("d-block", "mx-auto")
                                 attr("width", "344")
                             }
                             Div({ classes("text-light", "mt-4", "mt-sm-5") }) {
-                                Span({ classes("opacity-60") }) { Text("Don't have an account? ") }
+                                Span({ classes("opacity-60") }) { Text("Nemate račun? ") }
                                 A("#signup-modal", {
                                     classes("text-light")
                                     attr("data-bs-toggle", "modal")
                                     attr("data-bs-dismiss", "modal")
-                                }) { Text("Sign up here") }
+                                }) { Text("Registrirajte se ovdje") }
                             }
                         }
 
@@ -42,16 +42,16 @@ fun SignInModal() {
                         Div({ classes("col-md-6", "px-4", "pt-2", "pb-4", "px-sm-5", "pb-sm-5", "pt-md-5") }) {
                             A("#", { classes("btn", "btn-outline-info", "w-100", "mb-3") }) {
                                 I({ classes("fi-google", "fs-lg", "me-1") })
-                                Text("Sign in with Google")
+                                Text("Prijava putem Google-a")
                             }
                             A("#", { classes("btn", "btn-outline-info", "w-100", "mb-3") }) {
                                 I({ classes("fi-facebook", "fs-lg", "me-1") })
-                                Text("Sign in with Facebook")
+                                Text("Prijava putem Facebook-a")
                             }
 
                             Div({ classes("d-flex", "align-items-center", "py-3", "mb-3") }) {
                                 Hr({ classes("hr-light", "w-100") })
-                                Div({ classes("text-light", "opacity-70", "px-3") }) { Text("Or") }
+                                Div({ classes("text-light", "opacity-70", "px-3") }) { Text("Ili") }
                                 Hr({ classes("hr-light", "w-100") })
                             }
 
@@ -59,12 +59,12 @@ fun SignInModal() {
                                 // Email
                                 Div({ classes("mb-4") }) {
                                     Label(attrs = { classes("form-label", "text-light", "mb-2"); attr("for", "signin-email") }) {
-                                        Text("Email address")
+                                        Text("Email adresa")
                                     }
                                     Input(InputType.Email) {
                                         classes("form-control", "form-control-light")
                                         id("signin-email")
-                                        attr("placeholder", "Enter your email")
+                                        attr("placeholder", "Unesite svoj email")
                                         attr("required", "")
                                     }
                                 }
@@ -73,19 +73,19 @@ fun SignInModal() {
                                 Div({ classes("mb-4") }) {
                                     Div({ classes("d-flex", "align-items-center", "justify-content-between", "mb-2") }) {
                                         Label(attrs = { classes("form-label", "text-light", "mb-0"); attr("for", "signin-password") }) {
-                                            Text("Password")
+                                            Text("Lozinka")
                                         }
-                                        A("#", { classes("fs-sm", "text-light") }) { Text("Forgot password?") }
+                                        A("#", { classes("fs-sm", "text-light") }) { Text("Zaboravili ste lozinku?") }
                                     }
 
                                     Div({ classes("password-toggle") }) {
                                         Input(InputType.Password) {
                                             classes("form-control", "form-control-light")
                                             id("signin-password")
-                                            attr("placeholder", "Enter password")
+                                            attr("placeholder", "Unesite lozinku")
                                             attr("required", "")
                                         }
-                                        Label(attrs ={ classes("password-toggle-btn"); attr("aria-label", "Show/hide password") }) {
+                                        Label(attrs ={ classes("password-toggle-btn"); attr("aria-label", "Prikaži/sakrij lozinku") }) {
                                             Input(InputType.Checkbox) { classes("password-toggle-check") }
                                             Span({ classes("password-toggle-indicator") })
                                         }
@@ -96,7 +96,7 @@ fun SignInModal() {
                                     classes("btn", "btn-primary", "btn-lg", "w-100")
                                     attr("type", "submit")
                                 }) {
-                                    Text("Sign in")
+                                    Text("Prijava")
                                 }
                             }
                         }

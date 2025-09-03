@@ -19,9 +19,9 @@ fun LatestCarsSection() {
             "price" to "$37,900",
             "location" to "New York",
             "mileage" to "16K mi",
-            "transmission" to "Automatic",
-            "fuel" to "Gasoline",
-            "badge" to "Used",
+            "transmission" to "Automatski",
+            "fuel" to "Benzin",
+            "badge" to "Rabljeno",
             "img" to "img/car-finder/catalog/04.jpg"
         ),
         mapOf(
@@ -30,11 +30,11 @@ fun LatestCarsSection() {
             "price" to "$26,950",
             "location" to "Kansas",
             "mileage" to "34K mi",
-            "transmission" to "Manual",
-            "fuel" to "Diesel",
-            "badge" to "Used",
+            "transmission" to "Manualni",
+            "fuel" to "Dizel",
+            "badge" to "Rabljeno",
             "img" to "img/car-finder/catalog/08.jpg",
-            "certified" to "Certified"
+            "certified" to "Certificirano"
         ),
         mapOf(
             "year" to "2019",
@@ -42,9 +42,9 @@ fun LatestCarsSection() {
             "price" to "$29,700",
             "location" to "Los Angeles",
             "mileage" to "18K mi",
-            "transmission" to "Manual",
-            "fuel" to "Gasoline",
-            "badge" to "Used",
+            "transmission" to "Manualni",
+            "fuel" to "Benzin",
+            "badge" to "Rabljeno",
             "img" to "img/car-finder/catalog/03.jpg"
         ),
         mapOf(
@@ -53,9 +53,9 @@ fun LatestCarsSection() {
             "price" to "$53,600",
             "location" to "San Francisco",
             "mileage" to "35K mi",
-            "transmission" to "Automatic",
-            "fuel" to "Hybrid",
-            "badge" to "Used",
+            "transmission" to "Automatski",
+            "fuel" to "Hibrid",
+            "badge" to "Rabljeno",
             "img" to "img/car-finder/catalog/02.jpg"
         )
     )
@@ -73,12 +73,12 @@ fun LatestCarsSection() {
             )
         }) {
             H2(attrs = { classes("h3", "text-light", "mb-3", "mb-sm-0") }) {
-                Text("Latest cars")
+                Text("Najnoviji automobili")
             }
 
             Div(attrs = { classes("d-flex", "align-items-center") }) {
                 Ul(attrs = { classes("nav", "nav-tabs", "nav-tabs-light", "fs-sm", "me-4", "pe-2", "mb-0") }) {
-                    listOf("New", "Used").forEachIndexed { i, tab ->
+                    listOf("Novi", "Rabljeni").forEachIndexed { i, tab ->
                         Li(attrs = { classes("nav-item") }) {
                             A(
                                 href = "#",
@@ -101,7 +101,7 @@ fun LatestCarsSection() {
                         "px-0"
                     ); href("car-finder-catalog-grid.html")
                 }) {
-                    Text("View all")
+                    Text("Prikaži sve")
                     I(attrs = { classes("fi-arrow-long-right", "fs-sm", "mt-0", "ps-1", "ms-2") })
                 }
             }
@@ -142,7 +142,7 @@ fun LatestCarsSection() {
                                             attr("data-bs-html", "true")
                                             attr(
                                                 "data-bs-content",
-                                                """<div class="d-flex"><i class="fi-award mt-1 me-2"></i><div>This car is checked and<br>certified by Finder.</div></div>"""
+                                                """<div class="d-flex"><i class="fi-award mt-1 me-2"></i><div>Ovaj automobil je provjeren i<br>certificiran od strane Findera.</div></div>"""
                                             )
                                         }) {
                                             Text(it)
@@ -165,7 +165,7 @@ fun LatestCarsSection() {
                                         I(attrs = { classes("fi-heart") })
                                     }
                                 }
-                                Img(src = car["img"]!!, attrs = { alt("Image") })
+                                Img(src = car["img"]!!, attrs = { alt("Slika") })
                             }
 
                             // Card body
@@ -189,7 +189,7 @@ fun LatestCarsSection() {
                                                 "fs-sm"
                                             ); attr ("for","compare${cars.indexOf(car) + 4}")
                                         }) {
-                                            Text("Compare")
+                                            Text("Usporedi")
                                         }
                                     }
                                 }

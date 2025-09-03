@@ -14,12 +14,12 @@ fun Breadcrumb(title: String) {
         Ol(attrs = { classes("breadcrumb", "breadcrumb-light") }) {
             Li(attrs = { classes("breadcrumb-item") }) {
                 A(href = "car-finder-home.html") {
-                    Text("Home")
+                    Text("Početna")
                 }
             }
             Li(attrs = { classes("breadcrumb-item") }) {
                 A(href = "car-finder-account-info.html") {
-                    Text("Account")
+                    Text("Račun")
                 }
             }
             Li(

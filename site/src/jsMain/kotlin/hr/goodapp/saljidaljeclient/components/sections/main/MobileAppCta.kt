@@ -25,12 +25,12 @@ fun MobileAppCta() {
                 )
             }) {
                 H2(attrs = { classes("text-light", "mb-4") }) {
-                    Text("Get the top-rated app!")
+                    Text("Preuzmite najbolje ocijenjenu aplikaciju!")
                 }
                 P(attrs = { classes("fs-lg", "text-light", "opacity-70", "mb-md-5") }) {
                     Text(
-                        "Download Finder App and join the community of car enthusiasts. " +
-                                "Don't stop your car search when you leave your computer with our Android and iOS app!"
+                        "Preuzmite Finder App i pridružite se zajednici ljubitelja automobila. " +
+                                "Ne prekidajte pretraživanje automobila kada napustite računalo – koristite našu Android i iOS aplikaciju!"
                     )
                 }
                 Div(attrs = {
@@ -42,7 +42,6 @@ fun MobileAppCta() {
                         "justify-content-md-start"
                     )
                 }) {
-
 
                     // App Store Button
                     A(
@@ -116,7 +115,7 @@ fun MobileAppCta() {
                 Img(src = "img/car-finder/home/mobile-app.png", attrs = {
                     classes("d-block", "mx-auto")
                     attr("width", "460")
-                    attr("alt", "Mobile App")
+                    attr("alt", "Mobilna aplikacija")
                 })
             }
         }

@@ -66,8 +66,8 @@ fun CustomFooter() {
             Div({ classes("row", "pt-2", "pt-lg-0") }) {
                 // Column 1
                 Div({ classes("col-lg-3", "pb-2", "mb-4") }) {
-                    H3({ classes("h5", "text-light", "mb-2") }) { Text("Subscribe to our newsletter") }
-                    P({ classes("fs-sm", "text-light", "opacity-70") }) { Text("Don’t miss any relevant offers!") }
+                    H3({ classes("h5", "text-light", "mb-2") }) { Text("Pretplatite se na naš newsletter") }
+                    P({ classes("fs-sm", "text-light", "opacity-70") }) { Text("Ne propustite nijednu relevantnu ponudu!") }
                     Form(attrs = { classes("form-group", "form-group-light", "w-100") }) {
                         Div({ classes("input-group", "input-group-sm") }) {
                             Span({ classes("input-group-text") }) {
@@ -75,7 +75,7 @@ fun CustomFooter() {
                             }
                             Input(type = InputType.Text, attrs = {
                                 classes("form-control")
-                                attr("placeholder", "Your email")
+                                attr("placeholder", "Vaš email")
                             })
                         }
                         Button(attrs = {
@@ -89,9 +89,9 @@ fun CustomFooter() {
 
                 // Column 2
                 Div({ classes("col-lg-2", "col-md-3", "col-sm-6", "offset-xl-1", "mb-2", "mb-sm-4") }) {
-                    H3({ classes("fs-base", "text-light") }) { Text("Buying & Selling") }
+                    H3({ classes("fs-base", "text-light") }) { Text("Kupnja i prodaja") }
                     Ul({ classes("list-unstyled", "fs-sm") }) {
-                        listOf("Find a car", "Sell your car", "Car dealers", "Compare cars", "Online car appraisal").forEach {
+                        listOf("Pronađite auto", "Prodajte svoj auto", "Autokuće", "Usporedite aute", "Online procjena auta").forEach {
                             Li { A("#", { classes("nav-link-light") }) { Text(it) } }
                         }
                     }
@@ -99,9 +99,9 @@ fun CustomFooter() {
 
                 // Column 3
                 Div({ classes("col-lg-2", "col-md-3", "col-sm-6", "mb-2", "mb-sm-4") }) {
-                    H3({ classes("fs-base", "text-light") }) { Text("About") }
+                    H3({ classes("fs-base", "text-light") }) { Text("O nama") }
                     Ul({ classes("list-unstyled", "fs-sm") }) {
-                        listOf("About Finder", "Contact us", "FAQs & support", "Mobile app", "Blog").forEach {
+                        listOf("O Finderu", "Kontakt", "FAQs & podrška", "Mobilna aplikacija", "Blog").forEach {
                             Li { A("#", { classes("nav-link-light") }) { Text(it) } }
                         }
                     }
@@ -109,9 +109,9 @@ fun CustomFooter() {
 
                 // Column 4
                 Div({ classes("col-lg-2", "col-md-3", "col-sm-6", "mb-2", "mb-sm-4") }) {
-                    H3({ classes("fs-base", "text-light") }) { Text("Profile") }
+                    H3({ classes("fs-base", "text-light") }) { Text("Profil") }
                     Ul({ classes("list-unstyled", "fs-sm") }) {
-                        listOf("My account", "Wishlist", "My listings", "Add listing").forEach {
+                        listOf("Moj račun", "Lista želja", "Moje objave", "Dodaj objavu").forEach {
                             Li { A("#", { classes("nav-link-light") }) { Text(it) } }
                         }
                     }
@@ -141,19 +141,19 @@ fun CustomFooter() {
         // Bottom legal + links
         Div({ classes("container", "d-lg-flex", "align-items-center", "justify-content-between", "fs-sm", "pb-3") }) {
             Div({ classes("d-flex", "flex-wrap", "justify-content-center", "order-lg-2", "mb-3") }) {
-                listOf("Terms of use", "Privacy policy", "Accessibility statement", "Interest based ads").forEach {
+                listOf("Uvjeti korištenja", "Politika privatnosti", "Izjava o pristupačnosti", "Oglasi temeljeni na interesima").forEach {
                     A("#", { classes(
                         *listOfNotNull(
                             "nav-link",
                             "nav-link-light",
                             "fw-normal",
-                            if (it == "Interest based ads") "pe-0" else null
+                            if (it == "Oglasi temeljeni na interesima") "pe-0" else "pe-2"
                         ).toTypedArray()
                     ) }) { Text(it) }
                 }
             }
             P({ classes("text-center", "text-lg-start", "order-lg-1", "mb-lg-0") }) {
-                Span({ classes("text-light", "opacity-50") }) { Text("© All rights reserved. Made by ") }
+                Span({ classes("text-light", "opacity-50") }) { Text("© Sva prava zadržana. Izradio ") }
                 A("https://createx.studio/", {
                     classes("nav-link-light", "fw-bold")
                     attr("target", "_blank")

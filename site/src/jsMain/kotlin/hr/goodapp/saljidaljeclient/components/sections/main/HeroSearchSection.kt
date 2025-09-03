@@ -19,10 +19,10 @@ fun HeroSearchSection() {
                 // Left column (text)
                 Div(attrs = { classes("col-lg-4", "col-md-5", "pt-3", "pt-md-4", "pt-lg-5") }) {
                     H1(attrs = { classes("display-4", "text-light", "pb-2", "mb-4", "me-md-n5") }) {
-                        Text("Easy way to find the right car")
+                        Text("Brzo do pravog auta")
                     }
                     P(attrs = { classes("fs-lg", "text-light", "opacity-70") }) {
-                        Text("Finder is a leading digital marketplace for the automotive industry that connects car shoppers with sellers.")
+                        Text("Finder je vodeće digitalno tržište za automobilsku industriju koje povezuje kupce vozila s prodavateljima.")
                     }
                 }
 
@@ -30,7 +30,7 @@ fun HeroSearchSection() {
                 Div(attrs = { classes("col-lg-8", "col-md-7", "pt-md-5") }) {
                     Img(
                         src = "img/car-finder/home/hero-img.png",
-                        alt = "Car",
+                        alt = "Automobil",
                         attrs = { classes("d-block", "mt-4", "ms-auto"); attr("width", "800") }
                     )
                 }
@@ -39,54 +39,47 @@ fun HeroSearchSection() {
 
         // Search + Tabs container
         Div(attrs = { classes("container", "mt-4", "mt-sm-3", "mt-lg-n3", "pb-5", "mb-md-4") }) {
-            // Tabs
+            // Kartice
             Ul(attrs = { classes("nav", "nav-tabs", "nav-tabs-light", "mb-4") }) {
                 Li(attrs = { classes("nav-item") }) {
-                    A("#", attrs = { classes("nav-link", "active") }) { Text("New") }
+                    A("#", attrs = { classes("nav-link", "active") }) { Text("Novi") }
                 }
                 Li(attrs = { classes("nav-item") }) {
-                    A("#", attrs = { classes("nav-link") }) { Text("Used") }
+                    A("#", attrs = { classes("nav-link") }) { Text("Rabljeni") }
                 }
             }
 
             // Form
             Form(attrs = { classes("form-group", "form-group-light", "d-block") }) {
                 Div(attrs = { classes("row", "g-0", "ms-lg-n2") }) {
-                    // Keywords input
+                    // Ključne riječi input
                     Div(attrs = { classes("col-lg-2") }) {
                         Div(attrs = { classes("input-group", "border-end-lg", "border-light") }) {
                             Span(attrs = { classes("input-group-text", "text-muted", "ps-2", "ps-sm-3") }) {
                                 I(attrs = { classes("fi-search") })
                             }
                             Input(type = InputType.Text, attrs = {
-                                classes("form-control"); attr(
-                                "name",
-                                "keywords"
-                            ); attr("placeholder", "Keywords...")
+                                classes("form-control")
+                                attr("name", "keywords")
+                                attr("placeholder", "Ključne riječi...")
                             })
                         }
                     }
                     Hr(attrs = { classes("hr-light", "d-lg-none", "my-2") })
 
-                    // Make dropdown
+                    // Marka dropdown
                     Div(attrs = { classes("col-lg-2", "col-md-3", "col-sm-6") }) {
                         Div(attrs = {
-                            classes("dropdown", "border-end-sm", "border-light"); attr(
-                            "data-bs-toggle",
-                            "select"
-                        )
+                            classes("dropdown", "border-end-sm", "border-light")
+                            attr("data-bs-toggle", "select")
                         }) {
                             Button(attrs = {
-                                classes(
-                                    "btn",
-                                    "btn-link",
-                                    "dropdown-toggle",
-                                    "ps-2",
-                                    "ps-sm-3"
-                                ); attr("type", "button"); attr("data-bs-toggle", "dropdown")
+                                classes("btn", "btn-link", "dropdown-toggle", "ps-2", "ps-sm-3")
+                                attr("type", "button")
+                                attr("data-bs-toggle", "dropdown")
                             }) {
                                 I(attrs = { classes("fi-list", "me-2") })
-                                Span(attrs = { classes("dropdown-toggle-label") }) { Text("Make") }
+                                Span(attrs = { classes("dropdown-toggle-label") }) { Text("Marka") }
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "make") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
@@ -113,19 +106,13 @@ fun HeroSearchSection() {
                     // Model dropdown
                     Div(attrs = { classes("col-lg-2", "col-md-3", "col-sm-6") }) {
                         Div(attrs = {
-                            classes("dropdown", "border-end-md", "border-light"); attr(
-                            "data-bs-toggle",
-                            "select"
-                        )
+                            classes("dropdown", "border-end-md", "border-light")
+                            attr("data-bs-toggle", "select")
                         }) {
                             Button(attrs = {
-                                classes(
-                                    "btn",
-                                    "btn-link",
-                                    "dropdown-toggle",
-                                    "ps-2",
-                                    "ps-sm-3"
-                                ); attr("type", "button"); attr("data-bs-toggle", "dropdown")
+                                classes("btn", "btn-link", "dropdown-toggle", "ps-2", "ps-sm-3")
+                                attr("type", "button")
+                                attr("data-bs-toggle", "dropdown")
                             }) {
                                 I(attrs = { classes("fi-list", "me-2") })
                                 Span(attrs = { classes("dropdown-toggle-label") }) { Text("Model") }
@@ -156,34 +143,28 @@ fun HeroSearchSection() {
                     // Body type dropdown
                     Div(attrs = { classes("col-lg-2", "col-md-3", "col-sm-6") }) {
                         Div(attrs = {
-                            classes("dropdown", "border-end-sm", "border-light"); attr(
-                            "data-bs-toggle",
-                            "select"
-                        )
+                            classes("dropdown", "border-end-sm", "border-light")
+                            attr("data-bs-toggle", "select")
                         }) {
                             Button(attrs = {
-                                classes(
-                                    "btn",
-                                    "btn-link",
-                                    "dropdown-toggle",
-                                    "ps-2",
-                                    "ps-sm-3"
-                                ); attr("type", "button"); attr("data-bs-toggle", "dropdown")
+                                classes("btn", "btn-link", "dropdown-toggle", "ps-2", "ps-sm-3")
+                                attr("type", "button")
+                                attr("data-bs-toggle", "dropdown")
                             }) {
                                 I(attrs = { classes("fi-car", "fs-lg", "me-2") })
-                                Span(attrs = { classes("dropdown-toggle-label") }) { Text("Body type") }
+                                Span(attrs = { classes("dropdown-toggle-label") }) { Text("Karoserija") }
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "type") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
                                 listOf(
-                                    "Compact",
+                                    "Kompakt",
                                     "Crossover",
-                                    "Coupe",
-                                    "Family MPV",
+                                    "Kupe",
+                                    "Obiteljski MPV",
                                     "Pickup",
-                                    "Sedan",
+                                    "Limuzina",
                                     "SUV",
-                                    "Wagon"
+                                    "Karavan"
                                 ).forEach { type ->
                                     Li {
                                         A("#", attrs = { classes("dropdown-item") }) {
@@ -200,16 +181,12 @@ fun HeroSearchSection() {
                     Div(attrs = { classes("col-lg-2", "col-md-3", "col-sm-6") }) {
                         Div(attrs = { classes("dropdown"); attr("data-bs-toggle", "select") }) {
                             Button(attrs = {
-                                classes(
-                                    "btn",
-                                    "btn-link",
-                                    "dropdown-toggle",
-                                    "ps-2",
-                                    "ps-sm-3"
-                                ); attr("type", "button"); attr("data-bs-toggle", "dropdown")
+                                classes("btn", "btn-link", "dropdown-toggle", "ps-2", "ps-sm-3")
+                                attr("type", "button")
+                                attr("data-bs-toggle", "dropdown")
                             }) {
                                 I(attrs = { classes("fi-map-pin", "me-2") })
-                                Span(attrs = { classes("dropdown-toggle-label") }) { Text("Location") }
+                                Span(attrs = { classes("dropdown-toggle-label") }) { Text("Lokacija") }
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "location") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
@@ -236,11 +213,9 @@ fun HeroSearchSection() {
                     // Search button
                     Div(attrs = { classes("col-lg-2") }) {
                         Button(attrs = {
-                            classes("btn", "btn-primary", "w-100"); attr(
-                            "type",
-                            "submit"
-                        )
-                        }) { Text("Search") }
+                            classes("btn", "btn-primary", "w-100")
+                            attr("type", "submit")
+                        }) { Text("Pretraži") }
                     }
                 }
             }

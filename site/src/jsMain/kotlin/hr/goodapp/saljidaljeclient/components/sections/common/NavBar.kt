@@ -44,7 +44,7 @@ fun NavbarBar() {
                 attr("data-bs-toggle", "modal")
             }) {
                 I(attrs = { classes("fi-user", "me-2") })
-                Text("Sign in")
+                Text("Prijava")
             }
 
             A("/sell-car", attrs = { onClick {
@@ -54,7 +54,7 @@ fun NavbarBar() {
                 classes("btn", "btn-primary", "btn-sm", "ms-2", "order-lg-3")
             }) {
                 I(attrs = { classes("fi-plus", "me-2") })
-                Text("Sell car")
+                Text("Prodaj auto")
             }
 
             // Collapse section
@@ -75,7 +75,7 @@ fun NavbarBar() {
                             attr("aria-expanded", "false")
                         }) {
                             I(attrs = { classes("fi-layers", "me-2") })
-                            Text("Demos")
+                            Text("Demo primjeri")
                             Span(attrs = {
                                 classes(
                                     "d-none", "d-lg-block", "position-absolute",
@@ -86,23 +86,23 @@ fun NavbarBar() {
                             })
                         }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                            Li { A("real-estate-home-v1.html", attrs = { classes("dropdown-item") }) { Text("Real Estate Demo") } }
+                            Li { A("real-estate-home-v1.html", attrs = { classes("dropdown-item") }) { Text("Demo nekretnine") } }
                             Li(attrs = { classes("dropdown-divider") })
-                            Li { A("car-finder-home.html", attrs = { classes("dropdown-item") }) { Text("Car Finder Demo") } }
+                            Li { A("car-finder-home.html", attrs = { classes("dropdown-item") }) { Text("Demo tražilica auta") } }
                             Li(attrs = { classes("dropdown-divider") })
-                            Li { A("job-board-home-v1.html", attrs = { classes("dropdown-item") }) { Text("Job Board Demo") } }
+                            Li { A("job-board-home-v1.html", attrs = { classes("dropdown-item") }) { Text("Demo poslovi") } }
                             Li(attrs = { classes("dropdown-divider") })
-                            Li { A("city-guide-home-v1.html", attrs = { classes("dropdown-item") }) { Text("City Guide Demo") } }
+                            Li { A("city-guide-home-v1.html", attrs = { classes("dropdown-item") }) { Text("Demo vodič kroz grad") } }
                             Li(attrs = { classes("dropdown-divider") })
-                            Li { A("index.html", attrs = { classes("dropdown-item") }) { Text("Main Page") } }
-                            Li { A("components/typography.html", attrs = { classes("dropdown-item") }) { Text("Components") } }
-                            Li { A("docs/dev-setup.html", attrs = { classes("dropdown-item") }) { Text("Documentation") } }
+                            Li { A("index.html", attrs = { classes("dropdown-item") }) { Text("Glavna stranica") } }
+                            Li { A("components/typography.html", attrs = { classes("dropdown-item") }) { Text("Komponente") } }
+                            Li { A("docs/dev-setup.html", attrs = { classes("dropdown-item") }) { Text("Dokumentacija") } }
                         }
                     }
 
                     // Home link
                     Li(attrs = { classes("nav-item", "active") }) {
-                        CostumeLink(href = "/", attrs = { classes("nav-link") }){ Text("Home") }
+                        CostumeLink(href = "/", attrs = { classes("nav-link") }){ Text("Početna") }
                     }
 
                     // Catalog dropdown
@@ -112,27 +112,27 @@ fun NavbarBar() {
                             attr("data-bs-toggle", "dropdown")
                             attr("role", "button")
                             attr("aria-expanded", "false")
-                        }) { Text("Catalog") }
+                        }) { Text("Katalog") }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                            Li { CostumeLink("/category", attrs = { classes("dropdown-item") }) { Text("List View") } }
-//                            Li { A("car-finder-catalog-grid.html", attrs = { classes("dropdown-item") }) { Text("Grid View") } }
-                            Li { CostumeLink("/single", attrs = { classes("dropdown-item") }) { Text("Car Single Page") } }
+                            Li { CostumeLink("/category", attrs = { classes("dropdown-item") }) { Text("Popis vozila") } }
+//                            Li { A("car-finder-catalog-grid.html", attrs = { classes("dropdown-item") }) { Text("Mrežni prikaz") } }
+                            Li { CostumeLink("/single", attrs = { classes("dropdown-item") }) { Text("Detalji vozila") } }
                         }
                     }
 
                     // Account dropdown
                     Li(attrs = { classes("nav-item", "dropdown") }) {
-                        A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle", "dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Account") }
+                        A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle", "dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Račun") }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
                             listOf(
-                                "Personal Info" to "/profile",
-                                "Password & Security" to "/profile/password-security",
-                                "My Cars" to "/profile/cars",
-                                "Wishlist" to "/profile/wish-list",
-                                "Reviews" to "/profile/reviews",
-                                "Notifications" to "/profile/notifications",
-                                "Sign In" to "signin-dark.html",
-                                "Sign Up" to "signup-dark.html"
+                                "Osobni podaci" to "/profile",
+                                "Lozinka i sigurnost" to "/profile/password-security",
+                                "Moji auti" to "/profile/cars",
+                                "Lista želja" to "/profile/wish-list",
+                                "Recenzije" to "/profile/reviews",
+                                "Obavijesti" to "/profile/notifications",
+                                "Prijava" to "signin-dark.html",
+                                "Registracija" to "signup-dark.html"
                             ).forEach { (label, href) ->
                                 CostumeLink(href, attrs = { classes("dropdown-item") }) { Text(label) }
                             }
@@ -141,12 +141,12 @@ fun NavbarBar() {
 
                     // Vendor dropdown
                     Li(attrs = { classes("nav-item", "dropdown") }) {
-                        A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle","dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Vendor") }
+                        A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle","dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Prodavač") }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
                             listOf(
-                                "Sell Car" to "car-finder-sell-car.html",
-                                "Ad Promotion Page" to "car-finder-promotion.html",
-                                "Vendor Page" to "car-finder-vendor.html"
+                                "Prodaj auto" to "car-finder-sell-car.html",
+                                "Promocija oglasa" to "car-finder-promotion.html",
+                                "Stranica prodavača" to "car-finder-vendor.html"
                             ).forEach { (label, href) ->
                                 Li { A(href, attrs = { classes("dropdown-item") }) { Text(label) } }
                             }
@@ -155,19 +155,19 @@ fun NavbarBar() {
 
                     // Pages dropdown
                     Li(attrs = { classes("nav-item", "dropdown") }) {
-                        A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle","dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Pages") }
+                        A("#", attrs = { classes("nav-link", "dropdown-toggle"); attr("data-bs-toggle","dropdown"); attr("role","button"); attr("aria-expanded","false") }) { Text("Stranice") }
                         Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                            Li { A("car-finder-about.html", attrs = { classes("dropdown-item") }) { Text("About") } }
+                            Li { A("car-finder-about.html", attrs = { classes("dropdown-item") }) { Text("O nama") } }
                             Li(attrs = { classes("dropdown", "dropend") }) {
                                 A("#", attrs = { classes("dropdown-item","dropdown-toggle"); attr("data-bs-toggle","dropdown") }) { Text("Blog") }
                                 Ul(attrs = { classes("dropdown-menu","dropdown-menu-dark") }) {
-                                    Li { A("car-finder-blog.html", attrs = { classes("dropdown-item") }) { Text("Blog Grid") } }
-                                    Li { A("car-finder-blog-single.html", attrs = { classes("dropdown-item") }) { Text("Single Post") } }
+                                    Li { A("car-finder-blog.html", attrs = { classes("dropdown-item") }) { Text("Blog mreža") } }
+                                    Li { A("car-finder-blog-single.html", attrs = { classes("dropdown-item") }) { Text("Jedan članak") } }
                                 }
                             }
-                            Li { A("car-finder-contacts.html", attrs = { classes("dropdown-item") }) { Text("Contacts") } }
-                            Li { A("car-finder-help-center.html", attrs = { classes("dropdown-item") }) { Text("Help Center") } }
-                            Li { A("car-finder-404.html", attrs = { classes("dropdown-item") }) { Text("404 Not Found") } }
+                            Li { A("car-finder-contacts.html", attrs = { classes("dropdown-item") }) { Text("Kontakt") } }
+                            Li { A("car-finder-help-center.html", attrs = { classes("dropdown-item") }) { Text("Centar za pomoć") } }
+                            Li { A("car-finder-404.html", attrs = { classes("dropdown-item") }) { Text("404 Stranica nije pronađena") } }
                         }
                     }
 
@@ -175,7 +175,7 @@ fun NavbarBar() {
                     Li(attrs = { classes("nav-item", "d-lg-none") }) {
                         A("#signin-modal", attrs = { classes("nav-link"); attr("data-bs-toggle","modal") }) {
                             I(attrs = { classes("fi-user","me-2") })
-                            Text("Sign in")
+                            Text("Prijava")
                         }
                     }
                 }

@@ -9,9 +9,9 @@ fun BodyTypeSelectionSection() {
     Section(attrs = { classes("container", "pb-5", "mb-md-4") }) {
         // Header row
         Div(attrs = { classes("d-sm-flex", "align-items-center", "justify-content-between", "mb-3", "mb-sm-4", "pb-sm-2") }) {
-            H2(attrs = { classes("h3", "text-light", "mb-2", "mb-sm-0") }) { Text("Popular car body types") }
+            H2(attrs = { classes("h3", "text-light", "mb-2", "mb-sm-0") }) { Text("Popularni tipovi karoserije") }
             A("car-finder-catalog-grid.html", attrs = { classes("btn", "btn-link", "btn-light", "fw-normal", "px-0") }) {
-                Text("View all")
+                Text("Pogledaj sve")
                 I(attrs = { classes("fi-arrow-long-right", "fs-sm", "mt-0", "ps-1", "ms-2") })
             }
         }
@@ -21,14 +21,14 @@ fun BodyTypeSelectionSection() {
             val bodyTypes = listOf(
                 "Sedan" to "sedan.svg" to "car-finder-catalog-list.html",
                 "SUV" to "suv.svg" to "car-finder-catalog-grid.html",
-                "Wagon" to "wagon.svg" to "car-finder-catalog-list.html",
+                "Karavan" to "wagon.svg" to "car-finder-catalog-list.html",
                 "Crossover" to "crossover.svg" to "car-finder-catalog-grid.html",
-                "Coupe" to "coupe.svg" to "car-finder-catalog-list.html",
+                "Kupe" to "coupe.svg" to "car-finder-catalog-list.html",
                 "Pickup" to "pickup.svg" to "car-finder-catalog-grid.html",
-                "Sport Coupe" to "sport.svg" to "car-finder-catalog-list.html",
-                "Compact" to "compact.svg" to "car-finder-catalog-grid.html",
-                "Convertible" to "convertible.svg" to "car-finder-catalog-list.html",
-                "Family MPV" to "mpv.svg" to "car-finder-catalog-grid.html"
+                "Sportski kupe" to "sport.svg" to "car-finder-catalog-list.html",
+                "Kompakt" to "compact.svg" to "car-finder-catalog-grid.html",
+                "Kabriolet" to "convertible.svg" to "car-finder-catalog-list.html",
+                "Obiteljski MPV" to "mpv.svg" to "car-finder-catalog-grid.html"
             )
 
             bodyTypes.forEach { (nameToSrc, link) ->

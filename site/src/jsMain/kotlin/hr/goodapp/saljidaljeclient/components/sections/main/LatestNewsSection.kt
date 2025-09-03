@@ -12,13 +12,13 @@ fun LatestNewsSection() {
     ) {
         Div(attrs = { classes("d-sm-flex", "align-items-center", "justify-content-between", "mb-3", "mb-sm-4", "pb-sm-2") }) {
             H2(attrs = { classes("h3", "text-light", "mb-2", "mb-sm-0") }) {
-                Text("Latest news")
+                Text("Najnovije vijesti")
             }
             A(
                 href = "car-finder-blog.html",
                 attrs = { classes("btn", "btn-link", "btn-light", "fw-normal", "px-0") }
             ) {
-                Text("Go to blog")
+                Text("Idi na blog")
                 I(attrs = { classes("fi-arrow-long-right", "fs-sm", "mt-0", "ps-1", "ms-2") })
             }
         }
@@ -33,32 +33,32 @@ fun LatestNewsSection() {
             }) {
                 NewsItem(
                     img = "img/car-finder/blog/04.jpg",
-                    category = "Events",
-                    title = "Top 10 Classic Car Events",
+                    category = "Događanja",
+                    title = "Top 10 događanja klasičnih automobila",
                     authorImg = "img/avatars/08.jpg",
                     author = "Jacob Jones",
-                    date = "May 8",
-                    comments = "No comments"
+                    date = "8. svibnja",
+                    comments = "Nema komentara"
                 )
 
                 NewsItem(
                     img = "img/car-finder/blog/05.jpg",
-                    category = "Inspiration",
-                    title = "5 Predictions From the Past About the Future",
+                    category = "Inspiracija",
+                    title = "5 predviđanja iz prošlosti o budućnosti",
                     authorImg = "img/avatars/09.jpg",
                     author = "Guy Hawkins",
-                    date = "Apr 25",
-                    comments = "6 comments"
+                    date = "25. travnja",
+                    comments = "6 komentara"
                 )
 
                 NewsItem(
                     img = "img/car-finder/blog/06.jpg",
-                    category = "Test Drives",
-                    title = "This Year is All About New Harley Davidson",
+                    category = "Test vožnje",
+                    title = "Ova godina je sve o novom Harley Davidsonu",
                     authorImg = "img/avatars/12.jpg",
                     author = "Ralph Edwards",
-                    date = "Mar 12",
-                    comments = "2 comments"
+                    date = "12. ožujka",
+                    comments = "2 komentara"
                 )
             }
         }
@@ -78,7 +78,7 @@ fun NewsItem(
     Div {
         Article {
             A(href = "car-finder-blog-single.html", attrs = { classes("d-block", "rounded-3", "overflow-hidden") }) {
-                Img(src = img, alt = "Image", attrs = { classes("d-block") })
+                Img(src = img, alt = "Slika", attrs = { classes("d-block") })
             }
             Div(attrs = { classes("py-3") }) {
                 A(href = "#", attrs = { classes("fs-xs", "text-uppercase", "text-decoration-none") }) {
