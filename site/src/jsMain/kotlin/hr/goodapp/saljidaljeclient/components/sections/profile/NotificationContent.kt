@@ -8,35 +8,35 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun NotificationContent() {
     Div(attrs = { classes("col-lg-8", "col-md-7", "mb-5") }) {
-        H1(attrs = { classes("h2", "text-light") }) { Text("Notifications") }
+        H1(attrs = { classes("h2", "text-light") }) { Text("Obavijesti") }
         P(attrs = { classes("text-light", "pt-1", "mb-4") }) {
-            Text("Get real-time vehicle updates, price drop alerts, helpful shopping information and more.")
+            Text("Primajte obavijesti o novim vozilima, padovima cijena, korisnim informacijama pri kupnji i više.")
         }
 
         Div(attrs = { classes("py-2"); id("notification-settings") }) {
 
-            // New vehicles alerts
+            // Obavijesti o novim vozilima
             Div(attrs = { classes("d-flex", "justify-content-between", "mb-4") }) {
                 Div(attrs = { classes("me-2") }) {
-                    H6(attrs = { classes("text-light", "mb-1") }) { Text("New vehicles alerts") }
+                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Obavijesti o novim vozilima") }
                     P(attrs = { classes("fs-sm", "text-light", "mb-0") }) {
-                        Span(attrs = { classes("opacity-70") }) { Text("New vehicles that match your ") }
-                        A(href = "car-finder-account-wishlist.html", attrs = { classes("text-light") }) { Text("Wishlist") }
+                        Span(attrs = { classes("opacity-70") }) { Text("Nova vozila koja odgovaraju vašem ") }
+                        A(href = "car-finder-account-wishlist.html", attrs = { classes("text-light") }) { Text("Popisu želja") }
                     }
                 }
                 Div(attrs = { classes("form-check", "form-switch", "form-switch-light") }) {
                     Input(type = InputType.Checkbox, attrs = { classes("form-check-input"); id("new-vehicles"); defaultChecked() })
-                    Label(attrs = { classes("form-check-label");}, forId = "new-vehicles") {}
+                    Label(attrs = { classes("form-check-label") }, forId = "new-vehicles") {}
                 }
             }
 
-            // Vehicle status updates
+            // Ažuriranja statusa vozila
             Div(attrs = { classes("d-flex", "justify-content-between", "mb-4") }) {
                 Div(attrs = { classes("me-2") }) {
-                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Vehicle status updates") }
+                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Ažuriranja statusa vozila") }
                     P(attrs = { classes("fs-sm", "text-light", "mb-0") }) {
-                        Span(attrs = { classes("opacity-70") }) { Text("Updates like price changes and off-market status on your ") }
-                        A(href = "car-finder-account-wishlist.html", attrs = { classes("text-light") }) { Text("Wishlist") }
+                        Span(attrs = { classes("opacity-70") }) { Text("Promjene cijena i status izvan tržišta za vaš ") }
+                        A(href = "car-finder-account-wishlist.html", attrs = { classes("text-light") }) { Text("Popis želja") }
                     }
                 }
                 Div(attrs = { classes("form-check", "form-switch", "form-switch-light") }) {
@@ -45,62 +45,61 @@ fun NotificationContent() {
                 }
             }
 
-            // Finder recommendations
+            // Preporuke Findera
             Div(attrs = { classes("d-flex", "justify-content-between", "mb-4") }) {
                 Div(attrs = { classes("me-2") }) {
-                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Finder recommendations") }
+                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Preporuke Findera") }
                     P(attrs = { classes("fs-sm", "text-light", "opacity-70", "mb-0") }) {
-                        Text("Vehicles we think you'll like. These recommendations may be slightly outside your search criteria")
+                        Text("Vozila za koja mislimo da će vam se svidjeti. Ove preporuke mogu biti blago izvan vaših kriterija pretraživanja")
                     }
                 }
                 Div(attrs = { classes("form-check", "form-switch", "form-switch-light") }) {
                     Input(type = InputType.Checkbox, attrs = { classes("form-check-input"); id("finder-recomendation") })
-                    Label(attrs = { classes("form-check-label");  }, forId = "finder-recomendation") {}
+                    Label(attrs = { classes("form-check-label") }, forId = "finder-recomendation") {}
                 }
             }
 
-            // Featured news
+            // Istaknute vijesti
             Div(attrs = { classes("d-flex", "justify-content-between", "mb-4") }) {
                 Div(attrs = { classes("me-2") }) {
-                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Featured news") }
+                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Istaknute vijesti") }
                     P(attrs = { classes("fs-sm", "text-light", "opacity-70", "mb-0") }) {
-                        Text("News and tips you may be interested in")
+                        Text("Vijesti i savjeti koji bi vas mogli zanimati")
                     }
                 }
                 Div(attrs = { classes("form-check", "form-switch", "form-switch-light") }) {
                     Input(type = InputType.Checkbox, attrs = { classes("form-check-input"); id("featured-news"); defaultChecked() })
-                    Label(attrs = { classes("form-check-label");  }, forId = "featured-news") {}
+                    Label(attrs = { classes("form-check-label") }, forId = "featured-news") {}
                 }
             }
 
-            // Finder extras
+            // Dodatne Finder obavijesti
             Div(attrs = { classes("d-flex", "justify-content-between", "mb-4") }) {
                 Div(attrs = { classes("me-2") }) {
-                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Finder extras") }
+                    H6(attrs = { classes("text-light", "mb-1") }) { Text("Dodatne Finder obavijesti") }
                     P(attrs = { classes("fs-sm", "text-light", "opacity-70", "mb-0") }) {
-                        Text("Occasional notifications about new features to make finding the perfect car easy")
+                        Text("Povremene obavijesti o novim funkcijama kako bi vam olakšali pronalazak savršenog automobila")
                     }
                 }
                 Div(attrs = { classes("form-check", "form-switch", "form-switch-light") }) {
                     Input(type = InputType.Checkbox, attrs = { classes("form-check-input"); id("extras") })
-                    Label(attrs = { classes("form-check-label");  }, forId = "extras") {}
+                    Label(attrs = { classes("form-check-label") }, forId = "extras") {}
                 }
             }
 
         }
 
-        // Enable/disable all
+        // Omogući/onemogući sve
         Div(attrs = { classes("border-top", "border-light", "pt-4") }) {
             Div(attrs = { classes("form-check", "form-switch", "form-switch-light") }) {
                 Input(type = InputType.Checkbox, attrs = {
-                    classes("form-check-input");
-                    id("all-notifications");
+                    classes("form-check-input")
+                    id("all-notifications")
                     defaultChecked()
-                    // you can add data attribute like:
                     attr("data-master-checkbox-for", "#notification-settings")
                 })
-                Label(attrs = { classes("form-check-label");}, forId = "all-notifications") {
-                    Text("Enable / disable all notifications")
+                Label(attrs = { classes("form-check-label") }, forId = "all-notifications") {
+                    Text("Omogući / onemogući sve obavijesti")
                 }
             }
         }

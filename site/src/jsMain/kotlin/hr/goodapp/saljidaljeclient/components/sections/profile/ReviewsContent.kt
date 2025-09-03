@@ -7,10 +7,10 @@ import org.jetbrains.compose.web.dom.*
 fun ReviewsContent() {
     Div(attrs = { classes("col-lg-8", "col-md-7", "mb-5") }) {
         H1(attrs = { classes("h2", "text-light") }) {
-            Text("Reviews")
+            Text("Recenzije")
         }
         P(attrs = { classes("text-light", "pt-1", "mb-4") }) {
-            Text("Reviews you’ve received will be visible both here and on your public profile.")
+            Text("Recenzije koje ste primili bit će vidljive ovdje i na vašem javnom profilu.")
         }
         NavTabs()
         TabsContent()
@@ -56,7 +56,7 @@ private fun ReviewsAboutYouTab() {
                 Span({
                     classes("text-light")
                 }) {
-                    Text("4,9 (32 reviews)")
+                    Text("4,9 (32 recenzije)")
                 }
             }
 
@@ -70,25 +70,25 @@ private fun ReviewsAboutYouTab() {
                     I({
                         classes("fi-arrows-sort", "mt-n1", "me-2")
                     })
-                    Text("Sort by:")
+                    Text("Sortiraj po:")
                 }
 
                 Select({
                     classes("form-select", "form-select-light", "form-select-sm")
                     attr("id", "review-sorting1")
                 }) {
-                    Option(value = "") { Text("Newest") }
-                    Option(value = "") { Text("Oldest") }
-                    Option(value = "") { Text("Popular") }
-                    Option(value = "") { Text("High rating") }
-                    Option(value = "") { Text("Low rating") }
+                    Option(value = "") { Text("Najnovije") }
+                    Option(value = "") { Text("Najstarije") }
+                    Option(value = "") { Text("Popularno") }
+                    Option(value = "") { Text("Najbolja ocjena") }
+                    Option(value = "") { Text("Najniža ocjena") }
                 }
             }
         }
         ReviewItem(
             avatar = "/img/avatars/06.jpg",
             name = "Kathryn Murphy",
-            date = "Jan 17, 2021",
+            date = "17. siječnja 2021",
             stars = 5,
             text = "Elementum ut quam tincidunt egestas vitae elit, hendrerit. Ullamcorper nulla amet lobortis elit, nibh condimentum enim. Aliquam felis nisl tellus sodales lectus dictum tristique proin vitae. Odio fermentum viverra tortor quis.",
             likes = 3,
@@ -98,7 +98,7 @@ private fun ReviewsAboutYouTab() {
         ReviewItem(
             avatar = "/img/avatars/14.png",
             name = "Darrell Steward",
-            date = "Dec 1, 2020",
+            date = "1. prosinca 2020",
             stars = 4,
             text = "Vel dictum nunc ut tristique. Egestas diam amet, ut proin hendrerit. Dui accumsan at phasellus tempus consequat dignissim tellus sodales.",
             likes = 0,
@@ -108,7 +108,7 @@ private fun ReviewsAboutYouTab() {
         ReviewItem(
             avatar = "/img/avatars/05.jpg",
             name = "Floyd Miles",
-            date = "Oct 28, 2020",
+            date = "28. listopada 2020",
             stars = 5,
             text = "Viverra nunc blandit sapien non imperdiet sit. Purus tempus elementum aliquam eu urna. A aenean duis non egestas at libero porttitor integer eget. Sed dictum lobortis laoreet gravida.",
             likes = 2,
@@ -118,7 +118,7 @@ private fun ReviewsAboutYouTab() {
         ReviewItem(
             avatar = "/img/avatars/04.jpg",
             name = "Ralph Edwards",
-            date = "Sep 14, 2020",
+            date = "14. rujna 2020",
             stars = 4,
             text = "Elementum nisl, egestas nam consectetur nisl, at pellentesque cras. Non sed ac vivamus dolor dignissim ut. Nisl sapien blandit pulvinar sagittis donec sociis ipsum arcu est. Tempus, rutrum morbi scelerisque tempor mi. Etiam urna, cras bibendum leo nec faucibus velit. Tempor lectus dignissim at auctor integer neque quam amet.",
             likes = 0,
@@ -152,7 +152,7 @@ private fun ReviewsByYouTab() {
         }) {
             H3({
                 classes("h4", "text-light", "mb-sm-0")
-            }) { Text("3 reviews") }
+            }) { Text("3 recenzije") }
 
             Div({ classes("d-flex", "align-items-center", "ms-sm-4") }) {
                 Label(attrs = {
@@ -160,18 +160,18 @@ private fun ReviewsByYouTab() {
                     attr("for", "review-sorting2")
                 }) {
                     I({ classes("fi-arrows-sort", "mt-n1", "me-2") })
-                    Text("Sort by:")
+                    Text("Sortiraj po:")
                 }
 
                 Select({
                     classes("form-select", "form-select-light", "form-select-sm")
                     attr("id", "review-sorting2")
                 }) {
-                    Option("") { Text("Newest") }
-                    Option("") { Text("Oldest") }
-                    Option("") { Text("Popular") }
-                    Option("") { Text("High rating") }
-                    Option("") { Text("Low rating") }
+                    Option("") { Text("Najnovije") }
+                    Option("") { Text("Najstarije") }
+                    Option("") { Text("Popularno") }
+                    Option("") { Text("Najbolja ocjena") }
+                    Option("") { Text("Najniža ocjena") }
                 }
             }
         }
@@ -179,7 +179,7 @@ private fun ReviewsByYouTab() {
         ReviewCard(
             Review(
                 itemFor = "Ford Truck Lifted",
-                date = "Jan 13, 2021",
+                date = "13. siječnja 2021",
                 text = "Elementum ut quam tincidunt egestas vitae elit, hendrerit. Ullamcorper nulla amet lobortis elit, nibh condimentum enim. Aliquam felis nisl tellus sodales lectus dictum tristique proin vitae. Odio fermentum viverra tortor quis.",
                 stars = 2,
                 likes = 2,
@@ -189,7 +189,7 @@ private fun ReviewsByYouTab() {
         ReviewCard(
             Review(
                 itemFor = "Mercedes Benz C300 Sport",
-                date = "Dec 10, 2020",
+                date = "10. prosinca 2020",
                 text = "Vel dictum nunc ut tristique. Egestas diam amet, ut proin hendrerit. Dui accumsan at phasellus tempus consequat dignissim tellus sodales.",
                 stars = 4,
                 likes = 4,
@@ -199,7 +199,7 @@ private fun ReviewsByYouTab() {
         ReviewCard(
             Review(
                 itemFor = "BMW 640 XI Gran Turismo",
-                date = "Oct 24, 2020",
+                date = "24. listopada 2020",
                 text = "Viverra nunc blandit sapien non imperdiet sit. Purus tempus elementum aliquam eu urna. A aenean duis non egestas at libero porttitor integer eget. Sed dictum lobortis laoreet gravida.",
                 stars = 5,
                 likes = 2,
@@ -227,7 +227,7 @@ fun ReviewCard(review: Review) {
             Div({ classes("pe-2") }) {
                 H6({ classes("text-light", "mb-0") }) {
                     review.itemFor?.let {
-                        Span({ classes("fw-normal", "opacity-70", "me-1") }) { Text("For:") }
+                        Span({ classes("fw-normal", "opacity-70", "me-1") }) { Text("Za:") }
                         Text(it)
                     }
                 }
@@ -345,6 +345,7 @@ private fun ReviewItem(
     dislikes: Int
 ) {
     Div({ classes("mb-4", "pb-4", "border-bottom", "border-light") }) {
+        // Header
         Div({ classes("d-flex", "justify-content-between", "mb-3") }) {
             Div({ classes("d-flex", "align-items-center", "pe-2") }) {
                 Img(attrs = {
@@ -358,6 +359,7 @@ private fun ReviewItem(
 
                     Div({ classes("text-light") }) {
                         Span({ classes("star-rating") }) {
+                            // Render filled stars
                             for (i in 1..stars) {
                                 I({ classes("star-rating-icon", "fi-star-filled", "active") })
                             }
@@ -369,12 +371,12 @@ private fun ReviewItem(
             Span({ classes("text-light", "fs-sm", "opacity-50") }) { Text(date) }
         }
 
+        // Review text
         P({ classes("text-light", "opacity-70") }) {
-            Text(
-                text
-            )
+            Text(text)
         }
 
+        // Likes/Dislikes
         Div({ classes("d-flex", "align-items-center") }) {
             Button({ classes("btn-like", "btn-light"); attr("type", "button") }) {
                 I({ classes("fi-like") })
@@ -387,7 +389,6 @@ private fun ReviewItem(
             }
         }
     }
-
 }
 
 
@@ -415,7 +416,7 @@ private fun NavTabs() {
                     attr("aria-selected", "true")
                 }
             ) {
-                Text("Reviews about you")
+                Text("Recenzije o vama")
             }
         }
         Li(attrs = { classes("nav-item", "mb-3") }) {
@@ -429,7 +430,7 @@ private fun NavTabs() {
                     attr("aria-selected", "false")
                 }
             ) {
-                Text("Reviews by you")
+                Text("Recenzije koje ste napisali")
             }
         }
     }

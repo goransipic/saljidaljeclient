@@ -11,12 +11,12 @@ fun PasswordSecurityContent() {
     Div(attrs = {
         classes("col-lg-8", "col-md-7", "mb-5")
     }) {
-        H1(attrs = { classes("h2", "text-light") }) { Text("Password & Security") }
+        H1(attrs = { classes("h2", "text-light") }) { Text("Lozinka i sigurnost") }
         P(attrs = { classes("text-light", "pt-1") }) {
-            Text("Manage your password settings and secure your account.")
+            Text("Upravljajte postavkama lozinke i osigurajte svoj račun.")
         }
 
-        H2(attrs = { classes("h5", "text-light") }) { Text("Password") }
+        H2(attrs = { classes("h5", "text-light") }) { Text("Lozinka") }
 
         Form(attrs = {
             classes("needs-validation", "pb-4")
@@ -27,7 +27,7 @@ fun PasswordSecurityContent() {
                     Label(attrs = {
                         classes("form-label", "text-light")
                         attr("for", "account-password")
-                    }) { Text("Current password") }
+                    }) { Text("Trenutna lozinka") }
 
                     Div(attrs = { classes("password-toggle") }) {
                         Input(type = InputType.Password, attrs = {
@@ -37,7 +37,7 @@ fun PasswordSecurityContent() {
                         })
                         Label(attrs = {
                             classes("password-toggle-btn")
-                            attr("aria-label", "Show/hide password")
+                            attr("aria-label", "Prikaži/sakrij lozinku")
                         }) {
                             Input(type = InputType.Checkbox, attrs = { classes("password-toggle-check") })
                             Span(attrs = { classes("password-toggle-indicator") })
@@ -47,7 +47,7 @@ fun PasswordSecurityContent() {
 
                 Div(attrs = { classes("col-sm-6", "mb-2") }) {
                     A(href = "#", attrs = { classes("d-inline-block", "text-light", "mb-2") }) {
-                        Text("Forgot password?")
+                        Text("Zaboravljena lozinka?")
                     }
                 }
             }
@@ -57,7 +57,7 @@ fun PasswordSecurityContent() {
                     Label(attrs = {
                         classes("form-label", "text-light")
                         attr("for", "account-password-new")
-                    }) { Text("New password") }
+                    }) { Text("Nova lozinka") }
 
                     Div(attrs = { classes("password-toggle") }) {
                         Input(type = InputType.Password, attrs = {
@@ -67,7 +67,7 @@ fun PasswordSecurityContent() {
                         })
                         Label(attrs = {
                             classes("password-toggle-btn")
-                            attr("aria-label", "Show/hide password")
+                            attr("aria-label", "Prikaži/sakrij lozinku")
                         }) {
                             Input(type = InputType.Checkbox, attrs = { classes("password-toggle-check") })
                             Span(attrs = { classes("password-toggle-indicator") })
@@ -79,7 +79,7 @@ fun PasswordSecurityContent() {
                     Label(attrs = {
                         classes("form-label", "text-light")
                         attr("for", "account-password-confirm")
-                    }) { Text("Confirm password") }
+                    }) { Text("Potvrdi lozinku") }
 
                     Div(attrs = { classes("password-toggle") }) {
                         Input(type = InputType.Password, attrs = {
@@ -89,7 +89,7 @@ fun PasswordSecurityContent() {
                         })
                         Label(attrs = {
                             classes("password-toggle-btn")
-                            attr("aria-label", "Show/hide password")
+                            attr("aria-label", "Prikaži/sakrij lozinku")
                         }) {
                             Input(type = InputType.Checkbox, attrs = { classes("password-toggle-check") })
                             Span(attrs = { classes("password-toggle-indicator") })
@@ -102,30 +102,30 @@ fun PasswordSecurityContent() {
                 classes("btn", "btn-outline-primary")
                 type(ButtonType.Submit)
             }) {
-                Text("Update password")
+                Text("Ažuriraj lozinku")
             }
         }
 
         Div(attrs = { classes("border-top", "border-light", "pt-4", "mt-3") })
 
         H2(attrs = { classes("h5", "text-light", "pt-2", "mb-4") }) {
-            Text("Where you're signed in on")
+            Text("Gdje ste prijavljeni")
         }
 
         // Example device entry
         Div(attrs = { classes("d-flex", "border-bottom", "border-light", "pb-3", "mb-3") }) {
             I(attrs = { classes("fi-device-desktop", "fs-5", "text-light", "me-1") })
             Div(attrs = { classes("ps-2", "text-light") }) {
-                Div(attrs = { classes("fw-bold", "mb-1") }) { Text("Mac – New York, USA") }
+                Div(attrs = { classes("fw-bold", "mb-1") }) { Text("Mac – New York, SAD") }
                 Span(attrs = { classes("d-inline-block", "fs-sm", "border-end", "border-light", "pe-2", "me-2") }) {
                     Span(attrs = { classes("opacity-70") }) { Text("Chrome") }
                 }
-                Span(attrs = { classes("fs-sm", "fw-bold", "text-success") }) { Text("Active now") }
+                Span(attrs = { classes("fs-sm", "fw-bold", "text-success") }) { Text("Aktivno sada") }
             }
         }
 
         A(href = "#", attrs = { classes("nav-link", "nav-link-light", "px-0", "mt-4") }) {
-            Text("Sign out of all sessions")
+            Text("Odjavi se sa svih sesija")
         }
     }
 }

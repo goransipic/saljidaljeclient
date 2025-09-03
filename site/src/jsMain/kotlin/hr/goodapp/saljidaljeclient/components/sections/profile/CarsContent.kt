@@ -11,14 +11,14 @@ fun CarsContent() {
     Div(attrs = { classes("col-lg-8", "col-md-7", "mb-5") }) {
         // Header
         Div(attrs = { classes("d-flex", "align-items-center", "justify-content-between", "mb-3") }) {
-            H1(attrs = { classes("h2", "text-light", "mb-0") }) { Text("My Cars") }
+            H1(attrs = { classes("h2", "text-light", "mb-0") }) { Text("Moji automobili") }
             A(href = "#", attrs = { classes("nav-link-light", "fw-bold") }) {
                 I(attrs = { classes("fi-trash", "mt-n1", "me-2") })
-                Text("Delete all")
+                Text("Izbriši sve")
             }
         }
         P(attrs = { classes("text-light", "pt-1", "mb-4") }) {
-            Text("Here you can see your car offers and edit them easily.")
+            Text("Ovdje možete vidjeti svoje ponude automobila i lako ih uređivati.")
         }
 
         // Nav Tabs
@@ -26,19 +26,19 @@ fun CarsContent() {
             Li(attrs = { classes("nav-item", "mb-3") }) {
                 A(href = "#", attrs = { classes("nav-link", "active"); role("tab"); attr("aria-selected", "true") }) {
                     I(attrs = { classes("fi-file", "fs-base", "me-2") })
-                    Text("Published")
+                    Text("Objavljeno")
                 }
             }
             Li(attrs = { classes("nav-item", "mb-3") }) {
                 A(href = "#", attrs = { classes("nav-link"); role("tab"); attr("aria-selected", "false") }) {
                     I(attrs = { classes("fi-file-clean", "fs-base", "me-2") })
-                    Text("Drafts")
+                    Text("Nacrti")
                 }
             }
             Li(attrs = { classes("nav-item", "mb-3") }) {
                 A(href = "#", attrs = { classes("nav-link"); role("tab"); attr("aria-selected", "false") }) {
                     I(attrs = { classes("fi-archive", "fs-base", "me-2") })
-                    Text("Archived")
+                    Text("Arhivirano")
                 }
             }
         }
@@ -100,7 +100,7 @@ private fun CarCard(
         Div(attrs = { classes("tns-carousel-wrapper", "card-img-top", "card-img-hover") }) {
             A(href = "car-finder-single.html", attrs = { classes("img-overlay") }) {}
             Div(attrs = { classes("position-absolute", "start-0", "top-0", "pt-3", "ps-3") }) {
-                Span(attrs = { classes("d-table", "badge", "bg-info") }) { Text("Used") }
+                Span(attrs = { classes("d-table", "badge", "bg-info") }) { Text("Rabljeno") }
             }
             Div(attrs = { classes("content-overlay", "end-0", "top-0", "pt-3", "pe-3") }) {
                 Button(attrs = {
@@ -108,7 +108,7 @@ private fun CarCard(
                     type(ButtonType.Button)
                     attr("data-bs-toggle", "tooltip")
                     attr("data-bs-placement", "left")
-                    attr("title", "Add to Wishlist")
+                    attr("title", "Dodaj u listu želja")
                 }) {
                     I(attrs = { classes("fi-heart") })
                 }
@@ -137,7 +137,7 @@ private fun CarCard(
                     I(attrs = { classes("fi-dots-vertical") })
                 }
                 Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark", "my-1"); attr("aria-labelledby", contextMenuId) }) {
-                    listOf("Edit" to "fi-edit", "Promote" to "fi-flame", "Deactivate" to "fi-power", "Delete" to "fi-trash").forEach { (text, icon) ->
+                    listOf("Uredi" to "fi-edit", "Promoviraj" to "fi-flame", "Deaktiviraj" to "fi-power", "Izbriši" to "fi-trash").forEach { (text, icon) ->
                         Li {
                             Button(attrs = { classes("dropdown-item"); type(ButtonType.Button) }) {
                                 I(attrs = { classes(icon, "me-2") })

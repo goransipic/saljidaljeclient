@@ -10,9 +10,9 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun PersonalInfoContent() {
     Div(attrs = { classes("col-lg-8", "col-md-7", "mb-5") }) {
-        H1(attrs = { classes("h2", "text-light") }) { Text("Personal Info") }
+        H1(attrs = { classes("h2", "text-light") }) { Text("Osobni podaci") }
         Div(attrs = { classes("text-light", "mb-2", "pt-1") }) {
-            Text("Your personal info is 50% completed")
+            Text("Vaši osobni podaci su 50% popunjeni")
         }
 
         // Progress bar
@@ -32,17 +32,17 @@ fun PersonalInfoContent() {
             Div(attrs = { classes("col-lg-9", "col-md-12", "col-sm-8", "mb-2", "mb-m-4") }) {
                 Div(attrs = { classes("border", "border-light", "rounded-3", "p-3", "mb-4"); id("personal-info") }) {
                     // Fields
-                    fieldBlock("Full name", "Robert Fox", "name")
+                    fieldBlock("Ime i prezime", "Robert Fox", "name")
                     fieldBlock(
-                        "Gender",
-                        "Not specified",
+                        "Spol",
+                        "Nije navedeno",
                         "gender",
                         isSelect = true,
-                        selectOptions = listOf("Male", "Female")
+                        selectOptions = listOf("Muški", "Ženski")
                     )
                     fieldBlock("Email", "robert_fox@email.com", "email", InputType.Email)
-                    fieldBlock("Phone number", "(302) 555-0107", "phone")
-                    fieldBlock("Address", "Not specified", "address", withBorder = false, placeholder = "Enter address")
+                    fieldBlock("Broj telefona", "(302) 555-0107", "phone")
+                    fieldBlock("Adresa", "Nije navedeno", "address", withBorder = false, placeholder = "Unesite adresu")
                 }
             }
 
@@ -53,7 +53,7 @@ fun PersonalInfoContent() {
                     attr("accept", "image/png, image/jpeg")
                     attr(
                         "data-label-idle",
-                        """<i class="d-inline-block fi-camera-plus fs-2 text-light text-muted mb-2"></i><br><span class="fw-bold text-light opacity-70">Change picture</span>"""
+                        """<i class="d-inline-block fi-camera-plus fs-2 text-light text-muted mb-2"></i><br><span class="fw-bold text-light opacity-70">Promijeni sliku</span>"""
                     )
                     attr("data-style-panel-layout", "compact")
                     attr("data-image-preview-height", "160")
@@ -62,9 +62,9 @@ fun PersonalInfoContent() {
                     attr("data-image-resize-target-height", "200")
                 })
                 Div(attrs = { classes("pt-4", "pb-2", "py-lg-5") }) {
-                    H6(attrs = { classes("text-light", "mb-2") }) { Text("Who can see my profile?") }
+                    H6(attrs = { classes("text-light", "mb-2") }) { Text("Tko može vidjeti moj profil?") }
                     P(attrs = { classes("fs-sm", "text-light", "opacity-70", "mb-0") }) {
-                        Text("Your profile is private. No one else will see it until a reservation is confirmed.")
+                        Text("Vaš profil je privatan. Nitko drugi ga neće vidjeti dok rezervacija ne bude potvrđena.")
                     }
                 }
             }
@@ -74,7 +74,7 @@ fun PersonalInfoContent() {
         Div(attrs = { classes("row") }) {
             Div(attrs = { classes("col-lg-9") }) {
                 Div(attrs = { classes("d-flex", "align-items-center", "justify-content-between", "pb-1") }) {
-                    Button(attrs = { classes("btn", "btn-primary"); type(ButtonType.Button) }) { Text("Save changes") }
+                    Button(attrs = { classes("btn", "btn-primary"); type(ButtonType.Button) }) { Text("Spremi promjene") }
                     Button(attrs = {
                         classes(
                             "btn",
@@ -85,7 +85,7 @@ fun PersonalInfoContent() {
                         ); type(ButtonType.Button)
                     }) {
                         I(attrs = { classes("fi-trash", "me-2") })
-                        Text("Delete account")
+                        Text("Izbriši račun")
                     }
                 }
             }

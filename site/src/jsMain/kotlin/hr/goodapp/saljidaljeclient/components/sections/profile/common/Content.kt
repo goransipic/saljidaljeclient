@@ -48,7 +48,7 @@ fun fieldBlock(
                 Label(attrs = { classes("form-label", "fw-bold", "text-light") }) { Text(label) }
                 Div(attrs = { classes("text-light"); id("$collapseId-value") }) { Text(value) }
             }
-            Div(attrs = { attr("data-bs-toggle", "tooltip"); attr("title", "Edit") }) {
+            Div(attrs = { attr("data-bs-toggle", "tooltip"); attr("title", "Uredi") }) {
                 A(href = "#$collapseId-collapse", attrs = {
                     classes("nav-link", "nav-link-light", "py-0")
                     attr("data-bs-toggle", "collapse")
@@ -70,7 +70,7 @@ fun fieldBlock(
                     Option(
                         value = "",
                         attrs = { attr("value", ""); attr("disabled", "true"); attr("selected", "true") }) {
-                        Text("Select your $label")
+                        Text("Odaberite $label")
                     }
                     selectOptions.forEach { opt ->
                         Option(value = "Demo") { Text(opt) }
@@ -80,7 +80,7 @@ fun fieldBlock(
                 Input(type = inputType, attrs = {
                     classes("form-control", "form-control-light", "mt-3")
                     attr("data-bs-binded-element", "#$collapseId-value")
-                    attr("data-bs-unset-value", "Not specified")
+                    attr("data-bs-unset-value", "Nije navedeno")
                     placeholder?.let { attr("placeholder", it) }
                     value(value)
                 })

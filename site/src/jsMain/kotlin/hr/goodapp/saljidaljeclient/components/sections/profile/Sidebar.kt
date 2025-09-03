@@ -67,7 +67,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
         // Action buttons
         A(href = "car-finder-sell-car.html", attrs = { classes("btn", "btn-primary", "btn-lg", "w-100", "mb-3") }) {
             I(attrs = { classes("fi-plus", "me-2") })
-            Text("Sell car")
+            Text("Prodaj auto")
         }
         A(
             href = "#account-nav",
@@ -77,7 +77,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
             }
         ) {
             I(attrs = { classes("fi-align-justify", "me-2") })
-            Text("Menu")
+            Text("Meni")
         }
         // Collapsible navigation
         Div(attrs = { classes("collapse", "d-md-block", "mt-3"); id("account-nav") }) {
@@ -101,7 +101,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                     I(attrs = {
                         classes("fi-user", "me-2")
                     })
-                    Text("Personal Info")
+                    Text("Osobni podaci")
                 }
                 A(href = SidebarItems.PASSWORD_SECURITY.url, attrs = {
                     onClick { it ->
@@ -116,7 +116,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                     I(attrs = {
                         classes("fi-lock", "me-2")
                     })
-                    Text("Password & Security")
+                    Text("Lozinka i sigurnost")
                 }
                 A(href = SidebarItems.CARS.url, attrs = {
                     onClick {
@@ -129,7 +129,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                 )
                 }) {
                     I(attrs = { classes("fi-car", "me-2") })
-                    Text("My Cars")
+                    Text("Moji automobili")
                 }
                 A(
                     href = SidebarItems.WHISH_LIST.url,
@@ -147,7 +147,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                     )
                     }) {
                     I(attrs = { classes("fi-heart", "me-2") })
-                    Text("Wishlist")
+                    Text("Lista želja")
                     Span(attrs = { classes("badge", "bg-faded-light", "ms-2") }) {
                         Text("4")
                     }
@@ -163,7 +163,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                     )
                     }) {
                     I(attrs = { classes("fi-star", "me-2") })
-                    Text("Reviews")
+                    Text("Recenzije")
                 }
                 A(
                     href = SidebarItems.NOTIFICATION.url,
@@ -181,7 +181,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                     )
                     }) {
                     I(attrs = { classes("fi-bell", "me-2") })
-                    Text("Notifications")
+                    Text("Obavijesti")
                 }
                 val ctx = rememberPageContext()
                 A(href = "/profile/help-center", attrs = { onClick {
@@ -189,7 +189,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                     ctx.router.navigateTo("/profile/help-center")
                 };classes("card-nav-link") }) {
                     I(attrs = { classes("fi-help", "me-2") })
-                    Text("Help")
+                    Text("Pomoć")
                 }
 
                 A(
@@ -201,7 +201,7 @@ private fun AccountNav(sidebarItems: SidebarItems, onClicked: (SidebarItems, Syn
                         }; classes("card-nav-link")
                     }) {
                     I(attrs = { classes("fi-logout", "me-2") })
-                    Text("Sign Out")
+                    Text("Odjava")
                 }
             }
         }

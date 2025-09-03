@@ -33,16 +33,16 @@ fun ContactUs() {
         Div(attrs = { classes("container", "position-relative", "zindex-5", "py-lg-5") }) {
             Div(attrs = { classes("col-lg-8", "col-md-10", "mx-auto", "px-0", "text-center") }) {
                 H2(attrs = { classes("text-light") }) {
-                    Text("Haven't found the answer? We can help.")
+                    Text("Niste pronašli odgovor? Mi vam možemo pomoći.")
                 }
                 P(attrs = { classes("mb-4", "pb-3", "text-light", "opacity-70") }) {
-                    Text("Contact us and we’ll get back to you as soon as possible.")
+                    Text("Kontaktirajte nas i javit ćemo vam se što je prije moguće.")
                 }
                 A(
                     href = "car-finder-contacts.html",
                     attrs = { classes("btn", "btn-lg", "btn-primary") }
                 ) {
-                    Text("Contact us")
+                    Text("Kontaktirajte nas")
                 }
             }
         }
@@ -55,7 +55,7 @@ private fun FAQ() {
         Div(attrs = { classes("row", "justify-content-center") }) {
             Div(attrs = { classes("col-lg-8", "col-md-10") }) {
                 H2(attrs = { classes("h3", "mb-4", "pb-3", "text-light", "text-center") }) {
-                    Text("Frequently Asked Questions")
+                    Text("Često postavljana pitanja")
                 }
 
                 // Nav tabs
@@ -72,7 +72,7 @@ private fun FAQ() {
                             "text-nowrap"
                         ); attr("role", "tablist")
                     }) {
-                        listOf("General questions", "Buy or rent cars", "Sell cars").forEachIndexed { index, title ->
+                        listOf("Opća pitanja", "Kupnja ili najam automobila", "Prodaja automobila").forEachIndexed { index, title ->
                             Li(attrs = { classes("nav-item", "w-100", "px-2") }) {
                                 A(
                                     href = "#",
@@ -95,13 +95,13 @@ private fun FAQ() {
                     Div(attrs = { classes("accordion", "accordion-light"); attr("id", "accordionFAQ") }) {
 
                         val faqs = listOf(
-                            "How much does it cost to sell a car on Finder?" to "Aut dolores nemo rem commodi neque voluptatem molestiae cupiditate unde consequatur impedit, enim rerum eum ipsam. Eligendi, blanditiis ad? Laboriosam, distinctio nemo, culpa suscipit tenetur at est quis commodi similique impedit illum non dignissimos et cum aut, asperiores fugiat unde. Possimus autem iusto fugit ipsa natus, fugiat libero. Nemo sed nisi error.",
-                            "How do I take the best pictures of my car?" to "Porta mi integer lectus cras augue amet tellus. Mus in justo orci est urna facilisis vitae. Sem sagittis potenti scelerisque justo, etiam pharetra. In augue egestas nec rhoncus. Lectus tincidunt phasellus eu in erat eget id egestas nec. Purus massa blandit nibh ut sed tellus. Sit cras aliquam velit tellus leo. Sed vulputate erat dui eros, viverra. Cursus et nulla turpis sit. Egestas at non elementum non. Molestie nunc, diam etiam diam. Ac et turpis vestibulum porta.",
-                            "Can I sell a vehicle if I live outside of the United States?" to "Delectus perferendis libero ad sapiente unde cupiditate vero error autem ex sed culpa beatae vel, alias amet quam officiis repudiandae ab nobis! Animi ullam obcaecati praesentium at officia quos doloremque nihil aperiam debitis quasi placeat atque, amet laborum illo voluptates autem totam in mollitia! At, autem, ipsum quam minima doloribus distinctio aspernatur id et, cum reiciendis iste officia. Architecto tempore deserunt voluptates?",
-                            "How does the buyer get in contact with me and make payment?" to "Impedit iusto cum vitae pariatur. Veritatis totam neque, libero non odio doloremque sequi ut, delectus optio cumque rerum illum? Libero corrupti neque magnam aliquam tempora debitis at voluptate alias, facilis ipsa dignissimos repellendus quaerat soluta dolorem ad ipsam nemo quisquam voluptatum quibusdam dolorum. Labore qui saepe ducimus iure fuga accusamus, commodi quod ex sed excepturi corrupti! Ducimus natus repellendus placeat mollitia harum nostrum similique earum qui ratione?",
-                            "Who writes the listing description for my car?" to "Facere unde eveniet explicabo quidem, quaerat, nesciunt, minus in vel incidunt natus qui recusandae neque laudantium est vitae ipsam? Dolores natus nesciunt culpa accusantium tempora, recusandae, debitis, labore maxime a optio similique rem nam fuga vel doloremque suscipit repellendus veritatis necessitatibus. Architecto sit qui dolorum nihil ea!",
-                            "Are there rules to follow in the comments?" to "Perspiciatis iste atque in quis recusandae libero maxime, quo sed itaque, totam quaerat earum dolorum accusantium? Optio quidem aliquam corporis, nesciunt nobis incidunt numquam debitis cumque quisquam eum veniam quae eaque voluptates totam culpa aperiam sapiente minima sint sit facere dolorum excepturi ab odit? Adipisci exercitationem distinctio dolores obcaecati eligendi explicabo, ipsa dicta, tempore, enim molestias excepturi nihil vel! Quas, culpa.",
-                            "What currency does Finder use?" to "Dolores assumenda dolorem saepe, consequatur praesentium alias numquam accusantium explicabo distinctio omnis voluptatum eum enim aspernatur vel, minus optio dolore ratione quasi sunt. Ab distinctio laborum dolore explicabo hic omnis iste quibusdam minus mollitia ad voluptate suscipit accusantium, laudantium sapiente? Aperiam est minus veniam explicabo repellendus id velit sit adipisci quam in!"
+                            "Koliko košta prodaja automobila na Finderu?" to "Odgovor na hrvatskom primjer teksta...",
+                            "Kako napraviti najbolje fotografije svog automobila?" to "Odgovor na hrvatskom primjer teksta...",
+                            "Mogu li prodati vozilo ako živim izvan SAD-a?" to "Odgovor na hrvatskom primjer teksta...",
+                            "Kako kupac stupi u kontakt sa mnom i izvrši plaćanje?" to "Odgovor na hrvatskom primjer teksta...",
+                            "Tko piše opis mog automobila?" to "Odgovor na hrvatskom primjer teksta...",
+                            "Postoje li pravila za komentare?" to "Odgovor na hrvatskom primjer teksta...",
+                            "Koju valutu koristi Finder?" to "Odgovor na hrvatskom primjer teksta..."
                         )
 
                         faqs.forEachIndexed { index, faq ->
@@ -171,24 +171,24 @@ private fun HeroSearch() {
             Nav(attrs = { classes("mb-3", "pt-md-3"); attr("aria-label", "Breadcrumb") }) {
                 Ol(attrs = { classes("breadcrumb", "breadcrumb-light") }) {
                     Li(attrs = { classes("breadcrumb-item") }) {
-                        A(href = "car-finder-home.html") { Text("Home") }
+                        A(href = "car-finder-home.html") { Text("Početna") }
                     }
                     Li(attrs = { classes("breadcrumb-item", "active"); attr("aria-current", "page") }) {
-                        Text("Help center")
+                        Text("Centar za pomoć")
                     }
                 }
             }
 
             Div(attrs = { classes("col-lg-8", "col-md-10", "mx-auto", "px-0", "pt-2") }) {
                 H1(attrs = { classes("mb-4", "pb-2", "text-center", "text-light") }) {
-                    Text("Hello, what can we do for you?")
+                    Text("Bok, kako vam možemo pomoći?")
                 }
 
                 // Search form
                 Form(attrs = { classes("form-group", "form-group-light", "mb-4") }) {
                     Input(type = InputType.Text, attrs = {
                         classes("form-control", "form-control-lg")
-                        placeholder("What are you looking for?")
+                        placeholder("Što tražite?")
                     })
                     Button(attrs = {
                         classes(
@@ -200,7 +200,7 @@ private fun HeroSearch() {
                         ); type(ButtonType.Submit)
                     }) {
                         I(attrs = { classes("fi-search", "me-sm-2") })
-                        Span(attrs = { classes("d-sm-inline", "d-none") }) { Text("Search") }
+                        Span(attrs = { classes("d-sm-inline", "d-none") }) { Text("Traži") }
                     }
                 }
 
@@ -225,7 +225,7 @@ private fun HeroSearch() {
                             "opacity-70"
                         )
                     }) {
-                        Text("Popular sections:")
+                        Text("Popularne sekcije:")
                     }
                     Div(attrs = { classes("text-nowrap", "overflow-auto", "pb-3") }) {
                         Div {
@@ -240,7 +240,7 @@ private fun HeroSearch() {
                                         "mb-2",
                                         "me-2"
                                     )
-                                }) { Text("General inquiries") }
+                                }) { Text("Opći upiti") }
                             A(
                                 href = "#",
                                 attrs = {
@@ -252,7 +252,7 @@ private fun HeroSearch() {
                                         "mb-2",
                                         "me-2"
                                     )
-                                }) { Text("Warranties & more") }
+                                }) { Text("Jamstva i više") }
                             A(
                                 href = "#",
                                 attrs = {
@@ -264,7 +264,7 @@ private fun HeroSearch() {
                                         "mb-2",
                                         "me-2"
                                     )
-                                }) { Text("Account questions") }
+                                }) { Text("Pitanja o računu") }
                             A(
                                 href = "#",
                                 attrs = {
@@ -276,7 +276,7 @@ private fun HeroSearch() {
                                         "mb-2",
                                         "me-2"
                                     )
-                                }) { Text("Payment & Documentation") }
+                                }) { Text("Plaćanje i dokumentacija") }
                         }
                     }
                 }

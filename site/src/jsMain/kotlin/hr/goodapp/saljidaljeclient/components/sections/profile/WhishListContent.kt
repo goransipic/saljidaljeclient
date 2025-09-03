@@ -13,12 +13,12 @@ fun WishlistContent() {
         // Header
         Div(attrs = { classes("d-flex", "align-items-center", "justify-content-between", "mb-4", "pb-2") }) {
             H1(attrs = { classes("h2", "text-light", "mb-0") }) {
-                Text("Wishlist")
+                Text("Lista želja")
                 Span(attrs = { classes("badge", "bg-faded-light", "fs-base", "align-middle", "ms-3") }) { Text("4") }
             }
             A(href = "#", attrs = { classes("nav-link-light", "fw-bold") }) {
                 I(attrs = { classes("fi-x", "fs-xs", "mt-n1", "me-2") })
-                Text("Clear all")
+                Text("Obriši sve")
             }
         }
 
@@ -91,7 +91,7 @@ fun WishlistCard(
         Div(attrs = { classes("tns-carousel-wrapper", "card-img-top", "card-img-hover") }) {
             A(href = "car-finder-single.html", attrs = { classes("img-overlay") }) {}
             Div(attrs = { classes("position-absolute", "start-0", "top-0", "pt-3", "ps-3") }) {
-                Span(attrs = { classes("d-table", "badge", "bg-info") }) { Text("Used") }
+                Span(attrs = { classes("d-table", "badge", "bg-info") }) { Text("Rabljeno") }
             }
             Div(attrs = { classes("position-absolute", "end-0", "top-0", "pt-3", "pe-3", "zindex-5") }) {
                 Button(attrs = {
@@ -99,7 +99,7 @@ fun WishlistCard(
                     type(ButtonType.Button)
                     attr("data-bs-toggle", "tooltip")
                     attr("data-bs-placement", "left")
-                    attr("title", "Remove from Wishlist")
+                    attr("title", "Ukloni s liste želja")
                 }) {
                     I(attrs = { classes("fi-heart-filled") })
                 }
@@ -120,7 +120,7 @@ fun WishlistCard(
                 Span(attrs = { classes("fs-sm", "text-light", "me-3") }) { Text(year) }
                 Div(attrs = { classes("form-check", "form-check-light") }) {
                     Input(attrs = { classes("form-check-input"); id(compareId) },  type = InputType.Checkbox )
-                    Label(forId = compareId, attrs = { classes("form-check-label", "fs-sm") }) { Text("Compare") }
+                    Label(forId = compareId, attrs = { classes("form-check-label", "fs-sm") }) { Text("Usporedi") }
                 }
             }
             H3(attrs = { classes("h6", "mb-1") }) {
