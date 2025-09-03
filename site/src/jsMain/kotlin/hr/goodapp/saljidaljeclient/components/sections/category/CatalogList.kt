@@ -20,12 +20,12 @@ fun CatalogList() {
 val cars = listOf(
     CarData(
         year = 1995,
-        title = "Ford Truck Lifted",
+        title = "Ford kamion s liftom",
         price = "$24,000",
         location = "Chicago",
-        mileage = "278K mi",
-        gearbox = "Manual",
-        fuel = "Diesel",
+        mileage = "278K milja",
+        gearbox = "Ručni",
+        fuel = "Dizel",
         images = listOf(
             "/img/car-finder/catalog/09.jpg",
             "/img/car-finder/catalog/09.jpg"
@@ -36,9 +36,9 @@ val cars = listOf(
         title = "Mercedes Benz C300 Sport",
         price = "$53,400",
         location = "San Francisco",
-        mileage = "35K mi",
-        gearbox = "Automatic",
-        fuel = "Hybrid",
+        mileage = "35K milja",
+        gearbox = "Automatski",
+        fuel = "Hibrid",
         images = listOf(
             "/img/car-finder/catalog/10.jpg",
             "/img/car-finder/catalog/10.jpg"
@@ -47,12 +47,12 @@ val cars = listOf(
     ),
     CarData(
         year = 2019,
-        title = "Mazda MX-5 Miata Convertible",
+        title = "Mazda MX-5 Miata kabriolet",
         price = "$36,500",
         location = "Los Angeles",
-        mileage = "18K mi",
-        gearbox = "Manual",
-        fuel = "Gasoline",
+        mileage = "18K milja",
+        gearbox = "Ručni",
+        fuel = "Benzin",
         images = listOf(
             "/img/car-finder/catalog/11.jpg",
             "/img/car-finder/catalog/11.jpg"
@@ -63,9 +63,9 @@ val cars = listOf(
         title = "Nissan 370Z Nismo",
         price = "$37,900",
         location = "New York",
-        mileage = "16K mi",
-        gearbox = "Automatic",
-        fuel = "Gasoline",
+        mileage = "16K milja",
+        gearbox = "Automatski",
+        fuel = "Benzin",
         images = listOf(
             "/img/car-finder/catalog/12.jpg",
             "/img/car-finder/catalog/12.jpg"
@@ -76,9 +76,9 @@ val cars = listOf(
         title = "BMW 640 XI Gran Turismo",
         price = "$44,300",
         location = "New Jersey",
-        mileage = "10K mi",
-        gearbox = "Automatic",
-        fuel = "Gasoline",
+        mileage = "10K milja",
+        gearbox = "Automatski",
+        fuel = "Benzin",
         images = listOf(
             "/img/car-finder/catalog/13.jpg",
             "/img/car-finder/catalog/13.jpg"
@@ -90,9 +90,9 @@ val cars = listOf(
         title = "Toyota GT86",
         price = "$16,000",
         location = "Chicago",
-        mileage = "46K mi",
-        gearbox = "Manual",
-        fuel = "Gasoline",
+        mileage = "46K milja",
+        gearbox = "Ručni",
+        fuel = "Benzin",
         images = listOf(
             "/img/car-finder/catalog/14.jpg",
             "/img/car-finder/catalog/14.jpg"
@@ -103,9 +103,9 @@ val cars = listOf(
         title = "Volkswagen GTI S",
         price = "$29,000",
         location = "San Francisco",
-        mileage = "25K mi",
-        gearbox = "Automatic",
-        fuel = "Hybrid",
+        mileage = "25K milja",
+        gearbox = "Automatski",
+        fuel = "Hibrid",
         images = listOf(
             "/img/car-finder/catalog/15.jpg",
             "/img/car-finder/catalog/15.jpg"
@@ -117,9 +117,9 @@ val cars = listOf(
         title = "Ford Explorer XLT",
         price = "$26,900",
         location = "Kansas",
-        mileage = "34K mi",
-        gearbox = "Manual",
-        fuel = "Diesel",
+        mileage = "34K milja",
+        gearbox = "Ručni",
+        fuel = "Dizel",
         images = listOf(
             "/img/car-finder/catalog/16.jpg",
             "/img/car-finder/catalog/16.jpg"

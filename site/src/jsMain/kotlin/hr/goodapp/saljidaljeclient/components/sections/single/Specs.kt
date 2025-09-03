@@ -14,30 +14,30 @@ fun Specs() {
         H2(attrs = {
             classes("h4", "text-light", "mb-4")
         }) {
-            Text("Specifications")
+            Text("Specifikacije")
         }
 
         Div(attrs = { classes("row", "text-light") }) {
             // Left Column
             Div(attrs = { classes("col-sm-6", "col-md-12", "col-lg-6") }) {
                 Ul(attrs = { classes("list-unstyled") }) {
-                    SpecItem("Manufacturing Year:", "2018")
-                    SpecItem("Mileage:", "25K miles")
-                    SpecItem("Body Type:", "Convertible")
-                    SpecItem("Drivetrain:", "Front Wheel Drive")
-                    SpecItem("Engine:", "2.5L Turbo 6 Cylinder")
-                    SpecItem("Transmission:", "7-Speed Shiftable Automatic")
+                    SpecItem("Godina proizvodnje:", "2018")
+                    SpecItem("Kilometraža:", "25K milja")
+                    SpecItem("Tip karoserije:", "Kabriolet")
+                    SpecItem("Pogon:", "Prednji pogon")
+                    SpecItem("Motor:", "2.5L Turbo 6-cilindarski")
+                    SpecItem("Mjenjač:", "7-stupanjski automatski s ručnim izborom")
                 }
             }
 
             // Right Column
             Div(attrs = { classes("col-sm-6", "col-md-12", "col-lg-6") }) {
                 Ul(attrs = { classes("list-unstyled") }) {
-                    SpecItem("Fuel Type:", "Gasoline")
-                    SpecItemWithIcon("City MPG:", "20", "Verified by seller")
-                    SpecItemWithIcon("Highway MPG:", "29", "Verified by seller")
-                    SpecItem("Exterior Color:", "Aspen White")
-                    SpecItem("Interior Color:", "Charcoal")
+                    SpecItem("Vrsta goriva:", "Benzin")
+                    SpecItemWithIcon("Potrošnja u gradu:", "20", "Provjereno od prodavatelja")
+                    SpecItemWithIcon("Potrošnja na autocesti:", "29", "Provjereno od prodavatelja")
+                    SpecItem("Boja eksterijera:", "Aspen bijela")
+                    SpecItem("Boja interijera:", "Ugljen")
                     SpecItem("VIN:", "2VW821AU9JM754284")
                 }
             }

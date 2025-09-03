@@ -11,7 +11,7 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun RelatedPostsCarousel() {
     H2(attrs = { classes("h3", "text-light", "pt-5", "pb-3", "mt-md-4") }) {
-        Text("You may be interested in")
+        Text("Možda će vas zanimati")
     }
 
     Div(attrs = {
@@ -31,25 +31,25 @@ fun RelatedPostsCarousel() {
         }) {
             val cars = listOf(
                 RelatedCar(
-                    year = "2020", title = "Mazda MX-5 Miata Convertible", price = "$29,700",
+                    year = "2020", title = "Mazda MX-5 Miata Cabriolet", price = "$29,700",
                     location = "Los Angeles", img = "img/car-finder/catalog/03.jpg",
-                    mileage = "18K mi", transmission = "Manual", fuel = "Gasoline", badge = "New", badgeColor = "bg-danger"
+                    mileage = "18K mi", transmission = "Manual", fuel = "Benzin", badge = "Novo", badgeColor = "bg-danger"
                 ),
                 RelatedCar(
                     year = "2018", title = "BMW 640 XI Gran Turismo", price = "$43,500",
                     location = "San Francisco", img = "img/car-finder/catalog/05.jpg",
-                    mileage = "10K mi", transmission = "Automatic", fuel = "Gasoline", badge = "Used", badgeColor = "bg-info",
+                    mileage = "10K mi", transmission = "Automatski", fuel = "Benzin", badge = "Rabljeno", badgeColor = "bg-info",
                     certified = true
                 ),
                 RelatedCar(
                     year = "2019", title = "Nissan 370Z Nismo", price = "$37,900",
                     location = "New York", img = "img/car-finder/catalog/04.jpg",
-                    mileage = "16K mi", transmission = "Automatic", fuel = "Gasoline", badge = "Used", badgeColor = "bg-info"
+                    mileage = "16K mi", transmission = "Automatski", fuel = "Benzin", badge = "Rabljeno", badgeColor = "bg-info"
                 ),
                 RelatedCar(
                     year = "2017", title = "Ford Explorer XLT", price = "$26,950",
                     location = "Kansas", img = "img/car-finder/catalog/08.jpg",
-                    mileage = "34K mi", transmission = "Manual", fuel = "Diesel", badge = "Used", badgeColor = "bg-info"
+                    mileage = "34K mi", transmission = "Manual", fuel = "Dizel", badge = "Rabljeno", badgeColor = "bg-info"
                 )
             )
 
@@ -70,9 +70,9 @@ fun RelatedPostsCarousel() {
                                         attr("data-bs-html", "true")
                                         attr(
                                             "data-bs-content",
-                                            """<div class="d-flex"><i class="fi-award mt-1 me-2"></i><div>This car is checked and<br>certified by Finder.</div></div>"""
+                                            """<div class="d-flex"><i class="fi-award mt-1 me-2"></i><div>Ovaj automobil je provjeren i<br>certificiran od strane Findera.</div></div>"""
                                         )
-                                    }) { Text("Certified") }
+                                    }) { Text("Certificirano") }
                                 }
                             }
                             Div(attrs = { classes("content-overlay", "end-0", "top-0", "pt-3", "pe-3") }) {
@@ -81,10 +81,10 @@ fun RelatedPostsCarousel() {
                                     type(ButtonType.Button)
                                     attr("data-bs-toggle", "tooltip")
                                     attr("data-bs-placement", "left")
-                                    attr("title", "Add to Wishlist")
+                                    attr("title", "Dodaj u listu želja")
                                 }) { I(attrs = { classes("fi-heart") }) {} }
                             }
-                            Img(attrs = { alt("Image") }, src = car.img)
+                            Img(attrs = { alt("Slika") }, src = car.img)
                         }
 
                         // Card body
@@ -93,7 +93,7 @@ fun RelatedPostsCarousel() {
                                 Span(attrs = { classes("fs-sm", "text-light", "me-3") }) { Text(car.year) }
                                 Div(attrs = { classes("form-check", "form-check-light") }) {
                                     Input(type = InputType.Checkbox,attrs = { classes("form-check-input"); id("compare${index + 1}") })
-                                    Label(attrs = { classes("form-check-label", "fs-sm"); }, forId = "compare${index + 1}") { Text("Compare") }
+                                    Label(attrs = { classes("form-check-label", "fs-sm"); }, forId = "compare${index + 1}") { Text("Usporedi") }
                                 }
                             }
                             H3(attrs = { classes("h6", "mb-1") }) {

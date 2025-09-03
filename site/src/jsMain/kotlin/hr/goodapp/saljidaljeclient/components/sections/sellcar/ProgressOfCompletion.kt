@@ -10,7 +10,7 @@ fun ProgressOfCompletion() {
     }) {
         Div(attrs = { classes("sticky-top", "pt-5") }) {
             H6(attrs = { classes("text-light", "pt-5", "mt-3", "mb-2") }) {
-                Text("80% content filled")
+                Text("80% sadržaja popunjeno")
             }
 
             // Progress bar
@@ -30,13 +30,13 @@ fun ProgressOfCompletion() {
 
             // Navigation checklist
             Ul(attrs = { classes("list-unstyled") }) {
-                SidebarItem("#basic-info", "Basic info", completed = true)
-                SidebarItem("#price", "Price", completed = true)
-                SidebarItem("#vehicle-info", "Vehicle information", completed = true)
-                SidebarItem("#features", "Features", completed = false)
-                SidebarItem("#photos", "Photos / video", completed = false)
-                SidebarItem("#location", "Location", completed = true)
-                SidebarItem("#contacts", "Contacts", completed = true)
+                SidebarItem("#basic-info", "Osnovne informacije", completed = true)
+                SidebarItem("#price", "Cijena", completed = true)
+                SidebarItem("#vehicle-info", "Podaci o vozilu", completed = true)
+                SidebarItem("#features", "Karakteristike", completed = false)
+                SidebarItem("#photos", "Fotografije / video", completed = false)
+                SidebarItem("#location", "Lokacija", completed = true)
+                SidebarItem("#contacts", "Kontakt", completed = true)
             }
         }
     }

@@ -12,7 +12,7 @@ fun FeaturesSection() {
     }) {
         H2(attrs = { classes("h4", "text-light", "mb-4") }) {
             I(attrs = { classes("fi-check-circle", "text-primary", "fs-5", "mt-n1", "me-2") })
-            Text("Features")
+            Text("Značajke")
         }
         Exterior()
         Interior()
@@ -23,15 +23,15 @@ fun FeaturesSection() {
 private fun Interior() {
     Div(attrs = { classes("mb-4") }) {
         Label(attrs = { classes("form-label", "d-block", "text-light", "fw-bold", "mb-2", "pb-1") }) {
-            Text("Interior")
+            Text("Unutrašnjost")
         }
 
         // Visible checkboxes
         Div(attrs = { classes("row") }) {
             val columns = listOf(
-                listOf("ac" to "Multi-zone A/C", "heated-seats" to "Heated front seats"),
-                listOf("navi" to "Navigation system", "leather-seats" to "Leather seats"),
-                listOf("wipers" to "Intermittent wipers", "memory-seat" to "Memory seat")
+                listOf("ac" to "Višezonska klima", "heated-seats" to "Grijana prednja sjedala"),
+                listOf("navi" to "Navigacijski sustav", "leather-seats" to "Kožna sjedala"),
+                listOf("wipers" to "Interval brisača", "memory-seat" to "Sjedalo s memorijom")
             )
             columns.forEach { colItems ->
                 Div(attrs = { classes("col-sm-4") }) {
@@ -55,8 +55,8 @@ private fun Interior() {
         Div(attrs = { classes("collapse"); attr("id", "moreInterior") }) {
             Div(attrs = { classes("row") }) {
                 val moreColumns = listOf(
-                    listOf("premium-sound" to "Premium sound system", "bluetooth" to "Bluetooth"),
-                    listOf("usb" to "USB port", "leather-wheel" to "Leather steering wheel"),
+                    listOf("premium-sound" to "Premium audio sustav", "bluetooth" to "Bluetooth"),
+                    listOf("usb" to "USB priključak", "leather-wheel" to "Kožni upravljač"),
                     listOf("apple-play" to "Apple CarPlay", "android-auto" to "Android Auto")
                 )
                 moreColumns.forEach { colItems ->
@@ -84,8 +84,8 @@ private fun Interior() {
             attrs = {
                 classes("collapse-label", "collapsed", "fs-sm")
                 attr("data-bs-toggle", "collapse")
-                attr("data-bs-label-collapsed", "Show more")
-                attr("data-bs-label-expanded", "Show less")
+                attr("data-bs-label-collapsed", "Prikaži više")
+                attr("data-bs-label-expanded", "Prikaži manje")
                 attr("role", "button")
                 attr("aria-expanded", "false")
                 attr("aria-controls", "moreInterior")
@@ -98,15 +98,15 @@ private fun Interior() {
 private fun Exterior() {
     Div(attrs = { classes("mb-4") }) {
         Label(attrs = { classes("form-label", "d-block", "text-light", "fw-bold", "mb-2", "pb-1") }) {
-            Text("Exterior")
+            Text("Vanjski dio")
         }
 
         Div(attrs = { classes("row") }) {
             // First column
             Div(attrs = { classes("col-sm-4") }) {
                 listOf(
-                    "alloy-wheels" to "Alloy wheels",
-                    "sunroof" to "Sunroof / moonroof"
+                    "alloy-wheels" to "Aluminijski naplatci",
+                    "sunroof" to "Krov / pomični krov"
                 ).forEach { (id, labelText) ->
                     Div(attrs = { classes("form-check", "form-check-light") }) {
                         Input(type = InputType.Checkbox, attrs = {
@@ -124,8 +124,8 @@ private fun Exterior() {
             // Second column
             Div(attrs = { classes("col-sm-4") }) {
                 listOf(
-                    "panoramic-roof" to "Panoramic roof",
-                    "tinted-glass" to "Tinted glass"
+                    "panoramic-roof" to "Panoramski krov",
+                    "tinted-glass" to "Zatmnjeno staklo"
                 ).forEach { (id, labelText) ->
                     Div(attrs = { classes("form-check", "form-check-light") }) {
                         Input(type = InputType.Checkbox, attrs = {
@@ -147,15 +147,15 @@ private fun Exterior() {
 private fun SafetyFeatures() {
     Div(attrs = { classes("mb-4") }) {
         Label(attrs = { classes("form-label", "d-block", "text-light", "fw-bold", "mb-2", "pb-1") }) {
-            Text("Safety")
+            Text("Sigurnost")
         }
 
         // Visible checkboxes
         Div(attrs = { classes("row") }) {
             val columns = listOf(
-                listOf("airbag-driver" to "Airbag: driver", "airbag-pasenger" to "Airbag: passenger"),
-                listOf("alarm" to "Alarm", "antilock" to "Antilock brakes"),
-                listOf("stability-control" to "Stability control", "fog-lights" to "Fog lights")
+                listOf("airbag-driver" to "Zračni jastuk: vozač", "airbag-pasenger" to "Zračni jastuk: suvozač"),
+                listOf("alarm" to "Alarm", "antilock" to "ABS kočnice"),
+                listOf("stability-control" to "Kontrola stabilnosti", "fog-lights" to "Maglenke")
             )
             columns.forEach { colItems ->
                 Div(attrs = { classes("col-sm-4") }) {
@@ -179,8 +179,8 @@ private fun SafetyFeatures() {
         Div(attrs = { classes("collapse"); attr("id", "moreSafety") }) {
             Div(attrs = { classes("row") }) {
                 val moreColumns = listOf(
-                    listOf("adaptive-cruise" to "Adaptive cruise control", "blind-monitor" to "Blind spot monitor"),
-                    listOf("brake-assist" to "Brake assist", "lane-warning" to "Lane departure warning")
+                    listOf("adaptive-cruise" to "Adaptivni tempomat", "blind-monitor" to "Monitor mrtvog kuta"),
+                    listOf("brake-assist" to "Pomoć pri kočenju", "lane-warning" to "Upozorenje za izlazak iz trake")
                 )
                 moreColumns.forEach { colItems ->
                     Div(attrs = { classes("col-sm-4") }) {
@@ -207,8 +207,8 @@ private fun SafetyFeatures() {
             attrs = {
                 classes("collapse-label", "collapsed", "fs-sm")
                 attr("data-bs-toggle", "collapse")
-                attr("data-bs-label-collapsed", "Show more")
-                attr("data-bs-label-expanded", "Show less")
+                attr("data-bs-label-collapsed", "Prikaži više")
+                attr("data-bs-label-expanded", "Prikaži manje")
                 attr("role", "button")
                 attr("aria-expanded", "false")
                 attr("aria-controls", "moreSafety")

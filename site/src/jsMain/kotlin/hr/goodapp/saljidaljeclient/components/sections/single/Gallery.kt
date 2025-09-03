@@ -33,7 +33,7 @@ fun CarGallery() {
                 Div {
                     Img(
                         src = "img/car-finder/single/gallery/$img",
-                        alt = "Image",
+                        alt = "Slika",
                         attrs = { classes("rounded-3") }
                     )
                 }
@@ -51,7 +51,7 @@ fun CarGallery() {
             Li(attrs = { classes("tns-thumbnail") }) {
                 Img(
                     src = filename,
-                    alt = "Thumbnail"
+                    alt = "Sličica"
                 )
             }
         }
@@ -71,7 +71,7 @@ fun CarGallery() {
                 }
             ) {
                 I(attrs = { classes("fi-play-circle", "fs-5") })
-                Span(attrs = { classes("opacity-70", "mt-1") }) { Text("Play video") }
+                Span(attrs = { classes("opacity-70", "mt-1") }) { Text("Pusti video") }
             }
         }
     }

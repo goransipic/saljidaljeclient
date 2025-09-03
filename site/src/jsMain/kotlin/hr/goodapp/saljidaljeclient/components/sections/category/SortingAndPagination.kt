@@ -10,13 +10,13 @@ fun SortingAndPagination() {
         Div(attrs = { classes("d-flex", "align-items-center", "me-sm-4") }) {
             Label(forId = "sorting2", attrs = { classes("fs-sm", "text-light", "me-2", "pe-1", "text-nowrap") }) {
                 I(attrs = { classes("fi-arrows-sort", "mt-n1", "me-2") }) {}
-                Text("Sort by:")
+                Text("Sortiraj po:")
             }
             Select(attrs = { classes("form-select", "form-select-light", "form-select-sm", "me-2", "me-sm-4") }) {
-                Option(value = "") { Text("Newest") }
-                Option(value = "") { Text("Popular") }
-                Option(value = "") { Text("Price: Low - High") }
-                Option(value = "") { Text("Price: Hight - Low") }
+                Option(value = "") { Text("Najnoviji") }
+                Option(value = "") { Text("Popularni") }
+                Option(value = "") { Text("Cijena: Niska → Visoka") }
+                Option(value = "") { Text("Cijena: Visoka → Niska") }
             }
             Div(attrs = {
                 classes("d-none", "d-md-block", "border-end", "border-light")
@@ -24,7 +24,7 @@ fun SortingAndPagination() {
             }) {}
             Div(attrs = { classes("d-none", "d-md-block", "fw-bold", "text-light", "opacity-70", "text-nowrap", "ps-md-4") }) {
                 I(attrs = { classes("fi-switch-horizontal", "me-2") }) {}
-                Span(attrs = { classes("align-middle") }) { Text("Compare (0)") }
+                Span(attrs = { classes("align-middle") }) { Text("Usporedi (0)") }
             }
         }
 
@@ -45,7 +45,7 @@ fun SortingAndPagination() {
                 Li(attrs = { classes("page-item", "d-none", "d-sm-block") }) { Text("...") }
                 Li(attrs = { classes("page-item", "d-none", "d-sm-block") }) { A(href = "#", attrs = { classes("page-link") }) { Text("8") } }
                 Li(attrs = { classes("page-item") }) {
-                    A(href = "#", attrs = { classes("page-link"); attr("aria-label", "Next") }) {
+                    A(href = "#", attrs = { classes("page-link"); attr("aria-label", "Sljedeća") }) {
                         I(attrs = { classes("fi-chevron-right") }) {}
                     }
                 }

@@ -11,10 +11,10 @@ fun BreadCrumb() {
     }) {
         Ol(attrs = { classes("breadcrumb", "breadcrumb-light") }) {
             Li(attrs = { classes("breadcrumb-item") }) {
-                A(href = "car-finder-home.html") { Text("Home") }
+                A(href = "car-finder-home.html") { Text("Početna") }
             }
             Li(attrs = { classes("breadcrumb-item") }) {
-                A(href = "car-finder-catalog-grid.html") { Text("Used cars") }
+                A(href = "car-finder-catalog-grid.html") { Text("Rabljeni automobili") }
             }
             Li(attrs = {
                 classes("breadcrumb-item", "active")

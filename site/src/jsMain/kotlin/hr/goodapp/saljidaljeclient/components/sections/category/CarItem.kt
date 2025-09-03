@@ -15,7 +15,7 @@ fun CarItem(car: CarData) {
             // Badge
             Div(attrs = { classes("position-absolute", "start-0", "top-0", "pt-3", "ps-3") }) {
                 Span(attrs = { classes("d-table", "badge", "bg-info") }) {
-                    Text("Used")
+                    Text("Rabljeno")
                 }
             }
 
@@ -26,13 +26,13 @@ fun CarItem(car: CarData) {
                     attr("type", "button")
                     attr("data-bs-toggle", "tooltip")
                     attr("data-bs-placement", "left")
-                    attr("title", "Add to Wishlist")
+                    attr("title", "Dodaj u listu želja")
                 }) {
                     I(attrs = { classes("fi-heart") })
                 }
             }
 
-            // Carousel inner (static images here, replace with actual carousel logic if needed)
+            // Carousel inner
             Div(attrs = { classes("tns-carousel-inner", "position-absolute", "top-0", "h-100") }) {
                 car.images.forEach { url ->
                     Div(attrs = {
@@ -58,7 +58,7 @@ fun CarItem(car: CarData) {
                         id("compare1")
                     })
                     Label(forId = "compare1", attrs = { classes("form-check-label", "fs-sm") }) {
-                        Text("Compare")
+                        Text("Usporedi")
                     }
                 }
             }

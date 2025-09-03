@@ -16,24 +16,24 @@ fun BasicInfo() {
         // Heading
         H2(attrs = { classes("h4", "text-light", "mb-4") }) {
             I(attrs = { classes("fi-info-circle", "text-primary", "fs-5", "mt-n1", "me-2") })
-            Text("Basic info")
+            Text("Osnovne informacije")
         }
 
         // Title field
         Div(attrs = { classes("mb-3") }) {
             Label(forId = "sc-title", attrs = { classes("form-label", "text-light") }) {
-                Text("Title ")
+                Text("Naslov ")
                 Span(attrs = { classes("text-danger") }) { Text("*") }
             }
             Input(type = InputType.Text, attrs = {
                 classes("form-control", "form-control-light")
                 id("sc-title")
-                placeholder("Title for your property")
+                placeholder("Naslov za vaš automobil")
                 value("Mercedes-Benz E 400 Cabriolet")
                 attr("required", "true")
             })
             Span(attrs = { classes("form-text", "text-light", "opacity-50") }) {
-                Text("48 characters left")
+                Text("Preostalo znakova: 48")
             }
         }
 
@@ -41,7 +41,7 @@ fun BasicInfo() {
         Div(attrs = { classes("row") }) {
             Div(attrs = { classes("col-sm-6", "mb-3") }) {
                 Label(forId = "sc-condition", attrs = { classes("form-label", "text-light") }) {
-                    Text("Vehicle condition ")
+                    Text("Stanje vozila ")
                     Span(attrs = { classes("text-danger") }) { Text("*") }
                 }
                 Select(attrs = {
@@ -52,17 +52,17 @@ fun BasicInfo() {
                     Option(value = "") {
                         attr("disabled", "true")
                         attr("hidden", "true")
-                        Text("Choose condition")
+                        Text("Odaberite stanje")
                     }
-                    Option(value = "Used") { Text("Used") }
-                    Option(value = "New") { Text("New") }
+                    Option(value = "Used") { Text("Rabljeno") }
+                    Option(value = "New") { Text("Novo") }
                 }
             }
         }
 
         // Seller type
         Div(attrs = { classes("form-label", "text-light", "fw-bold", "pt-3", "pb-2") }) {
-            Text("Are you listing on Finder as part of a company?")
+            Text("Objavljujete li na Finderu kao dio tvrtke?")
         }
 
         // Radio: Dealer
@@ -73,7 +73,7 @@ fun BasicInfo() {
                 name("sc-seller-type")
             })
             Label(forId = "sc-dealer", attrs = { classes("form-check-label") }) {
-                Text("I am a registered dealer")
+                Text("Registrirani sam trgovac")
             }
         }
 
@@ -86,7 +86,7 @@ fun BasicInfo() {
                 attr("checked", "true")
             })
             Label(forId = "sc-individual", attrs = { classes("form-check-label") }) {
-                Text("I am a private seller")
+                Text("Privatni sam prodavač")
             }
         }
     }

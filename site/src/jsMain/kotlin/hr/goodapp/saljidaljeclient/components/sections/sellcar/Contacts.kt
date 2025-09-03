@@ -18,35 +18,35 @@ fun Contacts() {
     ) {
         H2(attrs = { classes("h4", "text-light", "mb-4") }) {
             I(attrs = { classes("fi-phone", "text-primary", "fs-5", "mt-n1", "me-2") })
-            Text("Contacts")
+            Text("Kontakti")
         }
 
         Div(attrs = { classes("row") }) {
             // First Name
             Div(attrs = { classes("col-sm-6", "mb-3") }) {
                 Label(attrs = { classes("form-label", "text-light") }, forId = "sc-fn") {
-                    Text("First name")
+                    Text("Ime")
                     Span(attrs = { classes("text-danger") }) { Text(" *") }
                 }
                 Input(type = InputType.Text, attrs = {
                     classes("form-control", "form-control-light")
                     id("sc-fn")
                     value("Devon")
-                    placeholder("Enter your first name")
+                    placeholder("Unesite ime")
                     required()
                 })
             }
             // Second Name
             Div(attrs = { classes("col-sm-6", "mb-3") }) {
                 Label(attrs = { classes("form-label", "text-light"); }, forId = "sc-sn") {
-                    Text("Second name")
+                    Text("Prezime")
                     Span(attrs = { classes("text-danger") }) { Text(" *") }
                 }
                 Input(type = InputType.Text, attrs = {
                     classes("form-control", "form-control-light")
                     id("sc-sn")
                     value("Lane")
-                    placeholder("Enter your second name")
+                    placeholder("Unesite prezime")
                     required()
                 })
             }
@@ -63,12 +63,12 @@ fun Contacts() {
                     classes("form-control", "form-control-light")
                     id("sc-email")
                     value("devone_lane@email.com")
-                    placeholder("Enter your email")
+                    placeholder("Unesite email")
                 })
             }
             Div(attrs = { classes("col-sm-6", "mb-3") }) {
                 Label(attrs = { classes("form-label", "text-light") }, forId = "sc-phone") {
-                    Text("Phone number")
+                    Text("Broj telefona")
                     Span(attrs = { classes("text-danger") }) { Text(" *") }
                 }
                 Input(type = InputType.Tel, attrs = {
@@ -85,21 +85,21 @@ fun Contacts() {
                 classes("form-label", "text-light")
                 attr("for", "sc-website")
             }) {
-                Text("Website")
+                Text("Web stranica")
             }
             Input(
                 type = InputType.Text,
                 attrs = {
                     classes("form-control", "form-control-light", "mb-3")
                     attr("id", "sc-website")
-                    attr("placeholder", "Enter company name")
+                    attr("placeholder", "Unesite naziv tvrtke")
                 }
             )
         }
 
         // Socials
         Div(attrs = { classes("text-light", "py-3") }) {
-            Text("Social accounts")
+            Text("Društveni profili")
         }
 
         Div(attrs = { classes("d-flex", "align-items-center", "mb-3") }) {
@@ -119,7 +119,7 @@ fun Contacts() {
             }
             Input(
                 type = InputType.Text,
-                attrs = { classes("form-control", "form-control-light"); placeholder("Your Facebook account") })
+                attrs = { classes("form-control", "form-control-light"); placeholder("Vaš Facebook profil") })
         }
 
         // Collapsible extra socials
@@ -140,7 +140,7 @@ fun Contacts() {
             }
             Input(
                 type = InputType.Text,
-                attrs = { classes("form-control", "form-control-light"); placeholder("Your LinkedIn account") })
+                attrs = { classes("form-control", "form-control-light"); placeholder("Vaš LinkedIn profil") })
         }
 
         Div(attrs = { classes("d-flex", "align-items-center", "mb-3") }) {
@@ -160,7 +160,7 @@ fun Contacts() {
             }
             Input(
                 type = InputType.Text,
-                attrs = { classes("form-control", "form-control-light"); placeholder("Your Twitter account") })
+                attrs = { classes("form-control", "form-control-light"); placeholder("Vaš Twitter profil") })
         }
 
         // Toggle button
@@ -183,7 +183,7 @@ fun Contacts() {
                 }
                 Input(type = InputType.Text, attrs = {
                     classes("form-control", "form-control-light")
-                    placeholder("Your Instagram account")
+                    placeholder("Vaš Instagram profil")
                 })
             }
 
@@ -201,11 +201,11 @@ fun Contacts() {
                         "me-3"
                     )
                 }) {
-                    I(attrs = { classes("fi-pinterest") }) // Bootstrap Icon
+                    I(attrs = { classes("fi-pinterest") })
                 }
                 Input(type = InputType.Text, attrs = {
                     classes("form-control", "form-control-light")
-                    placeholder("Your Pinterest account")
+                    placeholder("Vaš Pinterest profil")
                 })
             }
         }
@@ -223,15 +223,14 @@ fun Contacts() {
                     "pb-3"
                 )
                 attr("data-bs-toggle", "collapse")
-                attr("data-bs-label-collapsed", "Show more")
-                attr("data-bs-label-expanded", "Show less")
+                attr("data-bs-label-collapsed", "Prikaži više")
+                attr("data-bs-label-expanded", "Prikaži manje")
                 attr("role", "button")
                 attr("aria-expanded", "false")
                 attr("aria-controls", "showMoreSocials")
             }
         ) {
             I(attrs = { classes("fi-arrow-down", "me-2") })
-            //Text("Show more")
         }
     }
     Div(attrs = { classes("d-sm-flex", "justify-content-between", "pt-2") }) {
@@ -243,14 +242,14 @@ fun Contacts() {
             }
         ) {
             I(attrs = { classes("fi-eye-on", "ms-n1", "me-2") })
-            Text("Preview")
+            Text("Pregled")
         }
 
         A(
             href = "car-finder-promotion.html",
             attrs = { classes("btn", "btn-primary", "btn-lg", "d-block", "mb-2") }
         ) {
-            Text("Save and continue")
+            Text("Spremi i nastavi")
         }
     }
 }

@@ -14,16 +14,18 @@ fun Breadcrumbs() {
         attr("aria-label", "Breadcrumb")
     }) {
         Ol(attrs = { classes("breadcrumb", "breadcrumb-light") }) {
+            // Home link
             Li(attrs = { classes("breadcrumb-item") }) {
                 A(href = "car-finder-home.html") {
-                    Text("Home")
+                    Text("Početna")
                 }
             }
+            // Current page
             Li(attrs = {
                 classes("breadcrumb-item", "active")
                 attr("aria-current", "page")
             }) {
-                Text("Sell car")
+                Text("Prodaja automobila")
             }
         }
     }

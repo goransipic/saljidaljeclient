@@ -15,22 +15,22 @@ fun Price() {
         // Heading
         H2(attrs = { classes("h4", "text-light", "mb-4") }) {
             I(attrs = { classes("fi-cash", "text-primary", "fs-5", "mt-n1", "me-2") })
-            Text("Price")
+            Text("Cijena")
         }
 
         // Label
         Label(forId = "sc-price", attrs = { classes("form-label", "text-light") }) {
-            Text("Price ")
+            Text("Cijena ")
             Span(attrs = { classes("text-danger") }) { Text("*") }
         }
 
         // Currency + Price input
         Div(attrs = { classes("d-sm-flex", "mb-2") }) {
             Select(attrs = { classes("form-select", "form-select-light", "w-25", "me-2", "mb-2") }) {
-                Option(value = "usd") { Text("$") }  // $
-                Option(value = "eur") { Text("€") } // €
-                Option(value = "gbp") { Text("£") }  // £
-                Option(value = "jpy") { Text("¥") }  // ¥
+                Option(value = "usd") { Text("$") }
+                Option(value = "eur") { Text("€") }
+                Option(value = "gbp") { Text("£") }
+                Option(value = "jpy") { Text("¥") }
             }
 
             Input(type = InputType.Number, attrs = {
@@ -50,7 +50,7 @@ fun Price() {
                 id("negotiated-price")
             })
             Label(forId = "negotiated-price", attrs = { classes("form-check-label") }) {
-                Text("Negotiated price")
+                Text("Cijena po dogovoru")
             }
         }
     }

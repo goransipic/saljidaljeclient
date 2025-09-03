@@ -7,44 +7,44 @@ import org.jetbrains.compose.web.dom.*
 fun Features() {
     // Features heading
     H2(attrs = { classes("h4", "text-light", "pt-3", "mb-4") }) {
-        Text("Features")
+        Text("Značajke")
     }
 
-    Div(attrs = { classes("accordion", "accordion-light") ; attr("id", "features") }) {
+    Div(attrs = { classes("accordion", "accordion-light"); attr("id", "features") }) {
 
         // Exterior
-        AccordionItem("exterior", "Exterior") {
+        AccordionItem("exterior", "Vanjski dio") {
             Ul {
                 listOf(
-                    "Alloy Wheels",
-                    "Sunroof / Moonroof",
-                    "Tinged glass",
-                    "LED Headlights",
-                    "Foldable Roof",
-                    "Tow Hitch"
+                    "Alu naplatci",
+                    "Krov / Sunroof",
+                    "Tonirana stakla",
+                    "LED prednja svjetla",
+                    "Sklopivi krov",
+                    "Kuka za vuču"
                 ).forEach { Li { Text(it) } }
             }
         }
 
         // Interior
-        AccordionItem("interior", "Interior", expanded = true) {
+        AccordionItem("interior", "Unutrašnjost", expanded = true) {
             Div(attrs = { classes("row") }) {
                 val interiorCols = listOf(
                     listOf(
-                        "Adjustable Steering Wheel",
-                        "Auto-Dimming Rearview Mirror",
-                        "Driver Adjustable Lumbar",
-                        "Driver Illuminated Vanity Mirror",
-                        "Universal Garage Door Opener",
-                        "Steering Wheel Audio Controls"
+                        "Podesivi volan",
+                        "Retrovizor s automatskim zatamnjivanjem",
+                        "Podesiva lumbalna potpora vozača",
+                        "Osvijetljeno ogledalo vozača",
+                        "Universalni otvarač garažnih vrata",
+                        "Kontrole audio sustava na volanu"
                     ),
                     listOf(
-                        "Heated Front Seats",
-                        "Leather Seats",
-                        "Leather Steering Wheel",
-                        "Pass-Through Rear Seat",
-                        "Passenger Adjustable Lumbar",
-                        "Passenger Illuminated Visor Mirror"
+                        "Grijana prednja sjedala",
+                        "Kožna sjedala",
+                        "Kožni volan",
+                        "Sjedalo s prolazom straga",
+                        "Podesiva lumbalna potpora suvozača",
+                        "Osvijetljeno ogledalo suvozača"
                     )
                 )
                 interiorCols.forEach { colItems ->
@@ -58,23 +58,23 @@ fun Features() {
         }
 
         // Safety
-        AccordionItem("safety", "Safety") {
+        AccordionItem("safety", "Sigurnost") {
             Div(attrs = { classes("row") }) {
                 val safetyCols = listOf(
                     listOf(
-                        "Airbag: Driver",
-                        "Airbag: Passenger",
-                        "Adaptive Cruise Control",
-                        "Blind Spot Monitor",
+                        "Zračni jastuk: Vozač",
+                        "Zračni jastuk: Suvozač",
+                        "Adaptivni tempomat",
+                        "Monitor mrtvog kuta",
                         "Alarm",
-                        "Antilock Brakes"
+                        "ABS kočnice"
                     ),
                     listOf(
-                        "Brake Assist",
-                        "Lane Departure Warning",
-                        "Stability Control",
-                        "Fog Lights",
-                        "Power Door Locks"
+                        "Pomoć pri kočenju",
+                        "Upozorenje za napuštanje trake",
+                        "Kontrola stabilnosti",
+                        "Maglenke",
+                        "Električno zaključavanje vrata"
                     )
                 )
                 safetyCols.forEach { colItems ->
@@ -88,24 +88,24 @@ fun Features() {
         }
 
         // Technology
-        AccordionItem("technology", "Technology") {
+        AccordionItem("technology", "Tehnologija") {
             Div(attrs = { classes("row") }) {
                 val techCols = listOf(
                     listOf(
-                        "Multi-Zone A/C",
-                        "Climate Control",
-                        "Navigation System",
-                        "Remote Start",
+                        "Višezonska klima",
+                        "Klima kontrola",
+                        "Navigacijski sustav",
+                        "Daljinsko paljenje",
                         "Bluetooth",
-                        "Remote Start"
+                        "Daljinsko paljenje"
                     ),
                     listOf(
                         "Apple CarPlay",
                         "Android Auto",
-                        "Backup Camera",
+                        "Kamera za vožnju unatrag",
                         "HomeLink",
-                        "Keyless Start",
-                        "Premium Sound System"
+                        "Pokretanje bez ključa",
+                        "Premium audio sustav"
                     )
                 )
                 techCols.forEach { colItems ->
@@ -140,7 +140,9 @@ fun AccordionItem(
                     attr("aria-expanded", expanded.toString())
                     attr("aria-controls", id)
                 }
-            ) { Text(header) }
+            ) {
+                Text(header)
+            }
         }
         Div(
             attrs = {

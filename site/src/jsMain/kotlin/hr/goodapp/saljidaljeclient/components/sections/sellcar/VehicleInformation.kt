@@ -12,17 +12,17 @@ fun VehicleInformation() {
     }) {
         H2(attrs = { classes("h4", "text-light", "mb-4") }) {
             I(attrs = { classes("fi-car", "text-primary", "fs-5", "mt-n1", "me-2") })
-            Text("Vehicle information")
+            Text("Podaci o vozilu")
         }
 
         Div(attrs = { classes("row", "pb-2") }) {
             // Make
             Div(attrs = { classes("col-sm-6", "mb-3") }) {
                 Label(attrs = { classes("form-label", "text-light") ; attr("for", "sc-make") }) {
-                    Text("Make *")
+                    Text("Marka *")
                 }
                 Select(attrs = { classes("form-select", "form-select-light"); attr("id", "sc-make") }) {
-                    Option(value = "",attrs = { attr("value",""); attr("disabled", "true"); attr("hidden","true") }) { Text("Select make") }
+                    Option(value = "",attrs = { attr("value",""); attr("disabled", "true"); attr("hidden","true") }) { Text("Odaberite marku") }
                     Option(value = "",attrs = { attr("value","Acura") }) { Text("Acura") }
                     Option(value = "",attrs = { attr("value","BMW") }) { Text("BMW") }
                     Option(value = "",attrs = { attr("value","Citroen") }) { Text("Citroen") }
@@ -37,7 +37,7 @@ fun VehicleInformation() {
             Div(attrs = { classes("col-sm-6", "mb-3") }) {
                 Label(attrs = { classes("form-label", "text-light"); attr("for","sc-model") }) { Text("Model *") }
                 Select(attrs = { classes("form-select", "form-select-light"); attr("id","sc-model") }) {
-                    Option(value = "",attrs = { attr("value",""); attr("disabled","true"); attr("hidden","true") }) { Text("Select model") }
+                    Option(value = "",attrs = { attr("value",""); attr("disabled","true"); attr("hidden","true") }) { Text("Odaberite model") }
                     Option(value = "",attrs = { attr("value","A-Class") }) { Text("A-Class") }
                     Option(value = "",attrs = { attr("value","B-Class") }) { Text("B-Class") }
                     Option(value = "",attrs = { attr("value","C-Class") }) { Text("C-Class") }
@@ -52,9 +52,9 @@ fun VehicleInformation() {
 
             // Year
             Div(attrs = { classes("col-md-3", "col-sm-6", "mb-3") }) {
-                Label(attrs = { classes("form-label", "text-light"); attr("for","sc-year") }) { Text("Year *") }
+                Label(attrs = { classes("form-label", "text-light"); attr("for","sc-year") }) { Text("Godina *") }
                 Select(attrs = { classes("form-select", "form-select-light"); attr("id","sc-year") }) {
-                    Option(value = "",attrs = { attr("value",""); attr("disabled","true"); attr("hidden","true") }) { Text("Select year") }
+                    Option(value = "",attrs = { attr("value",""); attr("disabled","true"); attr("hidden","true") }) { Text("Odaberite godinu") }
                     Option(value = "",attrs = { attr("value","2021") }) { Text("2021") }
                     Option(value = "",attrs = { attr("value","2020") }) { Text("2020") }
                     Option(value = "",attrs = { attr("value","2019") }) { Text("2019") }
@@ -69,14 +69,14 @@ fun VehicleInformation() {
 
             // Mileage
             Div(attrs = { classes("col-md-3", "col-sm-6", "mb-3") }) {
-                Label(attrs = { classes("form-label", "text-light"); attr("for","sc-mileage") }) { Text("Mileage *") }
+                Label(attrs = { classes("form-label", "text-light"); attr("for","sc-mileage") }) { Text("Kilometraža *") }
                 Input(type = InputType.Number, attrs = {
                     classes("form-control", "form-control-light")
                     attr("id","sc-mileage")
                     attr("min","200")
                     attr("step","100")
                     attr("value","25000")
-                    attr("placeholder","Enter mileage")
+                    attr("placeholder","Unesite kilometražu")
                 })
             }
 
@@ -87,7 +87,7 @@ fun VehicleInformation() {
                     classes("form-control", "form-control-light")
                     attr("id","sc-vin")
                     attr("value","2VW821AU9JM754284")
-                    attr("placeholder","Enter VIN code")
+                    attr("placeholder","Unesite VIN kod")
                 })
             }
         }
@@ -97,17 +97,17 @@ fun VehicleInformation() {
             Div(attrs = { classes("row", "pb-2") }) {
                 Div(attrs = { classes("col-md-6") }) {
                     val vehicleFields = listOf(
-                        VehicleField("Body type", "sc-body", listOf("Compact","Convertible","Crossover","Coupe","Family MPV","Pickup","Sedan","SUV","Wagon"), "Convertible"),
-                        VehicleField("Fuel type", "sc-fuel", listOf("Gasoline","Diesel","Hybrid","Electric"), "Gasoline"),
-                        VehicleField("Engine", "sc-engine", listOf("1.5 Turbo 3 Cylinder Engine","2.4L 4 Cylinder Engine","3.5L 4 Cylinder Engine","2.5L Turbo 6 Cylinder"), "2.5L Turbo 6 Cylinder"),
-                        VehicleField("Transmission", "sc-transmission", listOf("Manual","Automatic"), "Automatic"),
-                        VehicleField("Drivetrain", "sc-drivetrain", listOf("Front Wheel Drive","Rear Wheel Drive","All Wheel Drive"), "Front Wheel Drive")
+                        VehicleField("Tip karoserije", "sc-body", listOf("Compact","Kabriolet","Crossover","Coupe","Obiteljski MPV","Pickup","Limuzina","SUV","Karavan"), "Kabriolet"),
+                        VehicleField("Vrsta goriva", "sc-fuel", listOf("Benzin","Dizel","Hibrid","Električni"), "Benzin"),
+                        VehicleField("Motor", "sc-engine", listOf("1.5 Turbo 3 cilindara","2.4L 4 cilindara","3.5L 4 cilindara","2.5L Turbo 6 cilindara"), "2.5L Turbo 6 cilindara"),
+                        VehicleField("Mjenjač", "sc-transmission", listOf("Ručni","Automatski"), "Automatski"),
+                        VehicleField("Pogon", "sc-drivetrain", listOf("Prednji","Zadnji","Svi kotači"), "Prednji")
                     )
 
                     vehicleFields.forEach { field ->
                         Label(attrs = { classes("form-label","text-light"); attr("for", field.id) }) { Text("${field.label} *") }
                         Select(attrs = { classes("form-select","form-select-light","mb-3"); attr("id", field.id) }) {
-                            Option(value = "", attrs = { attr("disabled","true"); attr("hidden","true") }) { Text("Select ${field.label}") }
+                            Option(value = "", attrs = { attr("disabled","true"); attr("hidden","true") }) { Text("Odaberite ${field.label}") }
                             field.options.forEach { item ->
                                 Option(value = "", attrs = { attr("value", item); if(item == field.selected) attr("selected","true") }) { Text(item) }
                             }
@@ -115,12 +115,12 @@ fun VehicleInformation() {
                     }
 
                     // Color
-                    Label(attrs = { classes("form-label", "text-light"); attr("for","sc-color") }) { Text("Color") }
+                    Label(attrs = { classes("form-label", "text-light"); attr("for","sc-color") }) { Text("Boja") }
                     Input(type = InputType.Text, attrs = {
                         classes("form-control","form-control-light","mb-3")
                         attr("id","sc-color")
                         attr("value","Aspen White")
-                        attr("placeholder","Enter color")
+                        attr("placeholder","Unesite boju")
                     })
                 }
             }
@@ -128,9 +128,9 @@ fun VehicleInformation() {
 
         // Description
         Div(attrs = { classes("border-top","border-light","mt-2","pt-4") }) {
-            Label(attrs = { classes("form-label","text-light"); attr("for","sc-description") }) { Text("Description") }
-            TextArea(attrs = { classes("form-control","form-control-light"); attr("id","sc-description"); attr("rows","5"); attr("placeholder","Describe your vehicle") })
-            Span(attrs = { classes("form-text","text-light","opacity-50") }) { Text("3000 characters left") }
+            Label(attrs = { classes("form-label","text-light"); attr("for","sc-description") }) { Text("Opis") }
+            TextArea(attrs = { classes("form-control","form-control-light"); attr("id","sc-description"); attr("rows","5"); attr("placeholder","Opis vozila") })
+            Span(attrs = { classes("form-text","text-light","opacity-50") }) { Text("Preostalo 3000 znakova") }
         }
     }
 }

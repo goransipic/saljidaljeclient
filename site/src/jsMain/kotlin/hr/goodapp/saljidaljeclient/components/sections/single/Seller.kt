@@ -8,7 +8,7 @@ fun Seller() {
     Div(attrs = { classes("pb-4", "mb-3") }) {
         // Heading
         H2(attrs = { classes("h4", "text-light", "pt-4", "mt-3") }) {
-            Text("Seller's Description")
+            Text("Opis prodavatelja")
         }
 
         // Short description
@@ -39,8 +39,8 @@ fun Seller() {
                 classes("collapse-label", "collapsed")
                 attr("href", "#seeMoreDescription")
                 attr("data-bs-toggle", "collapse")
-                attr("data-bs-label-collapsed", "Show more")
-                attr("data-bs-label-expanded", "Show less")
+                attr("data-bs-label-collapsed", "Prikaži više")
+                attr("data-bs-label-expanded", "Prikaži manje")
                 attr("role", "button")
                 attr("aria-expanded", "false")
                 attr("aria-controls", "seeMoreDescription")

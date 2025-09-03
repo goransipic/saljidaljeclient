@@ -19,7 +19,7 @@ fun TitleAndSharing() {
         // Left section (title + details)
         Div(attrs = { classes("me-3") }) {
             H1(attrs = { classes("h2", "text-light", "mb-md-0") }) {
-                Text("Mercedes-Benz E 400 Cabriolet")
+                Text("Mercedes-Benz E 400 Kabriolet")
             }
 
             // Mobile details
@@ -28,7 +28,7 @@ fun TitleAndSharing() {
                 Div(attrs = { classes("d-flex", "align-items-center", "mb-3") }) {
                     Div(attrs = { classes("h3", "mb-0", "text-light") }) { Text("$31,900") }
                     Div(attrs = { classes("text-nowrap", "ps-3") }) {
-                        Span(attrs = { classes("badge", "bg-info", "fs-base", "me-2") }) { Text("Used") }
+                        Span(attrs = { classes("badge", "bg-info", "fs-base", "me-2") }) { Text("Rabljeno") }
                         Span(attrs = {
                             classes("badge", "bg-success", "fs-base", "me-2")
                             attr("data-bs-toggle", "popover")
@@ -37,10 +37,10 @@ fun TitleAndSharing() {
                             attr("data-bs-html", "true")
                             attr(
                                 "data-bs-content",
-                                """<div class="d-flex"><i class="fi-award mt-1 me-2"></i><div>This car is checked and<br>certified by Finder.</div></div>"""
+                                """<div class="d-flex"><i class="fi-award mt-1 me-2"></i><div>Ovaj automobil je provjeren i<br>certificiran od strane Findera.</div></div>"""
                             )
                         }) {
-                            Text("Certified")
+                            Text("Certificirano")
                         }
                     }
                 }
@@ -49,7 +49,7 @@ fun TitleAndSharing() {
                 Div(attrs = { classes("d-flex", "flex-wrap", "align-items-center", "text-light", "mb-2") }) {
                     Div(attrs = { classes("text-nowrap", "border-end", "border-light", "pe-3", "me-3") }) {
                         I(attrs = { classes("fi-dashboard", "fs-lg", "opacity-70", "me-2") })
-                        Span(attrs = { classes("align-middle") }) { Text("25K miles") }
+                        Span(attrs = { classes("align-middle") }) { Text("25K milja") }
                     }
                     Div(attrs = { classes("text-nowrap") }) {
                         I(attrs = { classes("fi-map-pin", "fs-lg", "opacity-70", "me-2") })
@@ -65,7 +65,7 @@ fun TitleAndSharing() {
                 classes("btn", "btn-icon", "btn-translucent-light", "btn-xs", "rounded-circle", "mb-sm-2")
                 attr("type", "button")
                 attr("data-bs-toggle", "tooltip")
-                attr("title", "Add to Wishlist")
+                attr("title", "Dodaj u listu želja")
             }) {
                 I(attrs = { classes("fi-heart") })
             }
@@ -73,7 +73,7 @@ fun TitleAndSharing() {
             Div(attrs = {
                 classes("dropdown", "d-inline-block")
                 attr("data-bs-toggle", "tooltip")
-                attr("title", "Share")
+                attr("title", "Podijeli")
             }) {
                 Button(attrs = {
                     classes("btn", "btn-icon", "btn-translucent-light", "btn-xs", "rounded-circle", "ms-2", "mb-sm-2")

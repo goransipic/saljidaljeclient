@@ -10,7 +10,7 @@ fun PageContent() {
     }) {
         Breadcrumbs()
         PageTitleWithProgress(
-            title = "Sell car",
+            title = "Prodaj auto",
             progress = 70
         )
         BasicInfo()

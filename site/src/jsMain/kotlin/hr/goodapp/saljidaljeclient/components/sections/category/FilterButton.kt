@@ -17,6 +17,6 @@ fun FilterButton() {
         }
     ) {
         I(attrs = { classes("fi-filter", "me-2") })  // <i class="fi-filter me-2"></i>
-        Text("Filters")
+        Text("Filtri")
     }
 }
