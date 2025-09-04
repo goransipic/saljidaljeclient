@@ -1,12 +1,52 @@
 package hr.goodapp.saljidaljeclient.components.sections.main
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import hr.goodapp.saljidaljeclient.DropdownProps
+import hr.goodapp.saljidaljeclient.Option
+import hr.goodapp.saljidaljeclient.SearchFormViewModel
+import MockSearchRepositoryImpl
 import org.jetbrains.compose.web.attributes.InputType
 
 import org.jetbrains.compose.web.dom.*
 
 @Composable
 fun HeroSearchSection() {
+    val viewModel = remember {
+        SearchFormViewModel(
+            repository = MockSearchRepositoryImpl(),
+            dropdowns = listOf(
+                DropdownProps(
+                    name = "Make",
+                    icon = "fi-car",
+                    options = listOf(
+                        Option(name = "Toyota", seoName = "toyota", id = 1),
+                        Option(name = "BMW", seoName = "bmw", id = 2),
+                        Option(name = "Mercedes", seoName = "mercedes", id = 3),
+                        Option(name = "Opel", seoName = "mercedes", id = 4)
+                    )
+                ),
+                DropdownProps(
+                    name = "Make",
+                    icon = "fi-car",
+                    options = emptyList()
+                ),
+                DropdownProps(
+                    name = "Make",
+                    icon = "fi-car",
+                    options = emptyList()
+                ), DropdownProps(
+                    name = "Make",
+                    icon = "fi-car",
+                    options = emptyList()
+                )
+            ),
+        )
+    }
+    val state by viewModel.uiState.collectAsState()
+
     Section(attrs = {
         classes("bg-position-top-center", "bg-repeat-0", "pt-5")
         style {
@@ -83,18 +123,10 @@ fun HeroSearchSection() {
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "make") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                                listOf(
-                                    "Acura",
-                                    "BMW",
-                                    "Citroen",
-                                    "Lexus",
-                                    "Mercedes-Benz",
-                                    "Nissan",
-                                    "Toyota"
-                                ).forEach { make ->
+                                state.make.options.forEach { make ->
                                     Li {
-                                        A("#", attrs = { classes("dropdown-item") }) {
-                                            Span(attrs = { classes("dropdown-item-label") }) { Text(make) }
+                                        A("#", attrs = { onClick { it.preventDefault(); viewModel.selectMake(make) };  classes("dropdown-item") }) {
+                                            Span(attrs = { classes("dropdown-item-label") }) { Text(make.name) }
                                         }
                                     }
                                 }
@@ -119,19 +151,10 @@ fun HeroSearchSection() {
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "model") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                                listOf(
-                                    "Altima",
-                                    "Juke",
-                                    "Leaf",
-                                    "Maxima",
-                                    "Micra",
-                                    "Murano",
-                                    "Note",
-                                    "Patrol"
-                                ).forEach { model ->
+                                state.model.options.forEach { model ->
                                     Li {
-                                        A("#", attrs = { classes("dropdown-item") }) {
-                                            Span(attrs = { classes("dropdown-item-label") }) { Text(model) }
+                                        A("#", attrs = { onClick { it.preventDefault(); viewModel.selectModel(model) }; classes("dropdown-item") }) {
+                                            Span(attrs = { classes("dropdown-item-label") }) { Text(model.name) }
                                         }
                                     }
                                 }
@@ -156,19 +179,10 @@ fun HeroSearchSection() {
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "type") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                                listOf(
-                                    "Kompakt",
-                                    "Crossover",
-                                    "Kupe",
-                                    "Obiteljski MPV",
-                                    "Pickup",
-                                    "Limuzina",
-                                    "SUV",
-                                    "Karavan"
-                                ).forEach { type ->
+                                state.bodyType.options.forEach { type ->
                                     Li {
-                                        A("#", attrs = { classes("dropdown-item") }) {
-                                            Span(attrs = { classes("dropdown-item-label") }) { Text(type) }
+                                        A("#", attrs = { onClick { it.preventDefault(); viewModel.selectBodyType(type) } ;classes("dropdown-item") }) {
+                                            Span(attrs = { classes("dropdown-item-label") }) { Text(type.name) }
                                         }
                                     }
                                 }
@@ -190,18 +204,10 @@ fun HeroSearchSection() {
                             }
                             Input(type = InputType.Hidden, attrs = { attr("name", "location") })
                             Ul(attrs = { classes("dropdown-menu", "dropdown-menu-dark") }) {
-                                listOf(
-                                    "Dallas",
-                                    "Chicago",
-                                    "Houston",
-                                    "Las Vegas",
-                                    "Los Angeles",
-                                    "New York",
-                                    "San Francisco"
-                                ).forEach { loc ->
+                                state.location.options.forEach { loc ->
                                     Li {
-                                        A("#", attrs = { classes("dropdown-item") }) {
-                                            Span(attrs = { classes("dropdown-item-label") }) { Text(loc) }
+                                        A("#", attrs = { onClick { it.preventDefault(); viewModel.selectLocation(loc) };classes("dropdown-item") }) {
+                                            Span(attrs = { classes("dropdown-item-label") }) { Text(loc.name) }
                                         }
                                     }
                                 }

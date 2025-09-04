@@ -121,9 +121,9 @@ kotlin {
     configAsKobwebApplication("saljidaljeclient" /*, includeServer = true*/)
 
     sourceSets {
-//        commonMain.dependencies {
-//          // Add shared dependencies between JS and JVM here if building a fullstack app
-//        }
+        commonMain.dependencies {
+            implementation(project(":common"))
+        }
 
         jsMain.dependencies {
             implementation(libs.compose.runtime)

@@ -30,3 +30,4 @@ gradle.settingsEvaluated {
 rootProject.name = "saljidaljeclient"
 
 include(":site")
+include(":common")
