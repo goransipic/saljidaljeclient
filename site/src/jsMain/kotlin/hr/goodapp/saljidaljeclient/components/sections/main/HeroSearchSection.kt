@@ -154,7 +154,9 @@ fun HeroSearchSection() {
                                             "#",
                                             attrs = {
                                                 onClick {
-                                                    viewModel.selectMake(option); make = option.name
+                                                    it.preventDefault()
+                                                    viewModel.selectMake(option);
+                                                    make = option.name
                                                 }; classes("dropdown-item")
                                             }) {
                                             Span(attrs = { classes("dropdown-item-label") }) { Text(option.name) }
@@ -189,7 +191,9 @@ fun HeroSearchSection() {
                                             "#",
                                             attrs = {
                                                 onClick {
-                                                    viewModel.selectModel(option); model = option.name
+                                                    it.preventDefault()
+                                                    viewModel.selectModel(option);
+                                                    model = option.name
                                                 }; classes("dropdown-item")
                                             }) {
                                             Span(attrs = { classes("dropdown-item-label") }) { Text(option.name) }
@@ -224,7 +228,9 @@ fun HeroSearchSection() {
                                             "#",
                                             attrs = {
                                                 onClick {
-                                                    viewModel.selectBodyType(type); body = type.name
+                                                    it.preventDefault()
+                                                    viewModel.selectBodyType(type);
+                                                    body = type.name
                                                 }; classes("dropdown-item")
                                             }) {
                                             Span(attrs = { classes("dropdown-item-label") }) { Text(type.name) }
@@ -256,7 +262,9 @@ fun HeroSearchSection() {
                                             "#",
                                             attrs = {
                                                 onClick {
-                                                    viewModel.selectLocation(loc); location = loc.name
+                                                    it.preventDefault()
+                                                    viewModel.selectLocation(loc);
+                                                    location = loc.name
                                                 }; classes("dropdown-item")
                                             }) {
                                             Span(attrs = { classes("dropdown-item-label") }) { Text(loc.name) }
