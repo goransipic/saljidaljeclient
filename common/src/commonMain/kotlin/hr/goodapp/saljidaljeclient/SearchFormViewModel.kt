@@ -12,20 +12,6 @@ class SearchFormViewModel(
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
 
-    data class UiState(
-        val activeTab: String = "New",
-        val seoName: String? = null,
-        val bodyTypeSelection: Int? = null,
-        val locationTypeSelection: Int? = null,
-        val productCount: Int? = null,
-        val makeId: Int? = null,
-        val modelId: Int? = null,
-        val make: DropdownProps,
-        val model: DropdownProps,
-        val bodyType: DropdownProps,
-        val location: DropdownProps
-    )
-
     private val _uiState = MutableStateFlow(
         UiState(
             make = dropdowns[0],
@@ -41,7 +27,15 @@ class SearchFormViewModel(
     }
 
     fun selectMake(option: Option) {
-        _uiState.update { it.copy(seoName = option.seoName, makeId = option.id) }
+        _uiState.update {
+            it.copy(
+                seoName = option.seoName,
+                makeId = option.id,
+                model = DropdownProps(name = "", icon = "", options = emptyList()),
+                bodyType = DropdownProps(name = "", icon = "", options = emptyList()),
+                location = DropdownProps(name = "", icon = "", options = emptyList())
+            )
+        }
         loadChildren(option.id)
     }
 
@@ -126,3 +120,18 @@ class SearchFormViewModel(
         }
     }
 }
+
+
+data class UiState(
+    val activeTab: String = "Novi",
+    val seoName: String? = null,
+    val bodyTypeSelection: Int? = null,
+    val locationTypeSelection: Int? = null,
+    val productCount: Int? = null,
+    val makeId: Int? = null,
+    val modelId: Int? = null,
+    val make: DropdownProps,
+    val model: DropdownProps,
+    val bodyType: DropdownProps,
+    val location: DropdownProps
+)
