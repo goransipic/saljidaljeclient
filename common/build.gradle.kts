@@ -16,12 +16,12 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.coroutines.core)
-            implementation("io.ktor:ktor-client-core:3.0.0")                // core
-            implementation("io.ktor:ktor-client-content-negotiation:3.0.0")
-            implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.0")
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.json)
         }
         jsMain.dependencies {
-            api("io.ktor:ktor-client-js:3.0.0")
+            implementation(libs.ktor.client.js)
         }
         // Uncomment the following if you pass `includeServer = true` into the `configAsKobwebApplication` call.
 //        jvmMain.dependencies {
