@@ -11,8 +11,6 @@ class MockSearchRepositoryImpl(
 
     override suspend fun getModels(makeId: Int): ProductResponse {
         // Return fake data
-        val response: String = httpClient.get("https://saljidalje.hr").bodyAsText()
-        println(response)
         return ProductResponse(
             productsCount = 3,
             properties = listOf(
