@@ -7,7 +7,7 @@ import androidx.compose.runtime.remember
 import hr.goodapp.saljidaljeclient.DropdownProps
 import hr.goodapp.saljidaljeclient.Option
 import hr.goodapp.saljidaljeclient.SearchFormViewModel
-import MockSearchRepositoryImpl
+import hr.goodapp.saljidaljeclient.MockSearchRepositoryImpl
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import org.jetbrains.compose.web.attributes.InputType

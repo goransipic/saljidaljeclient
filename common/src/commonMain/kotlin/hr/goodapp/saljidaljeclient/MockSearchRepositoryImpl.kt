@@ -1,19 +1,22 @@
-import hr.goodapp.saljidaljeclient.ProductChildProperty
-import hr.goodapp.saljidaljeclient.ProductChildResponse
-import hr.goodapp.saljidaljeclient.ProductProperty
-import hr.goodapp.saljidaljeclient.ProductResponse
-import hr.goodapp.saljidaljeclient.SearchRepository
+package hr.goodapp.saljidaljeclient
+
+import io.ktor.client.HttpClient
+import io.ktor.client.request.get
+import io.ktor.client.statement.bodyAsText
 
 class MockSearchRepositoryImpl(
-
+    private val baseUrl: String = "http://localhost:8080",
+    private val httpClient: HttpClient = provideHttpClient()
 ) : SearchRepository {
 
     override suspend fun getModels(makeId: Int): ProductResponse {
         // Return fake data
+        val response: String = httpClient.get("https://saljidalje.hr").bodyAsText()
+        println(response)
         return ProductResponse(
             productsCount = 3,
             properties = listOf(
-                ProductProperty("Model A", "1", "1"),
+                ProductProperty("Model A", "1", "1a"),
                 ProductProperty("Model B", "2", "2"),
                 ProductProperty("Model C", "3", "3")
             )
