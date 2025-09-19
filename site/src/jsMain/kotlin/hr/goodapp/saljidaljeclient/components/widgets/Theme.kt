@@ -740,6 +740,9 @@ fun initFileUploader() {
     if (js("typeof FilePondPluginImageTransform !== 'undefined'") as Boolean) {
         js("FilePond.registerPlugin(FilePondPluginImageTransform)")
     }
+    if (js("typeof FilePondPluginFileEncode !== 'undefined'") as Boolean) {
+        js("FilePond.registerPlugin(FilePondPluginFileEncode)")
+    }
 
     // Create FilePond instances
     for (input in fileInputs) {

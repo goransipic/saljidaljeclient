@@ -4,6 +4,7 @@ import androidx.compose.runtime.*
 import com.varabyte.kobweb.core.rememberPageContext
 import hr.goodapp.saljidaljeclient.components.sections.profile.*
 import org.jetbrains.compose.web.attributes.InputType
+import org.jetbrains.compose.web.attributes.name
 import org.jetbrains.compose.web.dom.*
 
 @Composable
@@ -31,6 +32,7 @@ fun Content(sidebarItems: SidebarItems) {
 fun fieldBlock(
     label: String,
     value: String,
+    name: String,
     collapseId: String,
     inputType: InputType<String> = InputType.Text,
     placeholder: String? = null,
@@ -78,6 +80,7 @@ fun fieldBlock(
                 }
             } else {
                 Input(type = inputType, attrs = {
+                    name(name)
                     classes("form-control", "form-control-light", "mt-3")
                     attr("data-bs-binded-element", "#$collapseId-value")
                     attr("data-bs-unset-value", "Nije navedeno")

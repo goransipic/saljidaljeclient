@@ -1,7 +1,7 @@
 [versions]
 jetbrains-compose = "1.8.0"
-kobweb = "0.22.0"
-kotlin = "2.1.21"
+kobweb = "0.23.3"
+kotlin = "2.2.20"
 kotlinx-serialization = "1.8.1"
 coroutines = "1.10.2"
 ktor = "3.0.0"

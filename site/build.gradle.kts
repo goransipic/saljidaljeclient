@@ -101,6 +101,9 @@ kobweb {
                 script(src = "/vendor/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.min.js") {
                     type = "text/javascript"
                 }
+                script(src = "/vendor/filepond-plugin-file-encode/filepond-plugin-file-encode.js") {
+                    type = "text/javascript"
+                }
                 script(src = "/vendor/filepond/dist/filepond.min.js") {
                     type = "text/javascript"
                 }
